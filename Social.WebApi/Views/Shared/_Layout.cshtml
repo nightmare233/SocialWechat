@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Social Web Api", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                    @*<li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>*@
+                    <li>@Html.ActionLink("API", "", "Swagger", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Facebook", "Index", "Facebook", new { area = "" }, null)</li>
+                    <li><a id="shareBtn" href="javascript:void(0)">Facebook Share</a></li>
+                    <li>@Html.ActionLink("Notification", "Index", "NotificationTest", new { area = "" }, null)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Comm100 - Social Web Api</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1263112220424532',
+            autoLogAppEvents: true,
+            xfbml: true,
+            version: 'v2.10'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    document.getElementById('shareBtn').onclick = function () {
+        FB.ui({
+            method: 'share',
+            mobile_iframe: true,
+            href: 'https://developers.facebook.com/docs/',
+        }, function (response) { });
+    }
+</script>
+</html>

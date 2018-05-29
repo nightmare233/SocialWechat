@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Notification";
+}
+
+
+<div class="container">
+    <div class="row">
+        <h2>Real Time Notifications</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <span>Token : <input id="txtToken" type="text" /></span>
+            <span>Site Id : <input id="txtSiteId" type="text" value="10000" /></span>
+            <button id="btnStart">Start</button>
+            <button id="btnStop">Stop</button>
+        </div>
+        <div class="col-md-10">
+            <div id="discussion"></div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    <script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+        $(function () {
+
+            $.connection.hub.url = 'http://127.0.0.1:30001/signalr';
+            var hub = $.connection.notificationHub;
+            var facebookHub = $.connection.facebookHub;
+            var twitterHub = $.connection.twitterHub;
+            twitterHub.client.twitterAuthorize = function () {
+                console.log("get twiiter authroize notification.")
+            };
+            facebookHub.client.facebookAuthorize = function (code, isAuthorize) {
+                console.log("get facebook authroize notification.")
+                console.log("code = " + code);
+                console.log("isAuthorize = " + isAuthorize)
+            };
+
+            $("#btnStart").click(function () {
+                hub.state.agentId = 1;
+
+                var token = $("#txtToken").val();
+                $.signalR.ajaxDefaults.headers = { Authorization: "Bearer " + token };
+
+                var siteId = $("#txtSiteId").val();
+                hub.state.siteId = siteId;
+                $.connection.logging = true;
+                $.connection.hub.qs = { "access_token": token };
+
+                $.connection.hub.start().done(function () {
+                    console.log("hub connection id=" + $.connection.hub.id);
+                });
+            });
+
+            $("#btnStop").click(function () {
+                if ($.connection.hub != null) {
+                    $.connection.hub.stop().done(function () {
+                    });
+                }
+            });
+
+            hub.client.conversationLogCreated = function (logs) {
+                console.log(logs);
+                $('#discussion').append("<p>" + htmlEncode("Log Created") + "</p > ");
+            }
+
+            hub.client.conversationCreated = function (conversation) {
+                console.log(conversation);
+                $('#discussion').append("<p>" + htmlEncode("Conversation Created : " + conversation.id) + "</p > ");
+            }
+            hub.client.conversationUpdated = function (conversation) {
+                console.log(conversation);
+                $('#discussion').append("<p>" + htmlEncode("Conversation Updated : " + conversation.id) + "</p > ");
+            }
+            hub.client.facebookCommentCreated = function (messsage) {
+                console.log(messsage);
+                $('#discussion').append("<p>" + htmlEncode("Facebook comment created : " + messsage.id) + "</p > ");
+            }
+            hub.client.facebookMessageCreated = function (messsage) {
+                console.log(messsage);
+                $('#discussion').append("<p>" + htmlEncode("Facebook message created : " + messsage.id) + "</p > ");
+            }
+            hub.client.twitterTweetCreated = function (messsage) {
+                console.log(messsage);
+                $('#discussion').append("<p>" + htmlEncode("Twitter tweet created : " + messsage.id) + "</p > ");
+            }
+            hub.client.TwitterDirectMessageCreated = function (messsage) {
+                console.log(messsage);
+                $('#discussion').append("<p>" + htmlEncode("Twitter direct message created : " + messsage.id) + "</p > ");
+            }
+            hub.client.publicFilterCreated = function (id) {
+                console.log(id);
+                $('#discussion').append("<p>" + htmlEncode("public filter created : " + id) + "</p > ");
+            }
+            hub.client.publicFilterDeleted = function (id) {
+                console.log(id);
+                $('#discussion').append("<p>" + htmlEncode("public filter deleted : " + id) + "</p > ");
+            }
+            hub.client.publicFilterUpdated = function (id) {
+                console.log(id);
+                $('#discussion').append("<p>" + htmlEncode("public filter updated : " + id) + "</p > ");
+            }
+        });
+
+        function htmlEncode(value) {
+            var encodedValue = $('<div />').text(value).html();
+            return encodedValue;
+        }
+    </script>
+}

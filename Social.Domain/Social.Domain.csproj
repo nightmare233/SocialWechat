@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F485985-BA40-4B9D-A0A9-63486C82F0AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Social.Domain</RootNamespace>
+    <AssemblyName>Social.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.1.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.1.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.4.0.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Fissoft.EntityFramework.Fts, Version=1.0.80.0, Culture=neutral, PublicKeyToken=00e20d155e1afabe, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fissoft.EntityFramework.Fts.1.0.80\lib\net45\Fissoft.EntityFramework.Fts.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit.EntityFramework, Version=1.1.9.0, Culture=neutral, PublicKeyToken=b6c8cfc71f7a6a80, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqKit.EntityFramework.1.1.9.0\lib\net45\LinqKit.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tweetinvi, Version=1.3.0.0, Culture=neutral, PublicKeyToken=7247f14397bf67b9, processorArchitecture=MSIL">
+      <HintPath>..\packages\TweetinviAPI.1.3.0\lib\net45\Tweetinvi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\NotificationConnectionManager.cs" />
+    <Compile Include="DomainServices\AgentService.cs" />
+    <Compile Include="DomainServices\AuditLogService.cs" />
+    <Compile Include="DomainServices\ConversationFieldService.cs" />
+    <Compile Include="DomainServices\ConversationService.cs" />
+    <Compile Include="DomainServices\DepartmentService.cs" />
+    <Compile Include="DomainServices\Facebook\FacebookProcessResult.cs" />
+    <Compile Include="DomainServices\FilterExpressions\ConditionExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\DateTimeExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\ExpressionBuildOptions.cs" />
+    <Compile Include="DomainServices\FilterExpressions\NumberExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\AgentAssigneeStatusExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\CommentMessagesExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\ConversationIDExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\CreatedExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\DepartmentAssigneeExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\FilterExpressionFactory.cs" />
+    <Compile Include="DomainServices\FilterExpressions\IConditionExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\IFilterExpressionFactory.cs" />
+    <Compile Include="DomainServices\FilterExpressions\OptionExpression.cs" />
+    <Compile Include="DomainServices\Facebook\FacebookConverter.cs" />
+    <Compile Include="DomainServices\Facebook\WebHookService.cs" />
+    <Compile Include="DomainServices\Facebook\WebHookStrategies\IWebHookSrategy.cs" />
+    <Compile Include="DomainServices\Facebook\WebHookStrategies\IWebHookStrategyFactory.cs" />
+    <Compile Include="DomainServices\Facebook\WebHookStrategies\NewMessageStrategy.cs" />
+    <Compile Include="DomainServices\Facebook\WebHookStrategies\NewCommentStrategy.cs" />
+    <Compile Include="DomainServices\Facebook\WebHookStrategies\NewPostStrategy.cs" />
+    <Compile Include="DomainServices\Facebook\WebHookStrategies\RemovePostCommentStrategy.cs" />
+    <Compile Include="DomainServices\Facebook\WebHookStrategies\RemoveVisitorPostStrategy.cs" />
+    <Compile Include="DomainServices\Facebook\WebHookStrategies\WebHookStrategy.cs" />
+    <Compile Include="DomainServices\Facebook\WebHookStrategies\WebHookStrategyFactory.cs" />
+    <Compile Include="DomainServices\FilterExpressions\StringExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\AgentAssigneeExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\DepartmentAssigneeStatusExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\LastMessageSentbyExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\LastMessageSentExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\LastModifiedExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\LastRepliedAgentExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\RepliedAgentsExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\SocialAccountsExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\SocialUsersExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\PriorityExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\SourceExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\StatusExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\TimeToLastMessageExpression.cs" />
+    <Compile Include="DomainServices\FilterExpressions\SystemFiledExpression\TotalMessagesExpression.cs" />
+    <Compile Include="DomainServices\FilterService.cs" />
+    <Compile Include="DomainServices\MessageService.cs" />
+    <Compile Include="DomainServices\SiteSocialAccountService.cs" />
+    <Compile Include="DomainServices\SocialAccountService.cs" />
+    <Compile Include="DomainServices\SocialUserService.cs" />
+    <Compile Include="DomainServices\Facebook\PullJobService.cs" />
+    <Compile Include="DomainServices\TwitterAuthService.cs" />
+    <Compile Include="DomainServices\Twitter\ITweetTreeWalker.cs" />
+    <Compile Include="DomainServices\Twitter\TwitterConverter.cs" />
+    <Compile Include="DomainServices\Twitter\TwitterDirectMessageService.cs" />
+    <Compile Include="DomainServices\Twitter\TwitterTweetService.cs" />
+    <Compile Include="DomainServices\Twitter\TwitterProcessResult.cs" />
+    <Compile Include="DomainServices\Twitter\TwitterPullJobService.cs" />
+    <Compile Include="DomainServices\Twitter\TwitterService.cs" />
+    <Compile Include="DomainServices\Twitter\TweetTreeWalker.cs" />
+    <Compile Include="DomainServices\Twitter\TwitterUtil.cs" />
+    <Compile Include="DomainServices\UserInfoService.cs" />
+    <Compile Include="Entities\AuditLog.cs" />
+    <Compile Include="Entities\Conversation.cs" />
+    <Compile Include="Entities\ConversationField.cs" />
+    <Compile Include="Entities\ConversationFieldOption.cs" />
+    <Compile Include="Entities\CpanelConfigOption.cs" />
+    <Compile Include="Entities\CustomAwayStatus.cs" />
+    <Compile Include="Entities\DepartmentMember.cs" />
+    <Compile Include="Entities\Filter.cs" />
+    <Compile Include="Entities\FilterCondition.cs" />
+    <Compile Include="Entities\General\Agent.cs" />
+    <Compile Include="Entities\Department.cs" />
+    <Compile Include="Entities\General\Config.cs" />
+    <Compile Include="Entities\General\SiteSocialAccount.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Message.cs" />
+    <Compile Include="Entities\MessageAttachment.cs" />
+    <Compile Include="Entities\ConversationLog.cs" />
+    <Compile Include="Entities\SocialAccount.cs" />
+    <Compile Include="Entities\SocialUser.cs" />
+    <Compile Include="Entities\TwitterAuth.cs" />
+    <Compile Include="Core\GeneralDataContext.cs" />
+    <Compile Include="Core\NotificationManager.cs" />
+    <Compile Include="Core\SiteDataContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\SiteDataRepository.cs" />
+    <Compile Include="Repositories\ConfigRepository.cs" />
+    <Compile Include="Repositories\CpanelConfigOptionRepositiory.cs" />
+    <Compile Include="Repositories\SiteSocialAccountRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Framework.Core\Framework.Core.csproj">
+      <Project>{1D101296-5F63-46CF-AB35-4A72EA5A9C08}</Project>
+      <Name>Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Social.Infrastructure\Social.Infrastructure.csproj">
+      <Project>{fe79d2df-6b23-4278-9c84-fc1d6487c45b}</Project>
+      <Name>Social.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+</Project>

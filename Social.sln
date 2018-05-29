@@ -1,0 +1,129 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Infrastructure", "Social.Infrastructure\Social.Infrastructure.csproj", "{FE79D2DF-6B23-4278-9C84-FC1D6487C45B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Domain", "Social.Domain\Social.Domain.csproj", "{7F485985-BA40-4B9D-A0A9-63486C82F0AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Application", "Social.Application\Social.Application.csproj", "{349CD324-CB06-46E7-97F1-33AF7EA446FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{F27721B3-7966-42FE-87EA-A169BB5A802D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Core", "Framework\Framework.Core\Framework.Core.csproj", "{1D101296-5F63-46CF-AB35-4A72EA5A9C08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.WebApi", "Framework\Framework.WebApi\Framework.WebApi.csproj", "{A4E4B66A-A602-4D0B-A2B8-5E0336F0B473}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.WebApi", "Social.WebApi\Social.WebApi.csproj", "{C60334CD-00B0-4040-BFAB-ADB888917C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Job", "Social.Job\Social.Job.csproj", "{D20B328D-FB01-4124-A5B6-785C0CE67A9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.IntegrationTest", "Social.IntegrationTest\Social.IntegrationTest.csproj", "{9CD2AF68-E0C0-4957-A002-90B18B931AEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F2A2C673-AEE4-4DB3-92FC-79DAB018C043}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.UnitTest", "Social.UnitTest\Social.UnitTest.csproj", "{FF6844BD-69A3-409A-A330-EC77BE12282A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Core.UnitTest", "Framework\Framework.Core.UnitTest\Framework.Core.UnitTest.csproj", "{C4346B53-1A58-48C2-BC2C-C8AB7261BDD3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{BB01AF05-CA41-4691-A2BA-8FDA942588BE}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\Site200030_100014500.sql = SQL\Site200030_100014500.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "general-scripts", "general-scripts", "{1C16B363-5983-4B55-A523-3F0404C8E643}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\general-scripts\01 General_Create_t_Site_SocialAccount.sql = SQL\general-scripts\01 General_Create_t_Site_SocialAccount.sql
+		SQL\general-scripts\02 General_Create_t_Social_ConversationField_Config.sql = SQL\general-scripts\02 General_Create_t_Social_ConversationField_Config.sql
+		SQL\general-scripts\03 General_Create_t_Social_ConversationFieldOption_Config.sql = SQL\general-scripts\03 General_Create_t_Social_ConversationFieldOption_Config.sql
+		SQL\general-scripts\04 General_Create_t_Social_Filter_Config.sql = SQL\general-scripts\04 General_Create_t_Social_Filter_Config.sql
+		SQL\general-scripts\05 General_Create_t_Social_FilterCondition_Config.sql = SQL\general-scripts\05 General_Create_t_Social_FilterCondition_Config.sql
+		SQL\general-scripts\06 General_Add_t_Social_ConversationField_Config.sql = SQL\general-scripts\06 General_Add_t_Social_ConversationField_Config.sql
+		SQL\general-scripts\07 General_Add_t_Social_ConversationFieldOption_Config.sql = SQL\general-scripts\07 General_Add_t_Social_ConversationFieldOption_Config.sql
+		SQL\general-scripts\08 General_Add_t_Social_Filter_Config.sql = SQL\general-scripts\08 General_Add_t_Social_Filter_Config.sql
+		SQL\general-scripts\09 General_Add_t_Social_FilterCondition_Config.sql = SQL\general-scripts\09 General_Add_t_Social_FilterCondition_Config.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "site-scripts", "site-scripts", "{0AD65EAC-67BB-46C1-8383-4BA61D0F7197}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\site-scripts\01 Site_Create_t_Social_Account.sql = SQL\site-scripts\01 Site_Create_t_Social_Account.sql
+		SQL\site-scripts\02 Site_Create_t_Social_User.sql = SQL\site-scripts\02 Site_Create_t_Social_User.sql
+		SQL\site-scripts\03 Site_Create_t_Social_Conversation.sql = SQL\site-scripts\03 Site_Create_t_Social_Conversation.sql
+		SQL\site-scripts\04 Site_Create_t_Social_ConversationField.sql = SQL\site-scripts\04 Site_Create_t_Social_ConversationField.sql
+		SQL\site-scripts\05 Site_Create_t_Social_ConversationFieldOption.sql = SQL\site-scripts\05 Site_Create_t_Social_ConversationFieldOption.sql
+		SQL\site-scripts\06 Site_Create_t_Social_ConversationLog.sql = SQL\site-scripts\06 Site_Create_t_Social_ConversationLog.sql
+		SQL\site-scripts\07 Site_Create_t_Social_Filter.sql = SQL\site-scripts\07 Site_Create_t_Social_Filter.sql
+		SQL\site-scripts\08 Site_Create_t_Social_FilterCondition.sql = SQL\site-scripts\08 Site_Create_t_Social_FilterCondition.sql
+		SQL\site-scripts\09 Site_Create_t_Social_Message.sql = SQL\site-scripts\09 Site_Create_t_Social_Message.sql
+		SQL\site-scripts\10 Site_Create_t_Social_MessageAttachment.sql = SQL\site-scripts\10 Site_Create_t_Social_MessageAttachment.sql
+		SQL\site-scripts\11 Site_Create_t_Social_TwitterAuth.sql = SQL\site-scripts\11 Site_Create_t_Social_TwitterAuth.sql
+		SQL\site-scripts\12 Site_Add_t_Social_ConversationField.sql = SQL\site-scripts\12 Site_Add_t_Social_ConversationField.sql
+		SQL\site-scripts\13 Site_Add_t_Social_ConversationFieldOption.sql = SQL\site-scripts\13 Site_Add_t_Social_ConversationFieldOption.sql
+		SQL\site-scripts\14 Site_Add_t_Social_Filter.sql = SQL\site-scripts\14 Site_Add_t_Social_Filter.sql
+		SQL\site-scripts\15 Site_Add_t_Social_FilterCondition.sql = SQL\site-scripts\15 Site_Add_t_Social_FilterCondition.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE79D2DF-6B23-4278-9C84-FC1D6487C45B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE79D2DF-6B23-4278-9C84-FC1D6487C45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE79D2DF-6B23-4278-9C84-FC1D6487C45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE79D2DF-6B23-4278-9C84-FC1D6487C45B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F485985-BA40-4B9D-A0A9-63486C82F0AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F485985-BA40-4B9D-A0A9-63486C82F0AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F485985-BA40-4B9D-A0A9-63486C82F0AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F485985-BA40-4B9D-A0A9-63486C82F0AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{349CD324-CB06-46E7-97F1-33AF7EA446FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{349CD324-CB06-46E7-97F1-33AF7EA446FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{349CD324-CB06-46E7-97F1-33AF7EA446FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{349CD324-CB06-46E7-97F1-33AF7EA446FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D101296-5F63-46CF-AB35-4A72EA5A9C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D101296-5F63-46CF-AB35-4A72EA5A9C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D101296-5F63-46CF-AB35-4A72EA5A9C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D101296-5F63-46CF-AB35-4A72EA5A9C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4E4B66A-A602-4D0B-A2B8-5E0336F0B473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E4B66A-A602-4D0B-A2B8-5E0336F0B473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E4B66A-A602-4D0B-A2B8-5E0336F0B473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E4B66A-A602-4D0B-A2B8-5E0336F0B473}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C60334CD-00B0-4040-BFAB-ADB888917C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C60334CD-00B0-4040-BFAB-ADB888917C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C60334CD-00B0-4040-BFAB-ADB888917C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C60334CD-00B0-4040-BFAB-ADB888917C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20B328D-FB01-4124-A5B6-785C0CE67A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20B328D-FB01-4124-A5B6-785C0CE67A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20B328D-FB01-4124-A5B6-785C0CE67A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20B328D-FB01-4124-A5B6-785C0CE67A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD2AF68-E0C0-4957-A002-90B18B931AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD2AF68-E0C0-4957-A002-90B18B931AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD2AF68-E0C0-4957-A002-90B18B931AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD2AF68-E0C0-4957-A002-90B18B931AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF6844BD-69A3-409A-A330-EC77BE12282A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6844BD-69A3-409A-A330-EC77BE12282A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6844BD-69A3-409A-A330-EC77BE12282A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6844BD-69A3-409A-A330-EC77BE12282A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4346B53-1A58-48C2-BC2C-C8AB7261BDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4346B53-1A58-48C2-BC2C-C8AB7261BDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4346B53-1A58-48C2-BC2C-C8AB7261BDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4346B53-1A58-48C2-BC2C-C8AB7261BDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1D101296-5F63-46CF-AB35-4A72EA5A9C08} = {F27721B3-7966-42FE-87EA-A169BB5A802D}
+		{A4E4B66A-A602-4D0B-A2B8-5E0336F0B473} = {F27721B3-7966-42FE-87EA-A169BB5A802D}
+		{9CD2AF68-E0C0-4957-A002-90B18B931AEC} = {F2A2C673-AEE4-4DB3-92FC-79DAB018C043}
+		{FF6844BD-69A3-409A-A330-EC77BE12282A} = {F2A2C673-AEE4-4DB3-92FC-79DAB018C043}
+		{C4346B53-1A58-48C2-BC2C-C8AB7261BDD3} = {F2A2C673-AEE4-4DB3-92FC-79DAB018C043}
+		{1C16B363-5983-4B55-A523-3F0404C8E643} = {BB01AF05-CA41-4691-A2BA-8FDA942588BE}
+		{0AD65EAC-67BB-46C1-8383-4BA61D0F7197} = {BB01AF05-CA41-4691-A2BA-8FDA942588BE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30FD1E24-CB2F-4D2B-AF51-97754A54F2F7}
+	EndGlobalSection
+EndGlobal

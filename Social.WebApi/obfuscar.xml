@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<Obfuscator>
+  <Var name="InPath" value=".\obj\Release\Package\PackageTmp\bin" />
+  <Var name="OutPath" value=".\obj\Release\Package\PackageTmp\bin\Obfuscator_Output" />
+  <Var name="HidePrivateApi" value="true" />
+  <Var name="KeepPublicApi" value="false" />
+  <Var name="ReuseNames" value="false" />
+
+  <Module file="$(InPath)\Framework.Core.dll">
+    <SkipNamespace name="*" />
+  </Module>
+  <Module file="$(InPath)\Framework.WebApi.dll">
+    <SkipNamespace name="*" />
+  </Module>
+  <Module file="$(InPath)\Social.Infrastructure.dll">
+    <SkipNamespace name="*" />
+  </Module>
+  <Module file="$(InPath)\Social.Domain.dll">
+    <SkipNamespace name="Social.Domain.Entities*" />
+    <SkipNamespace name="Social.Domain.Core" />
+  </Module>
+  <Module file="$(InPath)\Social.Application.dll">
+    <SkipNamespace name="Social.Application.Dto*" />
+  </Module>
+  <Module file="$(InPath)\Social.WebApi.dll">
+    <SkipNamespace name="*" />
+  </Module>
+</Obfuscator>

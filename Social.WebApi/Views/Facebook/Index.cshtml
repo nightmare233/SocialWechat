@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Facebook";
+}
+
+
+<div class="container">
+    <div class="row">
+        <h2>Facebook Real Time Notifications</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-11">
+            <div id="discussion"></div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    <script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+        $(function () {
+
+            var chat = $.connection.facebookHub;
+            $.connection.logging = true;
+
+            chat.client.newRaw = function (raw) {
+                $('#discussion').append("<p>" + htmlEncode(raw) + "</p>");
+            };
+            chat.client.newMessage = function (sender, message) {
+                $('#discussion').append("<p class='text-primary'><b>" + sender + " send a message </b> : " + htmlEncode(message) + "</p>");
+            };
+
+            chat.client.newFeed = function (sender, message, postId) {
+                $('#discussion').append("<p class='text-primary'><b>" + sender + " created a visitor post '" + postId + "'</b> : " + htmlEncode(message) + "</p>");
+            };
+            chat.client.removeFeed = function (sender, postId) {
+                $('#discussion').append("<p class='text-primary'><b>" + sender + " removed a visitor post '" + postId + "'.</b></p>");
+            };
+
+            chat.client.newComment = function (sender, message, commentId) {
+                $('#discussion').append("<p class='text-primary'><b>" + sender + " created a comment '" + commentId + "'</b> : " + htmlEncode(message) + "</p>");
+            };
+
+            chat.client.removeComment = function (sender, commentId) {
+                $('#discussion').append("<p class='text-primary'><b>" + sender + " removed a comment '" + commentId + "'.</b></p>");
+            };
+
+            $.connection.hub.start().done(function () {
+            });
+
+        });
+
+        function htmlEncode(value) {
+            var encodedValue = $('<div />').text(value).html();
+            return encodedValue;
+        }
+    </script>
+}
