@@ -1,0 +1,2827 @@
+2017-09-27 10:09:41,740 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-09-27 10:09:44,680 [1] INFO  System.Web.HttpApplication - Application started...
+2017-09-27 10:10:00,980 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-09-27 10:10:02,006 [1] INFO  System.Web.HttpApplication - Application started...
+2017-09-27 10:10:40,332 [10] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:10:40 AM +08:00
+
+2017-09-27 10:10:41,392 [10] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation10000] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2017-09-27 10:10:41,393 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:10:41,395 [10] DEBUG Social.Domain.Core.SiteDataContext - -- p0: '41' (Type = Int32)
+
+2017-09-27 10:10:41,395 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:10:41 AM +08:00
+
+2017-09-27 10:10:41,519 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Failed in 120 ms with error: Invalid object name 'dbo.t_Social_Conversation10000'.
+
+2017-09-27 10:10:41,519 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:10:41,530 [10] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:10:41 AM +08:00
+
+2017-09-27 10:10:41,926 [10] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.t_Social_Conversation10000'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.FindInStore(WrappedEntityKey key, String keyValuesParamName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at Framework.Core.EntityFramework.EfRepository`3.Find(TKey id) in F:\social\social_20170728\Social\Framework\Framework.Core\EntityFramework\EfRepository.cs:line 58
+   at Social.Domain.DomainServices.ConversationService.CheckIfExists(Int32 id) in F:\social\social_20170728\Social\Social.Domain\DomainServices\ConversationService.cs:line 63
+   at Social.Domain.DomainServices.MessageService.ReplyFacebookMessage(Int32 conversationId, String content, Boolean isCloseConversation) in F:\social\social_20170728\Social\Social.Domain\DomainServices\MessageService.cs:line 98
+   at Social.Application.AppServices.ConversationMessageAppService.<ReplyFacebookMessage>d__13.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\ConversationMessageAppService.cs:line 198
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.ConversationsController.<PostFacebookMessages>d__14.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\ConversationsController.cs:line 189
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-09-27 10:11:08,480 [14] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:11:08 AM +08:00
+
+2017-09-27 10:11:08,481 [14] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation10000] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2017-09-27 10:11:08,481 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:11:08,481 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p0: '41' (Type = Int32)
+
+2017-09-27 10:11:08,481 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:11:08 AM +08:00
+
+2017-09-27 10:11:08,559 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Failed in 77 ms with error: Invalid object name 'dbo.t_Social_Conversation10000'.
+
+2017-09-27 10:11:08,559 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:11:08,560 [14] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:11:08 AM +08:00
+
+2017-09-27 10:11:08,681 [14] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.t_Social_Conversation10000'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.FindInStore(WrappedEntityKey key, String keyValuesParamName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at Framework.Core.EntityFramework.EfRepository`3.Find(TKey id) in F:\social\social_20170728\Social\Framework\Framework.Core\EntityFramework\EfRepository.cs:line 58
+   at Social.Domain.DomainServices.ConversationService.CheckIfExists(Int32 id) in F:\social\social_20170728\Social\Social.Domain\DomainServices\ConversationService.cs:line 63
+   at Social.Domain.DomainServices.MessageService.ReplyFacebookMessage(Int32 conversationId, String content, Boolean isCloseConversation) in F:\social\social_20170728\Social\Social.Domain\DomainServices\MessageService.cs:line 98
+   at Social.Application.AppServices.ConversationMessageAppService.<ReplyFacebookMessage>d__13.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\ConversationMessageAppService.cs:line 198
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.ConversationsController.<PostFacebookMessages>d__14.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\ConversationsController.cs:line 189
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-09-27 10:11:12,358 [10] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:11:12 AM +08:00
+
+2017-09-27 10:11:12,359 [10] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation10000] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2017-09-27 10:11:12,359 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:11:12,359 [10] DEBUG Social.Domain.Core.SiteDataContext - -- p0: '41' (Type = Int32)
+
+2017-09-27 10:11:12,359 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:11:12 AM +08:00
+
+2017-09-27 10:11:12,440 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Failed in 81 ms with error: Invalid object name 'dbo.t_Social_Conversation10000'.
+
+2017-09-27 10:11:12,440 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:11:12,444 [10] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:11:12 AM +08:00
+
+2017-09-27 10:11:12,617 [10] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.t_Social_Conversation10000'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.FindInStore(WrappedEntityKey key, String keyValuesParamName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at Framework.Core.EntityFramework.EfRepository`3.Find(TKey id) in F:\social\social_20170728\Social\Framework\Framework.Core\EntityFramework\EfRepository.cs:line 58
+   at Social.Domain.DomainServices.ConversationService.CheckIfExists(Int32 id) in F:\social\social_20170728\Social\Social.Domain\DomainServices\ConversationService.cs:line 63
+   at Social.Domain.DomainServices.MessageService.ReplyFacebookMessage(Int32 conversationId, String content, Boolean isCloseConversation) in F:\social\social_20170728\Social\Social.Domain\DomainServices\MessageService.cs:line 98
+   at Social.Application.AppServices.ConversationMessageAppService.<ReplyFacebookMessage>d__13.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\ConversationMessageAppService.cs:line 198
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.ConversationsController.<PostFacebookMessages>d__14.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\ConversationsController.cs:line 189
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-09-27 10:11:28,060 [10] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:11:28 AM +08:00
+
+2017-09-27 10:11:28,062 [10] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation10000] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2017-09-27 10:11:28,062 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:11:28,062 [10] DEBUG Social.Domain.Core.SiteDataContext - -- p0: '41' (Type = Int32)
+
+2017-09-27 10:11:28,062 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:11:28 AM +08:00
+
+2017-09-27 10:11:28,141 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Failed in 79 ms with error: Invalid object name 'dbo.t_Social_Conversation10000'.
+
+2017-09-27 10:11:28,141 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:11:28,142 [10] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:11:28 AM +08:00
+
+2017-09-27 10:11:34,284 [10] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.t_Social_Conversation10000'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.FindInStore(WrappedEntityKey key, String keyValuesParamName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at Framework.Core.EntityFramework.EfRepository`3.Find(TKey id) in F:\social\social_20170728\Social\Framework\Framework.Core\EntityFramework\EfRepository.cs:line 58
+   at Social.Domain.DomainServices.ConversationService.CheckIfExists(Int32 id) in F:\social\social_20170728\Social\Social.Domain\DomainServices\ConversationService.cs:line 63
+   at Social.Domain.DomainServices.MessageService.ReplyFacebookMessage(Int32 conversationId, String content, Boolean isCloseConversation) in F:\social\social_20170728\Social\Social.Domain\DomainServices\MessageService.cs:line 98
+   at Social.Application.AppServices.ConversationMessageAppService.<ReplyFacebookMessage>d__13.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\ConversationMessageAppService.cs:line 198
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.ConversationsController.<PostFacebookMessages>d__14.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\ConversationsController.cs:line 189
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-09-27 10:11:41,640 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:11:41 AM +08:00
+
+2017-09-27 10:11:41,642 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation10000] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2017-09-27 10:11:41,642 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:11:41,642 [9] DEBUG Social.Domain.Core.SiteDataContext - -- p0: '41' (Type = Int32)
+
+2017-09-27 10:11:41,643 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:11:41 AM +08:00
+
+2017-09-27 10:11:41,721 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Failed in 78 ms with error: Invalid object name 'dbo.t_Social_Conversation10000'.
+
+2017-09-27 10:11:41,721 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:11:41,722 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:11:41 AM +08:00
+
+2017-09-27 10:11:41,894 [9] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.t_Social_Conversation10000'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.FindInStore(WrappedEntityKey key, String keyValuesParamName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at Framework.Core.EntityFramework.EfRepository`3.Find(TKey id) in F:\social\social_20170728\Social\Framework\Framework.Core\EntityFramework\EfRepository.cs:line 58
+   at Social.Domain.DomainServices.ConversationService.CheckIfExists(Int32 id) in F:\social\social_20170728\Social\Social.Domain\DomainServices\ConversationService.cs:line 63
+   at Social.Domain.DomainServices.MessageService.ReplyFacebookMessage(Int32 conversationId, String content, Boolean isCloseConversation) in F:\social\social_20170728\Social\Social.Domain\DomainServices\MessageService.cs:line 98
+   at Social.Application.AppServices.ConversationMessageAppService.<ReplyFacebookMessage>d__13.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\ConversationMessageAppService.cs:line 198
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.ConversationsController.<PostFacebookMessages>d__14.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\ConversationsController.cs:line 189
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-09-27 10:12:01,042 [10] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:12:01 AM +08:00
+
+2017-09-27 10:12:01,045 [10] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014500] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2017-09-27 10:12:01,045 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:12:01,045 [10] DEBUG Social.Domain.Core.SiteDataContext - -- p0: '41' (Type = Int32)
+
+2017-09-27 10:12:01,045 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:12:01 AM +08:00
+
+2017-09-27 10:12:01,125 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 79 ms with result: SqlDataReader
+
+2017-09-27 10:12:01,125 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:12:01,246 [10] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:12:01 AM +08:00
+
+2017-09-27 10:12:01,261 [10] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:12:01 AM +08:00
+
+2017-09-27 10:12:01,440 [10] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ConversationId] AS [ConversationId], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[ParentId] AS [ParentId], 
+    [Extent1].[SendTime] AS [SendTime], 
+    [Extent1].[SenderId] AS [SenderId], 
+    [Extent1].[ReceiverId] AS [ReceiverId], 
+    [Extent1].[SendAgentId] AS [SendAgentId], 
+    [Extent1].[Content] AS [Content], 
+    [Extent1].[Story] AS [Story], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Extent2].[Id] AS [Id1], 
+    [Extent2].[OriginalId] AS [OriginalId1], 
+    [Extent2].[OriginalLink] AS [OriginalLink1], 
+    [Extent2].[Source] AS [Source1], 
+    [Extent2].[Type] AS [Type], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[ScreenName] AS [ScreenName], 
+    [Extent2].[Email] AS [Email], 
+    [Extent2].[Avatar] AS [Avatar], 
+    [Extent2].[IsDeleted] AS [IsDeleted1], 
+    [Extent2].[SiteId] AS [SiteId], 
+    [Extent3].[Id] AS [Id2], 
+    [Extent3].[OriginalId] AS [OriginalId2], 
+    [Extent3].[OriginalLink] AS [OriginalLink2], 
+    [Extent3].[Source] AS [Source2], 
+    [Extent3].[Type] AS [Type1], 
+    [Extent3].[Name] AS [Name1], 
+    [Extent3].[ScreenName] AS [ScreenName1], 
+    [Extent3].[Email] AS [Email1], 
+    [Extent3].[Avatar] AS [Avatar1], 
+    [Extent3].[IsDeleted] AS [IsDeleted2], 
+    [Extent3].[SiteId] AS [SiteId1]
+    FROM   [dbo].[t_Social_Message100014500] AS [Extent1]
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON (([Extent2].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[SenderId] = [Extent2].[Id])
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON (([Extent3].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[ReceiverId] = [Extent3].[Id])
+    WHERE [Extent1].[ConversationId] = @p__linq__0
+2017-09-27 10:12:01,441 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:12:01,441 [10] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014500' (Type = Int32)
+
+2017-09-27 10:12:01,441 [10] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:12:01,441 [10] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '41' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:12:01,441 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:12:01 AM +08:00
+
+2017-09-27 10:12:01,525 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 83 ms with result: SqlDataReader
+
+2017-09-27 10:12:01,525 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:12:01,579 [10] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:12:01 AM +08:00
+
+2017-09-27 10:12:01,588 [10] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:12:01 AM +08:00
+
+2017-09-27 10:12:01,625 [10] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Token] AS [Token], 
+    [Extent1].[TokenSecret] AS [TokenSecret], 
+    [Extent1].[IfEnable] AS [IfEnable], 
+    [Extent1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Extent1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Extent1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Extent1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Extent1].[ConversationAgentId] AS [ConversationAgentId], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[ConversationPriority] AS [ConversationPriority], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Account] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[Id] IN (80))
+2017-09-27 10:12:01,626 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:12:01,626 [10] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014500' (Type = Int32)
+
+2017-09-27 10:12:01,626 [10] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:12:01,626 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:12:01 AM +08:00
+
+2017-09-27 10:12:01,705 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 78 ms with result: SqlDataReader
+
+2017-09-27 10:12:01,705 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:12:01,714 [10] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:12:01 AM +08:00
+
+2017-09-27 10:12:03,938 [10] ERROR Social.Infrastructure.Logger - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.PublishMessage(String token, String fbConversationId, String message) in F:\social\social_20170728\Social\Social.Infrastructure\Facebook\FbClient.cs:line 294
+2017-09-27 10:13:07,793 [30] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:13:07 AM +08:00
+
+2017-09-27 10:13:07,796 [30] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014500] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2017-09-27 10:13:07,796 [30] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:13:07,796 [30] DEBUG Social.Domain.Core.SiteDataContext - -- p0: '41' (Type = Int32)
+
+2017-09-27 10:13:07,796 [30] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:13:07 AM +08:00
+
+2017-09-27 10:13:07,876 [30] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 79 ms with result: SqlDataReader
+
+2017-09-27 10:13:07,876 [30] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:13:07,877 [30] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:13:07 AM +08:00
+
+2017-09-27 10:13:07,878 [30] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:13:07 AM +08:00
+
+2017-09-27 10:13:07,885 [30] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ConversationId] AS [ConversationId], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[ParentId] AS [ParentId], 
+    [Extent1].[SendTime] AS [SendTime], 
+    [Extent1].[SenderId] AS [SenderId], 
+    [Extent1].[ReceiverId] AS [ReceiverId], 
+    [Extent1].[SendAgentId] AS [SendAgentId], 
+    [Extent1].[Content] AS [Content], 
+    [Extent1].[Story] AS [Story], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Extent2].[Id] AS [Id1], 
+    [Extent2].[OriginalId] AS [OriginalId1], 
+    [Extent2].[OriginalLink] AS [OriginalLink1], 
+    [Extent2].[Source] AS [Source1], 
+    [Extent2].[Type] AS [Type], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[ScreenName] AS [ScreenName], 
+    [Extent2].[Email] AS [Email], 
+    [Extent2].[Avatar] AS [Avatar], 
+    [Extent2].[IsDeleted] AS [IsDeleted1], 
+    [Extent2].[SiteId] AS [SiteId], 
+    [Extent3].[Id] AS [Id2], 
+    [Extent3].[OriginalId] AS [OriginalId2], 
+    [Extent3].[OriginalLink] AS [OriginalLink2], 
+    [Extent3].[Source] AS [Source2], 
+    [Extent3].[Type] AS [Type1], 
+    [Extent3].[Name] AS [Name1], 
+    [Extent3].[ScreenName] AS [ScreenName1], 
+    [Extent3].[Email] AS [Email1], 
+    [Extent3].[Avatar] AS [Avatar1], 
+    [Extent3].[IsDeleted] AS [IsDeleted2], 
+    [Extent3].[SiteId] AS [SiteId1]
+    FROM   [dbo].[t_Social_Message100014500] AS [Extent1]
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON (([Extent2].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[SenderId] = [Extent2].[Id])
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON (([Extent3].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[ReceiverId] = [Extent3].[Id])
+    WHERE [Extent1].[ConversationId] = @p__linq__0
+2017-09-27 10:13:07,885 [30] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:13:07,885 [30] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014500' (Type = Int32)
+
+2017-09-27 10:13:07,885 [30] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:13:07,885 [30] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '41' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:13:07,885 [30] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:13:07 AM +08:00
+
+2017-09-27 10:13:07,966 [30] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 81 ms with result: SqlDataReader
+
+2017-09-27 10:13:07,966 [30] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:13:07,967 [30] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:13:07 AM +08:00
+
+2017-09-27 10:13:07,968 [30] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:13:07 AM +08:00
+
+2017-09-27 10:13:07,976 [30] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Token] AS [Token], 
+    [Extent1].[TokenSecret] AS [TokenSecret], 
+    [Extent1].[IfEnable] AS [IfEnable], 
+    [Extent1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Extent1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Extent1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Extent1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Extent1].[ConversationAgentId] AS [ConversationAgentId], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[ConversationPriority] AS [ConversationPriority], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Account] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[Id] IN (80))
+2017-09-27 10:13:07,976 [30] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:13:07,976 [30] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014500' (Type = Int32)
+
+2017-09-27 10:13:07,976 [30] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:13:07,976 [30] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:13:07 AM +08:00
+
+2017-09-27 10:13:08,054 [30] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 78 ms with result: SqlDataReader
+
+2017-09-27 10:13:08,055 [30] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:13:08,055 [30] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:13:08 AM +08:00
+
+2017-09-27 10:13:10,101 [30] ERROR Social.Infrastructure.Logger - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.PublishMessage(String token, String fbConversationId, String message) in F:\social\social_20170728\Social\Social.Infrastructure\Facebook\FbClient.cs:line 294
+2017-09-27 10:13:36,541 [30] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:13:36 AM +08:00
+
+2017-09-27 10:13:36,543 [30] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ConversationId] AS [ConversationId], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[ParentId] AS [ParentId], 
+    [Extent1].[SendTime] AS [SendTime], 
+    [Extent1].[SenderId] AS [SenderId], 
+    [Extent1].[ReceiverId] AS [ReceiverId], 
+    [Extent1].[SendAgentId] AS [SendAgentId], 
+    [Extent1].[Content] AS [Content], 
+    [Extent1].[Story] AS [Story], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Extent2].[Id] AS [Id1], 
+    [Extent2].[OriginalId] AS [OriginalId1], 
+    [Extent2].[OriginalLink] AS [OriginalLink1], 
+    [Extent2].[Source] AS [Source1], 
+    [Extent2].[Type] AS [Type], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[ScreenName] AS [ScreenName], 
+    [Extent2].[Email] AS [Email], 
+    [Extent2].[Avatar] AS [Avatar], 
+    [Extent2].[IsDeleted] AS [IsDeleted1], 
+    [Extent2].[SiteId] AS [SiteId], 
+    [Extent3].[Id] AS [Id2], 
+    [Extent3].[OriginalId] AS [OriginalId2], 
+    [Extent3].[OriginalLink] AS [OriginalLink2], 
+    [Extent3].[Source] AS [Source2], 
+    [Extent3].[Type] AS [Type1], 
+    [Extent3].[Name] AS [Name1], 
+    [Extent3].[ScreenName] AS [ScreenName1], 
+    [Extent3].[Email] AS [Email1], 
+    [Extent3].[Avatar] AS [Avatar1], 
+    [Extent3].[IsDeleted] AS [IsDeleted2], 
+    [Extent3].[SiteId] AS [SiteId1]
+    FROM   [dbo].[t_Social_Message100014500] AS [Extent1]
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON (([Extent2].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[SenderId] = [Extent2].[Id])
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON (([Extent3].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[ReceiverId] = [Extent3].[Id])
+    WHERE [Extent1].[ConversationId] = @p__linq__0
+2017-09-27 10:13:36,543 [30] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:13:36,543 [30] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014500' (Type = Int32)
+
+2017-09-27 10:13:36,543 [30] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:13:36,543 [30] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '41' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:13:36,543 [30] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:13:36 AM +08:00
+
+2017-09-27 10:13:36,625 [30] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 81 ms with result: SqlDataReader
+
+2017-09-27 10:13:36,625 [30] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:13:36,625 [30] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:13:36 AM +08:00
+
+2017-09-27 10:13:38,696 [30] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:13:38 AM +08:00
+
+2017-09-27 10:13:38,701 [30] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Token] AS [Token], 
+    [Extent1].[TokenSecret] AS [TokenSecret], 
+    [Extent1].[IfEnable] AS [IfEnable], 
+    [Extent1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Extent1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Extent1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Extent1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Extent1].[ConversationAgentId] AS [ConversationAgentId], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[ConversationPriority] AS [ConversationPriority], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Account] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[Id] IN (80))
+2017-09-27 10:13:38,701 [30] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:13:38,701 [30] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014500' (Type = Int32)
+
+2017-09-27 10:13:38,702 [30] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:13:38,702 [30] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:13:38 AM +08:00
+
+2017-09-27 10:13:38,782 [30] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 79 ms with result: SqlDataReader
+
+2017-09-27 10:13:38,782 [30] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:13:38,782 [30] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:13:38 AM +08:00
+
+2017-09-27 10:13:52,946 [30] ERROR Social.Infrastructure.Logger - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.PublishMessage(String token, String fbConversationId, String message) in F:\social\social_20170728\Social\Social.Infrastructure\Facebook\FbClient.cs:line 294
+2017-09-27 10:19:58,484 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-09-27 10:20:01,136 [1] INFO  System.Web.HttpApplication - Application started...
+2017-09-27 10:20:37,323 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:20:37 AM +08:00
+
+2017-09-27 10:20:38,353 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014500] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2017-09-27 10:20:38,354 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:20:38,356 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p0: '41' (Type = Int32)
+
+2017-09-27 10:20:38,356 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:20:38 AM +08:00
+
+2017-09-27 10:20:38,468 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 109 ms with result: SqlDataReader
+
+2017-09-27 10:20:38,468 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:20:38,584 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:20:38 AM +08:00
+
+2017-09-27 10:20:38,756 [12] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Conversation has been closed
+Framework.Core.ExceptionWithCode: Conversation has been closed
+   at Social.Domain.DomainServices.MessageService.ReplyFacebookMessage(Int32 conversationId, String content, Boolean isCloseConversation) in F:\social\social_20170728\Social\Social.Domain\DomainServices\MessageService.cs:line 105
+   at Social.Application.AppServices.ConversationMessageAppService.<ReplyFacebookMessage>d__13.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\ConversationMessageAppService.cs:line 198
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.ConversationsController.<PostFacebookMessages>d__14.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\ConversationsController.cs:line 189
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-09-27 10:26:14,864 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-09-27 10:26:15,810 [1] INFO  System.Web.HttpApplication - Application started...
+2017-09-27 10:26:46,317 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:26:46 AM +08:00
+
+2017-09-27 10:26:47,371 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014500] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2017-09-27 10:26:47,371 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:47,374 [9] DEBUG Social.Domain.Core.SiteDataContext - -- p0: '15' (Type = Int32)
+
+2017-09-27 10:26:47,374 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:26:47 AM +08:00
+
+2017-09-27 10:26:47,481 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 104 ms with result: SqlDataReader
+
+2017-09-27 10:26:47,481 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:47,586 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:26:47 AM +08:00
+
+2017-09-27 10:26:47,600 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:26:47 AM +08:00
+
+2017-09-27 10:26:47,617 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ConversationId] AS [ConversationId], 
+    [Extent1].[Type] AS [Type], 
+    [Extent1].[Content] AS [Content], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[CreatedBy] AS [CreatedBy]
+    FROM [dbo].[t_Social_ConversationLog100014500] AS [Extent1]
+    WHERE [Extent1].[ConversationId] = @EntityKeyValue1
+2017-09-27 10:26:47,617 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:47,617 [9] DEBUG Social.Domain.Core.SiteDataContext - -- EntityKeyValue1: '15' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:26:47,617 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:26:47 AM +08:00
+
+2017-09-27 10:26:47,694 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 77 ms with result: SqlDataReader
+
+2017-09-27 10:26:47,694 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:47,698 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:26:47 AM +08:00
+
+2017-09-27 10:26:47,725 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:26:47 AM +08:00
+
+2017-09-27 10:26:47,761 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014500] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+2017-09-27 10:26:47,761 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:47,761 [9] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:26:47,761 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:26:47 AM +08:00
+
+2017-09-27 10:26:47,840 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 78 ms with result: SqlDataReader
+
+2017-09-27 10:26:47,840 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:47,847 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:26:47 AM +08:00
+
+2017-09-27 10:26:47,966 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:26:47 AM +08:00
+
+2017-09-27 10:26:48,016 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[Type] AS [Type], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[ScreenName] AS [ScreenName], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[Avatar] AS [Avatar], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_User] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[Id] = @EntityKeyValue1)
+2017-09-27 10:26:48,016 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:48,016 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-09-27 10:26:48,016 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:26:48,016 [9] DEBUG Social.Domain.Core.SiteDataContext - -- EntityKeyValue1: '6' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:26:48,016 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:26:48 AM +08:00
+
+2017-09-27 10:26:48,096 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 79 ms with result: SqlDataReader
+
+2017-09-27 10:26:48,096 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:48,105 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:26:48 AM +08:00
+
+2017-09-27 10:26:48,119 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:26:48 AM +08:00
+
+2017-09-27 10:26:48,424 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project5].[Id3] AS [Id], 
+    [Project5].[Id6] AS [Id1], 
+    [Project5].[Id] AS [Id2], 
+    [Project5].[ConversationId] AS [ConversationId], 
+    [Project5].[Source] AS [Source], 
+    [Project5].[OriginalId] AS [OriginalId], 
+    [Project5].[OriginalLink] AS [OriginalLink], 
+    [Project5].[ParentId] AS [ParentId], 
+    [Project5].[SendTime] AS [SendTime], 
+    [Project5].[SenderId] AS [SenderId], 
+    [Project5].[ReceiverId] AS [ReceiverId], 
+    [Project5].[SendAgentId] AS [SendAgentId], 
+    [Project5].[Content] AS [Content], 
+    [Project5].[Story] AS [Story], 
+    [Project5].[IsDeleted] AS [IsDeleted], 
+    [Project5].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project5].[Id1] AS [Id3], 
+    [Project5].[OriginalId1] AS [OriginalId1], 
+    [Project5].[OriginalLink1] AS [OriginalLink1], 
+    [Project5].[Source1] AS [Source1], 
+    [Project5].[Type] AS [Type], 
+    [Project5].[Name] AS [Name], 
+    [Project5].[ScreenName] AS [ScreenName], 
+    [Project5].[Email] AS [Email], 
+    [Project5].[Avatar] AS [Avatar], 
+    [Project5].[IsDeleted1] AS [IsDeleted1], 
+    [Project5].[SiteId] AS [SiteId], 
+    [Project5].[Id2] AS [Id4], 
+    [Project5].[Token] AS [Token], 
+    [Project5].[TokenSecret] AS [TokenSecret], 
+    [Project5].[IfEnable] AS [IfEnable], 
+    [Project5].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Project5].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Project5].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Project5].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Project5].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Project5].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Project5].[CreatedTime] AS [CreatedTime], 
+    [Project5].[CreatedBy] AS [CreatedBy], 
+    [Project5].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Project5].[ConversationAgentId] AS [ConversationAgentId], 
+    [Project5].[IsDeleted2] AS [IsDeleted2], 
+    [Project5].[ConversationPriority] AS [ConversationPriority], 
+    [Project5].[SiteId1] AS [SiteId1], 
+    [Project5].[Id4] AS [Id5], 
+    [Project5].[OriginalId2] AS [OriginalId2], 
+    [Project5].[OriginalLink2] AS [OriginalLink2], 
+    [Project5].[Source2] AS [Source2], 
+    [Project5].[Type1] AS [Type1], 
+    [Project5].[Name1] AS [Name1], 
+    [Project5].[ScreenName1] AS [ScreenName1], 
+    [Project5].[Email1] AS [Email1], 
+    [Project5].[Avatar1] AS [Avatar1], 
+    [Project5].[IsDeleted3] AS [IsDeleted3], 
+    [Project5].[SiteId2] AS [SiteId2], 
+    [Project5].[Id5] AS [Id6], 
+    [Project5].[Token1] AS [Token1], 
+    [Project5].[TokenSecret1] AS [TokenSecret1], 
+    [Project5].[IfEnable1] AS [IfEnable1], 
+    [Project5].[IfConvertMessageToConversation1] AS [IfConvertMessageToConversation1], 
+    [Project5].[IfConvertVisitorPostToConversation1] AS [IfConvertVisitorPostToConversation1], 
+    [Project5].[IfConvertWallPostToConversation1] AS [IfConvertWallPostToConversation1], 
+    [Project5].[IfConvertTweetToConversation1] AS [IfConvertTweetToConversation1], 
+    [Project5].[FacebookPageCategory1] AS [FacebookPageCategory1], 
+    [Project5].[FacebookSignInAs1] AS [FacebookSignInAs1], 
+    [Project5].[CreatedTime1] AS [CreatedTime1], 
+    [Project5].[CreatedBy1] AS [CreatedBy1], 
+    [Project5].[ConversationDepartmentId1] AS [ConversationDepartmentId1], 
+    [Project5].[ConversationAgentId1] AS [ConversationAgentId1], 
+    [Project5].[IsDeleted4] AS [IsDeleted4], 
+    [Project5].[ConversationPriority1] AS [ConversationPriority1], 
+    [Project5].[SiteId3] AS [SiteId3], 
+    [Project5].[C1] AS [C1], 
+    [Project5].[Id7] AS [Id7], 
+    [Project5].[MessageId] AS [MessageId], 
+    [Project5].[OriginalId3] AS [OriginalId3], 
+    [Project5].[OriginalLink3] AS [OriginalLink3], 
+    [Project5].[Type2] AS [Type2], 
+    [Project5].[Name2] AS [Name2], 
+    [Project5].[MimeType] AS [MimeType], 
+    [Project5].[Size] AS [Size], 
+    [Project5].[Url] AS [Url], 
+    [Project5].[PreviewUrl] AS [PreviewUrl], 
+    [Project5].[RawData] AS [RawData]
+    FROM ( SELECT 
+        [Project3].[Id] AS [Id], 
+        [Project3].[ConversationId] AS [ConversationId], 
+        [Project3].[Source] AS [Source], 
+        [Project3].[OriginalId] AS [OriginalId], 
+        [Project3].[OriginalLink] AS [OriginalLink], 
+        [Project3].[ParentId] AS [ParentId], 
+        [Project3].[SendTime] AS [SendTime], 
+        [Project3].[SenderId] AS [SenderId], 
+        [Project3].[ReceiverId] AS [ReceiverId], 
+        [Project3].[SendAgentId] AS [SendAgentId], 
+        [Project3].[Content] AS [Content], 
+        [Project3].[Story] AS [Story], 
+        [Project3].[IsDeleted] AS [IsDeleted], 
+        [Project3].[QuoteTweetId] AS [QuoteTweetId], 
+        [Project3].[Id1] AS [Id1], 
+        [Project3].[OriginalId1] AS [OriginalId1], 
+        [Project3].[OriginalLink1] AS [OriginalLink1], 
+        [Project3].[Source1] AS [Source1], 
+        [Project3].[Type] AS [Type], 
+        [Project3].[Name] AS [Name], 
+        [Project3].[ScreenName] AS [ScreenName], 
+        [Project3].[Email] AS [Email], 
+        [Project3].[Avatar] AS [Avatar], 
+        [Project3].[IsDeleted1] AS [IsDeleted1], 
+        [Project3].[SiteId] AS [SiteId], 
+        [Project3].[Id2] AS [Id2], 
+        [Project3].[Token] AS [Token], 
+        [Project3].[TokenSecret] AS [TokenSecret], 
+        [Project3].[IfEnable] AS [IfEnable], 
+        [Project3].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+        [Project3].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+        [Project3].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+        [Project3].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+        [Project3].[FacebookPageCategory] AS [FacebookPageCategory], 
+        [Project3].[FacebookSignInAs] AS [FacebookSignInAs], 
+        [Project3].[CreatedTime] AS [CreatedTime], 
+        [Project3].[CreatedBy] AS [CreatedBy], 
+        [Project3].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+        [Project3].[ConversationAgentId] AS [ConversationAgentId], 
+        [Project3].[IsDeleted2] AS [IsDeleted2], 
+        [Project3].[ConversationPriority] AS [ConversationPriority], 
+        [Project3].[SiteId1] AS [SiteId1], 
+        [Project3].[Id3] AS [Id3], 
+        [Project3].[Id4] AS [Id4], 
+        [Project3].[OriginalId2] AS [OriginalId2], 
+        [Project3].[OriginalLink2] AS [OriginalLink2], 
+        [Project3].[Source2] AS [Source2], 
+        [Project3].[Type1] AS [Type1], 
+        [Project3].[Name1] AS [Name1], 
+        [Project3].[ScreenName1] AS [ScreenName1], 
+        [Project3].[Email1] AS [Email1], 
+        [Project3].[Avatar1] AS [Avatar1], 
+        [Project3].[IsDeleted3] AS [IsDeleted3], 
+        [Project3].[SiteId2] AS [SiteId2], 
+        [Element2].[Id] AS [Id5], 
+        [Element2].[Token] AS [Token1], 
+        [Element2].[TokenSecret] AS [TokenSecret1], 
+        [Element2].[IfEnable] AS [IfEnable1], 
+        [Element2].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation1], 
+        [Element2].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation1], 
+        [Element2].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation1], 
+        [Element2].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation1], 
+        [Element2].[FacebookPageCategory] AS [FacebookPageCategory1], 
+        [Element2].[FacebookSignInAs] AS [FacebookSignInAs1], 
+        [Element2].[CreatedTime] AS [CreatedTime1], 
+        [Element2].[CreatedBy] AS [CreatedBy1], 
+        [Element2].[ConversationDepartmentId] AS [ConversationDepartmentId1], 
+        [Element2].[ConversationAgentId] AS [ConversationAgentId1], 
+        [Element2].[IsDeleted] AS [IsDeleted4], 
+        [Element2].[ConversationPriority] AS [ConversationPriority1], 
+        [Element2].[SiteId] AS [SiteId3], 
+        [Element2].[Id1] AS [Id6], 
+        [Extent8].[Id] AS [Id7], 
+        [Extent8].[MessageId] AS [MessageId], 
+        [Extent8].[OriginalId] AS [OriginalId3], 
+        [Extent8].[OriginalLink] AS [OriginalLink3], 
+        [Extent8].[Type] AS [Type2], 
+        [Extent8].[Name] AS [Name2], 
+        [Extent8].[MimeType] AS [MimeType], 
+        [Extent8].[Size] AS [Size], 
+        [Extent8].[Url] AS [Url], 
+        [Extent8].[PreviewUrl] AS [PreviewUrl], 
+        [Extent8].[RawData] AS [RawData], 
+        CASE WHEN ([Extent8].[Id] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    (SELECT 
+            [Project1].[Id] AS [Id], 
+            [Project1].[ConversationId] AS [ConversationId], 
+            [Project1].[Source] AS [Source], 
+            [Project1].[OriginalId] AS [OriginalId], 
+            [Project1].[OriginalLink] AS [OriginalLink], 
+            [Project1].[ParentId] AS [ParentId], 
+            [Project1].[SendTime] AS [SendTime], 
+            [Project1].[SenderId] AS [SenderId], 
+            [Project1].[ReceiverId] AS [ReceiverId], 
+            [Project1].[SendAgentId] AS [SendAgentId], 
+            [Project1].[Content] AS [Content], 
+            [Project1].[Story] AS [Story], 
+            [Project1].[IsDeleted] AS [IsDeleted], 
+            [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+            [Project1].[Id1] AS [Id1], 
+            [Project1].[OriginalId1] AS [OriginalId1], 
+            [Project1].[OriginalLink1] AS [OriginalLink1], 
+            [Project1].[Source1] AS [Source1], 
+            [Project1].[Type] AS [Type], 
+            [Project1].[Name] AS [Name], 
+            [Project1].[ScreenName] AS [ScreenName], 
+            [Project1].[Email] AS [Email], 
+            [Project1].[Avatar] AS [Avatar], 
+            [Project1].[IsDeleted1] AS [IsDeleted1], 
+            [Project1].[SiteId] AS [SiteId], 
+            [Element1].[Id] AS [Id2], 
+            [Element1].[Token] AS [Token], 
+            [Element1].[TokenSecret] AS [TokenSecret], 
+            [Element1].[IfEnable] AS [IfEnable], 
+            [Element1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Element1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Element1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Element1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Element1].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Element1].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Element1].[CreatedTime] AS [CreatedTime], 
+            [Element1].[CreatedBy] AS [CreatedBy], 
+            [Element1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Element1].[ConversationAgentId] AS [ConversationAgentId], 
+            [Element1].[IsDeleted] AS [IsDeleted2], 
+            [Element1].[ConversationPriority] AS [ConversationPriority], 
+            [Element1].[SiteId] AS [SiteId1], 
+            [Element1].[Id1] AS [Id3], 
+            [Extent5].[Id] AS [Id4], 
+            [Extent5].[OriginalId] AS [OriginalId2], 
+            [Extent5].[OriginalLink] AS [OriginalLink2], 
+            [Extent5].[Source] AS [Source2], 
+            [Extent5].[Type] AS [Type1], 
+            [Extent5].[Name] AS [Name1], 
+            [Extent5].[ScreenName] AS [ScreenName1], 
+            [Extent5].[Email] AS [Email1], 
+            [Extent5].[Avatar] AS [Avatar1], 
+            [Extent5].[IsDeleted] AS [IsDeleted3], 
+            [Extent5].[SiteId] AS [SiteId2]
+            FROM    (SELECT 
+                [Extent1].[Id] AS [Id], 
+                [Extent1].[ConversationId] AS [ConversationId], 
+                [Extent1].[Source] AS [Source], 
+                [Extent1].[OriginalId] AS [OriginalId], 
+                [Extent1].[OriginalLink] AS [OriginalLink], 
+                [Extent1].[ParentId] AS [ParentId], 
+                [Extent1].[SendTime] AS [SendTime], 
+                [Extent1].[SenderId] AS [SenderId], 
+                [Extent1].[ReceiverId] AS [ReceiverId], 
+                [Extent1].[SendAgentId] AS [SendAgentId], 
+                [Extent1].[Content] AS [Content], 
+                [Extent1].[Story] AS [Story], 
+                [Extent1].[IsDeleted] AS [IsDeleted], 
+                [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+                [Extent2].[Id] AS [Id1], 
+                [Extent2].[OriginalId] AS [OriginalId1], 
+                [Extent2].[OriginalLink] AS [OriginalLink1], 
+                [Extent2].[Source] AS [Source1], 
+                [Extent2].[Type] AS [Type], 
+                [Extent2].[Name] AS [Name], 
+                [Extent2].[ScreenName] AS [ScreenName], 
+                [Extent2].[Email] AS [Email], 
+                [Extent2].[Avatar] AS [Avatar], 
+                [Extent2].[IsDeleted] AS [IsDeleted1], 
+                [Extent2].[SiteId] AS [SiteId]
+                FROM  [dbo].[t_Social_Message100014500] AS [Extent1]
+                LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON (([Extent2].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[SenderId] = [Extent2].[Id])
+                WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0) ) AS [Project1]
+            OUTER APPLY  (SELECT TOP (1) 
+                [Extent3].[Id] AS [Id], 
+                [Extent3].[Token] AS [Token], 
+                [Extent3].[TokenSecret] AS [TokenSecret], 
+                [Extent3].[IfEnable] AS [IfEnable], 
+                [Extent3].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+                [Extent3].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+                [Extent3].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+                [Extent3].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+                [Extent3].[FacebookPageCategory] AS [FacebookPageCategory], 
+                [Extent3].[FacebookSignInAs] AS [FacebookSignInAs], 
+                [Extent3].[CreatedTime] AS [CreatedTime], 
+                [Extent3].[CreatedBy] AS [CreatedBy], 
+                [Extent3].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+                [Extent3].[ConversationAgentId] AS [ConversationAgentId], 
+                [Extent3].[IsDeleted] AS [IsDeleted], 
+                [Extent3].[ConversationPriority] AS [ConversationPriority], 
+                [Extent3].[SiteId] AS [SiteId], 
+                [Extent4].[Id] AS [Id1]
+                FROM  [dbo].[t_Social_Account] AS [Extent3]
+                INNER JOIN [dbo].[t_Social_User] AS [Extent4] ON [Extent4].[Id] = [Extent3].[Id]
+                WHERE (([Extent4].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Project1].[SenderId] = [Extent4].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) ) AS [Element1]
+            LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent5] ON (([Extent5].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Project1].[ReceiverId] = [Extent5].[Id]) ) AS [Project3]
+        OUTER APPLY  (SELECT TOP (1) 
+            [Extent6].[Id] AS [Id], 
+            [Extent6].[Token] AS [Token], 
+            [Extent6].[TokenSecret] AS [TokenSecret], 
+            [Extent6].[IfEnable] AS [IfEnable], 
+            [Extent6].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Extent6].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Extent6].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Extent6].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Extent6].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Extent6].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Extent6].[CreatedTime] AS [CreatedTime], 
+            [Extent6].[CreatedBy] AS [CreatedBy], 
+            [Extent6].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Extent6].[ConversationAgentId] AS [ConversationAgentId], 
+            [Extent6].[IsDeleted] AS [IsDeleted], 
+            [Extent6].[ConversationPriority] AS [ConversationPriority], 
+            [Extent6].[SiteId] AS [SiteId], 
+            [Extent7].[Id] AS [Id1]
+            FROM  [dbo].[t_Social_Account] AS [Extent6]
+            INNER JOIN [dbo].[t_Social_User] AS [Extent7] ON [Extent7].[Id] = [Extent6].[Id]
+            WHERE (([Extent7].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Project3].[ReceiverId] = [Extent7].[Id]) AND (([Extent6].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) ) AS [Element2]
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014500] AS [Extent8] ON [Project3].[Id] = [Extent8].[MessageId]
+    )  AS [Project5]
+    ORDER BY [Project5].[Id3] ASC, [Project5].[Id6] ASC, [Project5].[Id] ASC, [Project5].[Id1] ASC, [Project5].[Id2] ASC, [Project5].[Id4] ASC, [Project5].[Id5] ASC, [Project5].[C1] ASC
+2017-09-27 10:26:48,424 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:48,424 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-09-27 10:26:48,424 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:26:48,424 [9] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:26:48,424 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:26:48 AM +08:00
+
+2017-09-27 10:26:48,613 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 188 ms with result: SqlDataReader
+
+2017-09-27 10:26:48,613 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:48,648 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:26:48 AM +08:00
+
+2017-09-27 10:26:48,700 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:26:48 AM +08:00
+
+2017-09-27 10:26:48,820 [9] DEBUG Social.Domain.Core.SiteDataContext - UPDATE [dbo].[t_Social_Conversation100014500]
+SET [Source] = @0, [OriginalId] = @1, [IfRead] = @2, [LastMessageSentTime] = @3, [LastMessageSenderId] = @4, [LastRepliedAgentId] = NULL, [AgentId] = NULL, [DepartmentId] = NULL, [Status] = @5, [Subject] = @6, [Priority] = @7, [Note] = NULL, [IsDeleted] = @8, [IsHidden] = @9, [CreatedTime] = @10, [ModifiedTime] = @11
+WHERE ([Id] = @12)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @0: '4' (Type = Int16)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @1: '910038714230890497' (Type = String, Size = 200)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @2: 'True' (Type = Boolean)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @3: '9/19/2017 7:11:51 AM' (Type = DateTime2)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @4: '6' (Type = Int32)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @5: '4' (Type = Int16)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @6: '@richhashiqi @zhou_vico ????' (Type = String, Size = 200)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @7: '1' (Type = Int16)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @8: 'False' (Type = Boolean)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @9: 'False' (Type = Boolean)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @10: '9/19/2017 7:16:02 AM' (Type = DateTime2)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @11: '9/27/2017 2:26:48 AM' (Type = DateTime2)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @12: '15' (Type = Int32)
+
+2017-09-27 10:26:48,821 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:26:48 AM +08:00
+
+2017-09-27 10:26:48,902 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 79 ms with result: 1
+
+2017-09-27 10:26:48,902 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:48,907 [9] DEBUG Social.Domain.Core.SiteDataContext - INSERT [dbo].[t_Social_ConversationLog100014500]([ConversationId], [Type], [Content], [CreatedTime], [CreatedBy])
+VALUES (@0, @1, @2, @3, @4)
+SELECT [Id]
+FROM [dbo].[t_Social_ConversationLog100014500]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+2017-09-27 10:26:48,907 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:48,907 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @0: '15' (Type = Int32)
+
+2017-09-27 10:26:48,907 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @1: '3' (Type = Int16)
+
+2017-09-27 10:26:48,907 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @2: 'Agent Test Agent 1 changed Status from New to Closed.' (Type = String, Size = 500)
+
+2017-09-27 10:26:48,907 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @3: '9/27/2017 2:26:48 AM' (Type = DateTime2)
+
+2017-09-27 10:26:48,907 [9] DEBUG Social.Domain.Core.SiteDataContext - -- @4: '1' (Type = Int32)
+
+2017-09-27 10:26:48,907 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:26:48 AM +08:00
+
+2017-09-27 10:26:48,986 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 78 ms with result: SqlDataReader
+
+2017-09-27 10:26:48,986 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:26:49,009 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:26:49 AM +08:00
+
+2017-09-27 10:26:51,580 [8] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - An error occurred while sending the request.
+System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpClient.<FinishSendAsync>d__58.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.Infrastructure.Core.NotificationManager.<GetAsync>d__13.MoveNext() in F:\social\social_20170728\Social\Social.Domain\Core\NotificationManager.cs:line 99
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Social.Infrastructure.Core.NotificationManager.<NotifyUpdateConversation>d__5.MoveNext() in F:\social\social_20170728\Social\Social.Domain\Core\NotificationManager.cs:line 42
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Social.Application.AppServices.ConversationAppService.<UpdateConversation>d__21.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\ConversationAppService.cs:line 219
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.Application.AppServices.ConversationAppService.<CloseAsync>d__17.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\ConversationAppService.cs:line 187
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.ConversationsController.<CloseConversation>d__9.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\ConversationsController.cs:line 131
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-09-27 10:27:32,059 [8] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:27:32 AM +08:00
+
+2017-09-27 10:27:32,065 [8] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014500] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2017-09-27 10:27:32,065 [8] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:27:32,065 [8] DEBUG Social.Domain.Core.SiteDataContext - -- p0: '15' (Type = Int32)
+
+2017-09-27 10:27:32,065 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:27:32 AM +08:00
+
+2017-09-27 10:27:32,145 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 79 ms with result: SqlDataReader
+
+2017-09-27 10:27:32,145 [8] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:27:32,146 [8] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:27:32 AM +08:00
+
+2017-09-27 10:27:38,498 [8] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:27:38 AM +08:00
+
+2017-09-27 10:27:38,499 [8] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ConversationId] AS [ConversationId], 
+    [Extent1].[Type] AS [Type], 
+    [Extent1].[Content] AS [Content], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[CreatedBy] AS [CreatedBy]
+    FROM [dbo].[t_Social_ConversationLog100014500] AS [Extent1]
+    WHERE [Extent1].[ConversationId] = @EntityKeyValue1
+2017-09-27 10:27:38,499 [8] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:27:38,499 [8] DEBUG Social.Domain.Core.SiteDataContext - -- EntityKeyValue1: '15' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:27:38,499 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:27:38 AM +08:00
+
+2017-09-27 10:27:38,576 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 76 ms with result: SqlDataReader
+
+2017-09-27 10:27:38,576 [8] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:27:38,580 [8] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:27:38 AM +08:00
+
+2017-09-27 10:27:55,119 [8] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:27:55 AM +08:00
+
+2017-09-27 10:27:55,120 [8] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014500] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+2017-09-27 10:27:55,120 [8] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:27:55,120 [8] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:27:55,120 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:27:55 AM +08:00
+
+2017-09-27 10:27:55,197 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 76 ms with result: SqlDataReader
+
+2017-09-27 10:27:55,197 [8] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:27:55,197 [8] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:27:55 AM +08:00
+
+2017-09-27 10:27:58,680 [8] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:27:58 AM +08:00
+
+2017-09-27 10:27:58,680 [8] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[Type] AS [Type], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[ScreenName] AS [ScreenName], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[Avatar] AS [Avatar], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_User] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[Id] = @EntityKeyValue1)
+2017-09-27 10:27:58,680 [8] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:27:58,680 [8] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014500' (Type = Int32)
+
+2017-09-27 10:27:58,680 [8] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:27:58,680 [8] DEBUG Social.Domain.Core.SiteDataContext - -- EntityKeyValue1: '6' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:27:58,680 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:27:58 AM +08:00
+
+2017-09-27 10:27:58,759 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 77 ms with result: SqlDataReader
+
+2017-09-27 10:27:58,759 [8] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:27:58,759 [8] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:27:58 AM +08:00
+
+2017-09-27 10:28:23,670 [8] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:28:23 AM +08:00
+
+2017-09-27 10:28:23,685 [8] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project5].[Id3] AS [Id], 
+    [Project5].[Id6] AS [Id1], 
+    [Project5].[Id] AS [Id2], 
+    [Project5].[ConversationId] AS [ConversationId], 
+    [Project5].[Source] AS [Source], 
+    [Project5].[OriginalId] AS [OriginalId], 
+    [Project5].[OriginalLink] AS [OriginalLink], 
+    [Project5].[ParentId] AS [ParentId], 
+    [Project5].[SendTime] AS [SendTime], 
+    [Project5].[SenderId] AS [SenderId], 
+    [Project5].[ReceiverId] AS [ReceiverId], 
+    [Project5].[SendAgentId] AS [SendAgentId], 
+    [Project5].[Content] AS [Content], 
+    [Project5].[Story] AS [Story], 
+    [Project5].[IsDeleted] AS [IsDeleted], 
+    [Project5].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project5].[Id1] AS [Id3], 
+    [Project5].[OriginalId1] AS [OriginalId1], 
+    [Project5].[OriginalLink1] AS [OriginalLink1], 
+    [Project5].[Source1] AS [Source1], 
+    [Project5].[Type] AS [Type], 
+    [Project5].[Name] AS [Name], 
+    [Project5].[ScreenName] AS [ScreenName], 
+    [Project5].[Email] AS [Email], 
+    [Project5].[Avatar] AS [Avatar], 
+    [Project5].[IsDeleted1] AS [IsDeleted1], 
+    [Project5].[SiteId] AS [SiteId], 
+    [Project5].[Id2] AS [Id4], 
+    [Project5].[Token] AS [Token], 
+    [Project5].[TokenSecret] AS [TokenSecret], 
+    [Project5].[IfEnable] AS [IfEnable], 
+    [Project5].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Project5].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Project5].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Project5].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Project5].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Project5].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Project5].[CreatedTime] AS [CreatedTime], 
+    [Project5].[CreatedBy] AS [CreatedBy], 
+    [Project5].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Project5].[ConversationAgentId] AS [ConversationAgentId], 
+    [Project5].[IsDeleted2] AS [IsDeleted2], 
+    [Project5].[ConversationPriority] AS [ConversationPriority], 
+    [Project5].[SiteId1] AS [SiteId1], 
+    [Project5].[Id4] AS [Id5], 
+    [Project5].[OriginalId2] AS [OriginalId2], 
+    [Project5].[OriginalLink2] AS [OriginalLink2], 
+    [Project5].[Source2] AS [Source2], 
+    [Project5].[Type1] AS [Type1], 
+    [Project5].[Name1] AS [Name1], 
+    [Project5].[ScreenName1] AS [ScreenName1], 
+    [Project5].[Email1] AS [Email1], 
+    [Project5].[Avatar1] AS [Avatar1], 
+    [Project5].[IsDeleted3] AS [IsDeleted3], 
+    [Project5].[SiteId2] AS [SiteId2], 
+    [Project5].[Id5] AS [Id6], 
+    [Project5].[Token1] AS [Token1], 
+    [Project5].[TokenSecret1] AS [TokenSecret1], 
+    [Project5].[IfEnable1] AS [IfEnable1], 
+    [Project5].[IfConvertMessageToConversation1] AS [IfConvertMessageToConversation1], 
+    [Project5].[IfConvertVisitorPostToConversation1] AS [IfConvertVisitorPostToConversation1], 
+    [Project5].[IfConvertWallPostToConversation1] AS [IfConvertWallPostToConversation1], 
+    [Project5].[IfConvertTweetToConversation1] AS [IfConvertTweetToConversation1], 
+    [Project5].[FacebookPageCategory1] AS [FacebookPageCategory1], 
+    [Project5].[FacebookSignInAs1] AS [FacebookSignInAs1], 
+    [Project5].[CreatedTime1] AS [CreatedTime1], 
+    [Project5].[CreatedBy1] AS [CreatedBy1], 
+    [Project5].[ConversationDepartmentId1] AS [ConversationDepartmentId1], 
+    [Project5].[ConversationAgentId1] AS [ConversationAgentId1], 
+    [Project5].[IsDeleted4] AS [IsDeleted4], 
+    [Project5].[ConversationPriority1] AS [ConversationPriority1], 
+    [Project5].[SiteId3] AS [SiteId3], 
+    [Project5].[C1] AS [C1], 
+    [Project5].[Id7] AS [Id7], 
+    [Project5].[MessageId] AS [MessageId], 
+    [Project5].[OriginalId3] AS [OriginalId3], 
+    [Project5].[OriginalLink3] AS [OriginalLink3], 
+    [Project5].[Type2] AS [Type2], 
+    [Project5].[Name2] AS [Name2], 
+    [Project5].[MimeType] AS [MimeType], 
+    [Project5].[Size] AS [Size], 
+    [Project5].[Url] AS [Url], 
+    [Project5].[PreviewUrl] AS [PreviewUrl], 
+    [Project5].[RawData] AS [RawData]
+    FROM ( SELECT 
+        [Project3].[Id] AS [Id], 
+        [Project3].[ConversationId] AS [ConversationId], 
+        [Project3].[Source] AS [Source], 
+        [Project3].[OriginalId] AS [OriginalId], 
+        [Project3].[OriginalLink] AS [OriginalLink], 
+        [Project3].[ParentId] AS [ParentId], 
+        [Project3].[SendTime] AS [SendTime], 
+        [Project3].[SenderId] AS [SenderId], 
+        [Project3].[ReceiverId] AS [ReceiverId], 
+        [Project3].[SendAgentId] AS [SendAgentId], 
+        [Project3].[Content] AS [Content], 
+        [Project3].[Story] AS [Story], 
+        [Project3].[IsDeleted] AS [IsDeleted], 
+        [Project3].[QuoteTweetId] AS [QuoteTweetId], 
+        [Project3].[Id1] AS [Id1], 
+        [Project3].[OriginalId1] AS [OriginalId1], 
+        [Project3].[OriginalLink1] AS [OriginalLink1], 
+        [Project3].[Source1] AS [Source1], 
+        [Project3].[Type] AS [Type], 
+        [Project3].[Name] AS [Name], 
+        [Project3].[ScreenName] AS [ScreenName], 
+        [Project3].[Email] AS [Email], 
+        [Project3].[Avatar] AS [Avatar], 
+        [Project3].[IsDeleted1] AS [IsDeleted1], 
+        [Project3].[SiteId] AS [SiteId], 
+        [Project3].[Id2] AS [Id2], 
+        [Project3].[Token] AS [Token], 
+        [Project3].[TokenSecret] AS [TokenSecret], 
+        [Project3].[IfEnable] AS [IfEnable], 
+        [Project3].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+        [Project3].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+        [Project3].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+        [Project3].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+        [Project3].[FacebookPageCategory] AS [FacebookPageCategory], 
+        [Project3].[FacebookSignInAs] AS [FacebookSignInAs], 
+        [Project3].[CreatedTime] AS [CreatedTime], 
+        [Project3].[CreatedBy] AS [CreatedBy], 
+        [Project3].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+        [Project3].[ConversationAgentId] AS [ConversationAgentId], 
+        [Project3].[IsDeleted2] AS [IsDeleted2], 
+        [Project3].[ConversationPriority] AS [ConversationPriority], 
+        [Project3].[SiteId1] AS [SiteId1], 
+        [Project3].[Id3] AS [Id3], 
+        [Project3].[Id4] AS [Id4], 
+        [Project3].[OriginalId2] AS [OriginalId2], 
+        [Project3].[OriginalLink2] AS [OriginalLink2], 
+        [Project3].[Source2] AS [Source2], 
+        [Project3].[Type1] AS [Type1], 
+        [Project3].[Name1] AS [Name1], 
+        [Project3].[ScreenName1] AS [ScreenName1], 
+        [Project3].[Email1] AS [Email1], 
+        [Project3].[Avatar1] AS [Avatar1], 
+        [Project3].[IsDeleted3] AS [IsDeleted3], 
+        [Project3].[SiteId2] AS [SiteId2], 
+        [Element2].[Id] AS [Id5], 
+        [Element2].[Token] AS [Token1], 
+        [Element2].[TokenSecret] AS [TokenSecret1], 
+        [Element2].[IfEnable] AS [IfEnable1], 
+        [Element2].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation1], 
+        [Element2].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation1], 
+        [Element2].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation1], 
+        [Element2].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation1], 
+        [Element2].[FacebookPageCategory] AS [FacebookPageCategory1], 
+        [Element2].[FacebookSignInAs] AS [FacebookSignInAs1], 
+        [Element2].[CreatedTime] AS [CreatedTime1], 
+        [Element2].[CreatedBy] AS [CreatedBy1], 
+        [Element2].[ConversationDepartmentId] AS [ConversationDepartmentId1], 
+        [Element2].[ConversationAgentId] AS [ConversationAgentId1], 
+        [Element2].[IsDeleted] AS [IsDeleted4], 
+        [Element2].[ConversationPriority] AS [ConversationPriority1], 
+        [Element2].[SiteId] AS [SiteId3], 
+        [Element2].[Id1] AS [Id6], 
+        [Extent8].[Id] AS [Id7], 
+        [Extent8].[MessageId] AS [MessageId], 
+        [Extent8].[OriginalId] AS [OriginalId3], 
+        [Extent8].[OriginalLink] AS [OriginalLink3], 
+        [Extent8].[Type] AS [Type2], 
+        [Extent8].[Name] AS [Name2], 
+        [Extent8].[MimeType] AS [MimeType], 
+        [Extent8].[Size] AS [Size], 
+        [Extent8].[Url] AS [Url], 
+        [Extent8].[PreviewUrl] AS [PreviewUrl], 
+        [Extent8].[RawData] AS [RawData], 
+        CASE WHEN ([Extent8].[Id] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    (SELECT 
+            [Project1].[Id] AS [Id], 
+            [Project1].[ConversationId] AS [ConversationId], 
+            [Project1].[Source] AS [Source], 
+            [Project1].[OriginalId] AS [OriginalId], 
+            [Project1].[OriginalLink] AS [OriginalLink], 
+            [Project1].[ParentId] AS [ParentId], 
+            [Project1].[SendTime] AS [SendTime], 
+            [Project1].[SenderId] AS [SenderId], 
+            [Project1].[ReceiverId] AS [ReceiverId], 
+            [Project1].[SendAgentId] AS [SendAgentId], 
+            [Project1].[Content] AS [Content], 
+            [Project1].[Story] AS [Story], 
+            [Project1].[IsDeleted] AS [IsDeleted], 
+            [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+            [Project1].[Id1] AS [Id1], 
+            [Project1].[OriginalId1] AS [OriginalId1], 
+            [Project1].[OriginalLink1] AS [OriginalLink1], 
+            [Project1].[Source1] AS [Source1], 
+            [Project1].[Type] AS [Type], 
+            [Project1].[Name] AS [Name], 
+            [Project1].[ScreenName] AS [ScreenName], 
+            [Project1].[Email] AS [Email], 
+            [Project1].[Avatar] AS [Avatar], 
+            [Project1].[IsDeleted1] AS [IsDeleted1], 
+            [Project1].[SiteId] AS [SiteId], 
+            [Element1].[Id] AS [Id2], 
+            [Element1].[Token] AS [Token], 
+            [Element1].[TokenSecret] AS [TokenSecret], 
+            [Element1].[IfEnable] AS [IfEnable], 
+            [Element1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Element1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Element1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Element1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Element1].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Element1].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Element1].[CreatedTime] AS [CreatedTime], 
+            [Element1].[CreatedBy] AS [CreatedBy], 
+            [Element1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Element1].[ConversationAgentId] AS [ConversationAgentId], 
+            [Element1].[IsDeleted] AS [IsDeleted2], 
+            [Element1].[ConversationPriority] AS [ConversationPriority], 
+            [Element1].[SiteId] AS [SiteId1], 
+            [Element1].[Id1] AS [Id3], 
+            [Extent5].[Id] AS [Id4], 
+            [Extent5].[OriginalId] AS [OriginalId2], 
+            [Extent5].[OriginalLink] AS [OriginalLink2], 
+            [Extent5].[Source] AS [Source2], 
+            [Extent5].[Type] AS [Type1], 
+            [Extent5].[Name] AS [Name1], 
+            [Extent5].[ScreenName] AS [ScreenName1], 
+            [Extent5].[Email] AS [Email1], 
+            [Extent5].[Avatar] AS [Avatar1], 
+            [Extent5].[IsDeleted] AS [IsDeleted3], 
+            [Extent5].[SiteId] AS [SiteId2]
+            FROM    (SELECT 
+                [Extent1].[Id] AS [Id], 
+                [Extent1].[ConversationId] AS [ConversationId], 
+                [Extent1].[Source] AS [Source], 
+                [Extent1].[OriginalId] AS [OriginalId], 
+                [Extent1].[OriginalLink] AS [OriginalLink], 
+                [Extent1].[ParentId] AS [ParentId], 
+                [Extent1].[SendTime] AS [SendTime], 
+                [Extent1].[SenderId] AS [SenderId], 
+                [Extent1].[ReceiverId] AS [ReceiverId], 
+                [Extent1].[SendAgentId] AS [SendAgentId], 
+                [Extent1].[Content] AS [Content], 
+                [Extent1].[Story] AS [Story], 
+                [Extent1].[IsDeleted] AS [IsDeleted], 
+                [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+                [Extent2].[Id] AS [Id1], 
+                [Extent2].[OriginalId] AS [OriginalId1], 
+                [Extent2].[OriginalLink] AS [OriginalLink1], 
+                [Extent2].[Source] AS [Source1], 
+                [Extent2].[Type] AS [Type], 
+                [Extent2].[Name] AS [Name], 
+                [Extent2].[ScreenName] AS [ScreenName], 
+                [Extent2].[Email] AS [Email], 
+                [Extent2].[Avatar] AS [Avatar], 
+                [Extent2].[IsDeleted] AS [IsDeleted1], 
+                [Extent2].[SiteId] AS [SiteId]
+                FROM  [dbo].[t_Social_Message100014500] AS [Extent1]
+                LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON (([Extent2].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[SenderId] = [Extent2].[Id])
+                WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0) ) AS [Project1]
+            OUTER APPLY  (SELECT TOP (1) 
+                [Extent3].[Id] AS [Id], 
+                [Extent3].[Token] AS [Token], 
+                [Extent3].[TokenSecret] AS [TokenSecret], 
+                [Extent3].[IfEnable] AS [IfEnable], 
+                [Extent3].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+                [Extent3].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+                [Extent3].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+                [Extent3].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+                [Extent3].[FacebookPageCategory] AS [FacebookPageCategory], 
+                [Extent3].[FacebookSignInAs] AS [FacebookSignInAs], 
+                [Extent3].[CreatedTime] AS [CreatedTime], 
+                [Extent3].[CreatedBy] AS [CreatedBy], 
+                [Extent3].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+                [Extent3].[ConversationAgentId] AS [ConversationAgentId], 
+                [Extent3].[IsDeleted] AS [IsDeleted], 
+                [Extent3].[ConversationPriority] AS [ConversationPriority], 
+                [Extent3].[SiteId] AS [SiteId], 
+                [Extent4].[Id] AS [Id1]
+                FROM  [dbo].[t_Social_Account] AS [Extent3]
+                INNER JOIN [dbo].[t_Social_User] AS [Extent4] ON [Extent4].[Id] = [Extent3].[Id]
+                WHERE (([Extent4].[SiteId] = @DynamicFilterParam_000001) ) AND ([Project1].[SenderId] = [Extent4].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) ) ) AS [Element1]
+            LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent5] ON (([Extent5].[SiteId] = @DynamicFilterParam_000001) ) AND ([Project1].[ReceiverId] = [Extent5].[Id]) ) AS [Project3]
+        OUTER APPLY  (SELECT TOP (1) 
+            [Extent6].[Id] AS [Id], 
+            [Extent6].[Token] AS [Token], 
+            [Extent6].[TokenSecret] AS [TokenSecret], 
+            [Extent6].[IfEnable] AS [IfEnable], 
+            [Extent6].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Extent6].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Extent6].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Extent6].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Extent6].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Extent6].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Extent6].[CreatedTime] AS [CreatedTime], 
+            [Extent6].[CreatedBy] AS [CreatedBy], 
+            [Extent6].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Extent6].[ConversationAgentId] AS [ConversationAgentId], 
+            [Extent6].[IsDeleted] AS [IsDeleted], 
+            [Extent6].[ConversationPriority] AS [ConversationPriority], 
+            [Extent6].[SiteId] AS [SiteId], 
+            [Extent7].[Id] AS [Id1]
+            FROM  [dbo].[t_Social_Account] AS [Extent6]
+            INNER JOIN [dbo].[t_Social_User] AS [Extent7] ON [Extent7].[Id] = [Extent6].[Id]
+            WHERE (([Extent7].[SiteId] = @DynamicFilterParam_000001) ) AND ([Project3].[ReceiverId] = [Extent7].[Id]) AND (([Extent6].[SiteId] = @DynamicFilterParam_000001) ) ) AS [Element2]
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014500] AS [Extent8] ON [Project3].[Id] = [Extent8].[MessageId]
+    )  AS [Project5]
+    ORDER BY [Project5].[Id3] ASC, [Project5].[Id6] ASC, [Project5].[Id] ASC, [Project5].[Id1] ASC, [Project5].[Id2] ASC, [Project5].[Id4] ASC, [Project5].[Id5] ASC, [Project5].[C1] ASC
+2017-09-27 10:28:23,685 [8] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:28:23,685 [8] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014500' (Type = Int32)
+
+2017-09-27 10:28:23,685 [8] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:28:23,685 [8] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:28:23,685 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:28:23 AM +08:00
+
+2017-09-27 10:28:24,077 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 392 ms with result: SqlDataReader
+
+2017-09-27 10:28:24,077 [8] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:28:24,078 [8] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:28:24 AM +08:00
+
+2017-09-27 10:28:28,778 [8] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:28:28 AM +08:00
+
+2017-09-27 10:28:28,780 [8] DEBUG Social.Domain.Core.SiteDataContext - UPDATE [dbo].[t_Social_Conversation100014500]
+SET [Source] = @0, [OriginalId] = @1, [IfRead] = @2, [LastMessageSentTime] = @3, [LastMessageSenderId] = @4, [LastRepliedAgentId] = NULL, [AgentId] = NULL, [DepartmentId] = NULL, [Status] = @5, [Subject] = @6, [Priority] = @7, [Note] = NULL, [IsDeleted] = @8, [IsHidden] = @9, [CreatedTime] = @10, [ModifiedTime] = @11
+WHERE ([Id] = @12)
+
+2017-09-27 10:28:28,780 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @0: '4' (Type = Int16)
+
+2017-09-27 10:28:28,780 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @1: '910038714230890497' (Type = String, Size = 200)
+
+2017-09-27 10:28:28,780 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @2: 'True' (Type = Boolean)
+
+2017-09-27 10:28:28,780 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @3: '9/19/2017 7:11:51 AM' (Type = DateTime2)
+
+2017-09-27 10:28:28,780 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @4: '6' (Type = Int32)
+
+2017-09-27 10:28:28,780 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @5: '4' (Type = Int16)
+
+2017-09-27 10:28:28,780 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @6: '@richhashiqi @zhou_vico ????' (Type = String, Size = 200)
+
+2017-09-27 10:28:28,780 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @7: '1' (Type = Int16)
+
+2017-09-27 10:28:28,780 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @8: 'False' (Type = Boolean)
+
+2017-09-27 10:28:28,781 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @9: 'False' (Type = Boolean)
+
+2017-09-27 10:28:28,781 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @10: '9/19/2017 7:16:02 AM' (Type = DateTime2)
+
+2017-09-27 10:28:28,781 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @11: '9/27/2017 2:28:28 AM' (Type = DateTime2)
+
+2017-09-27 10:28:28,781 [8] DEBUG Social.Domain.Core.SiteDataContext - -- @12: '15' (Type = Int32)
+
+2017-09-27 10:28:28,781 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:28:28 AM +08:00
+
+2017-09-27 10:28:28,857 [8] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 76 ms with result: 1
+
+2017-09-27 10:28:28,857 [8] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:28:28,857 [8] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:28:28 AM +08:00
+
+2017-09-27 10:28:36,400 [8] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - An error occurred while sending the request.
+System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpClient.<FinishSendAsync>d__58.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.Infrastructure.Core.NotificationManager.<GetAsync>d__13.MoveNext() in F:\social\social_20170728\Social\Social.Domain\Core\NotificationManager.cs:line 99
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Social.Infrastructure.Core.NotificationManager.<NotifyUpdateConversation>d__5.MoveNext() in F:\social\social_20170728\Social\Social.Domain\Core\NotificationManager.cs:line 42
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Social.Application.AppServices.ConversationAppService.<UpdateConversation>d__21.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\ConversationAppService.cs:line 219
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.Application.AppServices.ConversationAppService.<CloseAsync>d__17.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\ConversationAppService.cs:line 187
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.ConversationsController.<CloseConversation>d__9.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\ConversationsController.cs:line 131
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-09-27 10:28:52,851 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-09-27 10:28:55,415 [1] INFO  System.Web.HttpApplication - Application started...
+2017-09-27 10:29:19,094 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:29:19 AM +08:00
+
+2017-09-27 10:29:20,119 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014500] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2017-09-27 10:29:20,119 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:29:20,121 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p0: '15' (Type = Int32)
+
+2017-09-27 10:29:20,121 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:20,228 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 101 ms with result: SqlDataReader
+
+2017-09-27 10:29:20,228 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:29:20,348 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:20,362 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:20,378 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ConversationId] AS [ConversationId], 
+    [Extent1].[Type] AS [Type], 
+    [Extent1].[Content] AS [Content], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[CreatedBy] AS [CreatedBy]
+    FROM [dbo].[t_Social_ConversationLog100014500] AS [Extent1]
+    WHERE [Extent1].[ConversationId] = @EntityKeyValue1
+2017-09-27 10:29:20,378 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:29:20,378 [12] DEBUG Social.Domain.Core.SiteDataContext - -- EntityKeyValue1: '15' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:29:20,378 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:20,455 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 76 ms with result: SqlDataReader
+
+2017-09-27 10:29:20,455 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:29:20,501 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:20,514 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:20,545 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014500] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+2017-09-27 10:29:20,545 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:29:20,545 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:29:20,545 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:20,622 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 77 ms with result: SqlDataReader
+
+2017-09-27 10:29:20,622 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:29:20,624 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:20,677 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:20,728 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[Type] AS [Type], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[ScreenName] AS [ScreenName], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[Avatar] AS [Avatar], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_User] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[Id] = @EntityKeyValue1)
+2017-09-27 10:29:20,728 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:29:20,728 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-09-27 10:29:20,728 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:29:20,728 [12] DEBUG Social.Domain.Core.SiteDataContext - -- EntityKeyValue1: '6' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:29:20,728 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:20,807 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 79 ms with result: SqlDataReader
+
+2017-09-27 10:29:20,807 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:29:20,827 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:20,851 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:29:20 AM +08:00
+
+2017-09-27 10:29:21,157 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project5].[Id3] AS [Id], 
+    [Project5].[Id6] AS [Id1], 
+    [Project5].[Id] AS [Id2], 
+    [Project5].[ConversationId] AS [ConversationId], 
+    [Project5].[Source] AS [Source], 
+    [Project5].[OriginalId] AS [OriginalId], 
+    [Project5].[OriginalLink] AS [OriginalLink], 
+    [Project5].[ParentId] AS [ParentId], 
+    [Project5].[SendTime] AS [SendTime], 
+    [Project5].[SenderId] AS [SenderId], 
+    [Project5].[ReceiverId] AS [ReceiverId], 
+    [Project5].[SendAgentId] AS [SendAgentId], 
+    [Project5].[Content] AS [Content], 
+    [Project5].[Story] AS [Story], 
+    [Project5].[IsDeleted] AS [IsDeleted], 
+    [Project5].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project5].[Id1] AS [Id3], 
+    [Project5].[OriginalId1] AS [OriginalId1], 
+    [Project5].[OriginalLink1] AS [OriginalLink1], 
+    [Project5].[Source1] AS [Source1], 
+    [Project5].[Type] AS [Type], 
+    [Project5].[Name] AS [Name], 
+    [Project5].[ScreenName] AS [ScreenName], 
+    [Project5].[Email] AS [Email], 
+    [Project5].[Avatar] AS [Avatar], 
+    [Project5].[IsDeleted1] AS [IsDeleted1], 
+    [Project5].[SiteId] AS [SiteId], 
+    [Project5].[Id2] AS [Id4], 
+    [Project5].[Token] AS [Token], 
+    [Project5].[TokenSecret] AS [TokenSecret], 
+    [Project5].[IfEnable] AS [IfEnable], 
+    [Project5].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Project5].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Project5].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Project5].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Project5].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Project5].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Project5].[CreatedTime] AS [CreatedTime], 
+    [Project5].[CreatedBy] AS [CreatedBy], 
+    [Project5].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Project5].[ConversationAgentId] AS [ConversationAgentId], 
+    [Project5].[IsDeleted2] AS [IsDeleted2], 
+    [Project5].[ConversationPriority] AS [ConversationPriority], 
+    [Project5].[SiteId1] AS [SiteId1], 
+    [Project5].[Id4] AS [Id5], 
+    [Project5].[OriginalId2] AS [OriginalId2], 
+    [Project5].[OriginalLink2] AS [OriginalLink2], 
+    [Project5].[Source2] AS [Source2], 
+    [Project5].[Type1] AS [Type1], 
+    [Project5].[Name1] AS [Name1], 
+    [Project5].[ScreenName1] AS [ScreenName1], 
+    [Project5].[Email1] AS [Email1], 
+    [Project5].[Avatar1] AS [Avatar1], 
+    [Project5].[IsDeleted3] AS [IsDeleted3], 
+    [Project5].[SiteId2] AS [SiteId2], 
+    [Project5].[Id5] AS [Id6], 
+    [Project5].[Token1] AS [Token1], 
+    [Project5].[TokenSecret1] AS [TokenSecret1], 
+    [Project5].[IfEnable1] AS [IfEnable1], 
+    [Project5].[IfConvertMessageToConversation1] AS [IfConvertMessageToConversation1], 
+    [Project5].[IfConvertVisitorPostToConversation1] AS [IfConvertVisitorPostToConversation1], 
+    [Project5].[IfConvertWallPostToConversation1] AS [IfConvertWallPostToConversation1], 
+    [Project5].[IfConvertTweetToConversation1] AS [IfConvertTweetToConversation1], 
+    [Project5].[FacebookPageCategory1] AS [FacebookPageCategory1], 
+    [Project5].[FacebookSignInAs1] AS [FacebookSignInAs1], 
+    [Project5].[CreatedTime1] AS [CreatedTime1], 
+    [Project5].[CreatedBy1] AS [CreatedBy1], 
+    [Project5].[ConversationDepartmentId1] AS [ConversationDepartmentId1], 
+    [Project5].[ConversationAgentId1] AS [ConversationAgentId1], 
+    [Project5].[IsDeleted4] AS [IsDeleted4], 
+    [Project5].[ConversationPriority1] AS [ConversationPriority1], 
+    [Project5].[SiteId3] AS [SiteId3], 
+    [Project5].[C1] AS [C1], 
+    [Project5].[Id7] AS [Id7], 
+    [Project5].[MessageId] AS [MessageId], 
+    [Project5].[OriginalId3] AS [OriginalId3], 
+    [Project5].[OriginalLink3] AS [OriginalLink3], 
+    [Project5].[Type2] AS [Type2], 
+    [Project5].[Name2] AS [Name2], 
+    [Project5].[MimeType] AS [MimeType], 
+    [Project5].[Size] AS [Size], 
+    [Project5].[Url] AS [Url], 
+    [Project5].[PreviewUrl] AS [PreviewUrl], 
+    [Project5].[RawData] AS [RawData]
+    FROM ( SELECT 
+        [Project3].[Id] AS [Id], 
+        [Project3].[ConversationId] AS [ConversationId], 
+        [Project3].[Source] AS [Source], 
+        [Project3].[OriginalId] AS [OriginalId], 
+        [Project3].[OriginalLink] AS [OriginalLink], 
+        [Project3].[ParentId] AS [ParentId], 
+        [Project3].[SendTime] AS [SendTime], 
+        [Project3].[SenderId] AS [SenderId], 
+        [Project3].[ReceiverId] AS [ReceiverId], 
+        [Project3].[SendAgentId] AS [SendAgentId], 
+        [Project3].[Content] AS [Content], 
+        [Project3].[Story] AS [Story], 
+        [Project3].[IsDeleted] AS [IsDeleted], 
+        [Project3].[QuoteTweetId] AS [QuoteTweetId], 
+        [Project3].[Id1] AS [Id1], 
+        [Project3].[OriginalId1] AS [OriginalId1], 
+        [Project3].[OriginalLink1] AS [OriginalLink1], 
+        [Project3].[Source1] AS [Source1], 
+        [Project3].[Type] AS [Type], 
+        [Project3].[Name] AS [Name], 
+        [Project3].[ScreenName] AS [ScreenName], 
+        [Project3].[Email] AS [Email], 
+        [Project3].[Avatar] AS [Avatar], 
+        [Project3].[IsDeleted1] AS [IsDeleted1], 
+        [Project3].[SiteId] AS [SiteId], 
+        [Project3].[Id2] AS [Id2], 
+        [Project3].[Token] AS [Token], 
+        [Project3].[TokenSecret] AS [TokenSecret], 
+        [Project3].[IfEnable] AS [IfEnable], 
+        [Project3].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+        [Project3].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+        [Project3].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+        [Project3].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+        [Project3].[FacebookPageCategory] AS [FacebookPageCategory], 
+        [Project3].[FacebookSignInAs] AS [FacebookSignInAs], 
+        [Project3].[CreatedTime] AS [CreatedTime], 
+        [Project3].[CreatedBy] AS [CreatedBy], 
+        [Project3].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+        [Project3].[ConversationAgentId] AS [ConversationAgentId], 
+        [Project3].[IsDeleted2] AS [IsDeleted2], 
+        [Project3].[ConversationPriority] AS [ConversationPriority], 
+        [Project3].[SiteId1] AS [SiteId1], 
+        [Project3].[Id3] AS [Id3], 
+        [Project3].[Id4] AS [Id4], 
+        [Project3].[OriginalId2] AS [OriginalId2], 
+        [Project3].[OriginalLink2] AS [OriginalLink2], 
+        [Project3].[Source2] AS [Source2], 
+        [Project3].[Type1] AS [Type1], 
+        [Project3].[Name1] AS [Name1], 
+        [Project3].[ScreenName1] AS [ScreenName1], 
+        [Project3].[Email1] AS [Email1], 
+        [Project3].[Avatar1] AS [Avatar1], 
+        [Project3].[IsDeleted3] AS [IsDeleted3], 
+        [Project3].[SiteId2] AS [SiteId2], 
+        [Element2].[Id] AS [Id5], 
+        [Element2].[Token] AS [Token1], 
+        [Element2].[TokenSecret] AS [TokenSecret1], 
+        [Element2].[IfEnable] AS [IfEnable1], 
+        [Element2].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation1], 
+        [Element2].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation1], 
+        [Element2].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation1], 
+        [Element2].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation1], 
+        [Element2].[FacebookPageCategory] AS [FacebookPageCategory1], 
+        [Element2].[FacebookSignInAs] AS [FacebookSignInAs1], 
+        [Element2].[CreatedTime] AS [CreatedTime1], 
+        [Element2].[CreatedBy] AS [CreatedBy1], 
+        [Element2].[ConversationDepartmentId] AS [ConversationDepartmentId1], 
+        [Element2].[ConversationAgentId] AS [ConversationAgentId1], 
+        [Element2].[IsDeleted] AS [IsDeleted4], 
+        [Element2].[ConversationPriority] AS [ConversationPriority1], 
+        [Element2].[SiteId] AS [SiteId3], 
+        [Element2].[Id1] AS [Id6], 
+        [Extent8].[Id] AS [Id7], 
+        [Extent8].[MessageId] AS [MessageId], 
+        [Extent8].[OriginalId] AS [OriginalId3], 
+        [Extent8].[OriginalLink] AS [OriginalLink3], 
+        [Extent8].[Type] AS [Type2], 
+        [Extent8].[Name] AS [Name2], 
+        [Extent8].[MimeType] AS [MimeType], 
+        [Extent8].[Size] AS [Size], 
+        [Extent8].[Url] AS [Url], 
+        [Extent8].[PreviewUrl] AS [PreviewUrl], 
+        [Extent8].[RawData] AS [RawData], 
+        CASE WHEN ([Extent8].[Id] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    (SELECT 
+            [Project1].[Id] AS [Id], 
+            [Project1].[ConversationId] AS [ConversationId], 
+            [Project1].[Source] AS [Source], 
+            [Project1].[OriginalId] AS [OriginalId], 
+            [Project1].[OriginalLink] AS [OriginalLink], 
+            [Project1].[ParentId] AS [ParentId], 
+            [Project1].[SendTime] AS [SendTime], 
+            [Project1].[SenderId] AS [SenderId], 
+            [Project1].[ReceiverId] AS [ReceiverId], 
+            [Project1].[SendAgentId] AS [SendAgentId], 
+            [Project1].[Content] AS [Content], 
+            [Project1].[Story] AS [Story], 
+            [Project1].[IsDeleted] AS [IsDeleted], 
+            [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+            [Project1].[Id1] AS [Id1], 
+            [Project1].[OriginalId1] AS [OriginalId1], 
+            [Project1].[OriginalLink1] AS [OriginalLink1], 
+            [Project1].[Source1] AS [Source1], 
+            [Project1].[Type] AS [Type], 
+            [Project1].[Name] AS [Name], 
+            [Project1].[ScreenName] AS [ScreenName], 
+            [Project1].[Email] AS [Email], 
+            [Project1].[Avatar] AS [Avatar], 
+            [Project1].[IsDeleted1] AS [IsDeleted1], 
+            [Project1].[SiteId] AS [SiteId], 
+            [Element1].[Id] AS [Id2], 
+            [Element1].[Token] AS [Token], 
+            [Element1].[TokenSecret] AS [TokenSecret], 
+            [Element1].[IfEnable] AS [IfEnable], 
+            [Element1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Element1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Element1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Element1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Element1].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Element1].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Element1].[CreatedTime] AS [CreatedTime], 
+            [Element1].[CreatedBy] AS [CreatedBy], 
+            [Element1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Element1].[ConversationAgentId] AS [ConversationAgentId], 
+            [Element1].[IsDeleted] AS [IsDeleted2], 
+            [Element1].[ConversationPriority] AS [ConversationPriority], 
+            [Element1].[SiteId] AS [SiteId1], 
+            [Element1].[Id1] AS [Id3], 
+            [Extent5].[Id] AS [Id4], 
+            [Extent5].[OriginalId] AS [OriginalId2], 
+            [Extent5].[OriginalLink] AS [OriginalLink2], 
+            [Extent5].[Source] AS [Source2], 
+            [Extent5].[Type] AS [Type1], 
+            [Extent5].[Name] AS [Name1], 
+            [Extent5].[ScreenName] AS [ScreenName1], 
+            [Extent5].[Email] AS [Email1], 
+            [Extent5].[Avatar] AS [Avatar1], 
+            [Extent5].[IsDeleted] AS [IsDeleted3], 
+            [Extent5].[SiteId] AS [SiteId2]
+            FROM    (SELECT 
+                [Extent1].[Id] AS [Id], 
+                [Extent1].[ConversationId] AS [ConversationId], 
+                [Extent1].[Source] AS [Source], 
+                [Extent1].[OriginalId] AS [OriginalId], 
+                [Extent1].[OriginalLink] AS [OriginalLink], 
+                [Extent1].[ParentId] AS [ParentId], 
+                [Extent1].[SendTime] AS [SendTime], 
+                [Extent1].[SenderId] AS [SenderId], 
+                [Extent1].[ReceiverId] AS [ReceiverId], 
+                [Extent1].[SendAgentId] AS [SendAgentId], 
+                [Extent1].[Content] AS [Content], 
+                [Extent1].[Story] AS [Story], 
+                [Extent1].[IsDeleted] AS [IsDeleted], 
+                [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+                [Extent2].[Id] AS [Id1], 
+                [Extent2].[OriginalId] AS [OriginalId1], 
+                [Extent2].[OriginalLink] AS [OriginalLink1], 
+                [Extent2].[Source] AS [Source1], 
+                [Extent2].[Type] AS [Type], 
+                [Extent2].[Name] AS [Name], 
+                [Extent2].[ScreenName] AS [ScreenName], 
+                [Extent2].[Email] AS [Email], 
+                [Extent2].[Avatar] AS [Avatar], 
+                [Extent2].[IsDeleted] AS [IsDeleted1], 
+                [Extent2].[SiteId] AS [SiteId]
+                FROM  [dbo].[t_Social_Message100014500] AS [Extent1]
+                LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON (([Extent2].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[SenderId] = [Extent2].[Id])
+                WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0) ) AS [Project1]
+            OUTER APPLY  (SELECT TOP (1) 
+                [Extent3].[Id] AS [Id], 
+                [Extent3].[Token] AS [Token], 
+                [Extent3].[TokenSecret] AS [TokenSecret], 
+                [Extent3].[IfEnable] AS [IfEnable], 
+                [Extent3].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+                [Extent3].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+                [Extent3].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+                [Extent3].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+                [Extent3].[FacebookPageCategory] AS [FacebookPageCategory], 
+                [Extent3].[FacebookSignInAs] AS [FacebookSignInAs], 
+                [Extent3].[CreatedTime] AS [CreatedTime], 
+                [Extent3].[CreatedBy] AS [CreatedBy], 
+                [Extent3].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+                [Extent3].[ConversationAgentId] AS [ConversationAgentId], 
+                [Extent3].[IsDeleted] AS [IsDeleted], 
+                [Extent3].[ConversationPriority] AS [ConversationPriority], 
+                [Extent3].[SiteId] AS [SiteId], 
+                [Extent4].[Id] AS [Id1]
+                FROM  [dbo].[t_Social_Account] AS [Extent3]
+                INNER JOIN [dbo].[t_Social_User] AS [Extent4] ON [Extent4].[Id] = [Extent3].[Id]
+                WHERE (([Extent4].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Project1].[SenderId] = [Extent4].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) ) AS [Element1]
+            LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent5] ON (([Extent5].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Project1].[ReceiverId] = [Extent5].[Id]) ) AS [Project3]
+        OUTER APPLY  (SELECT TOP (1) 
+            [Extent6].[Id] AS [Id], 
+            [Extent6].[Token] AS [Token], 
+            [Extent6].[TokenSecret] AS [TokenSecret], 
+            [Extent6].[IfEnable] AS [IfEnable], 
+            [Extent6].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Extent6].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Extent6].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Extent6].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Extent6].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Extent6].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Extent6].[CreatedTime] AS [CreatedTime], 
+            [Extent6].[CreatedBy] AS [CreatedBy], 
+            [Extent6].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Extent6].[ConversationAgentId] AS [ConversationAgentId], 
+            [Extent6].[IsDeleted] AS [IsDeleted], 
+            [Extent6].[ConversationPriority] AS [ConversationPriority], 
+            [Extent6].[SiteId] AS [SiteId], 
+            [Extent7].[Id] AS [Id1]
+            FROM  [dbo].[t_Social_Account] AS [Extent6]
+            INNER JOIN [dbo].[t_Social_User] AS [Extent7] ON [Extent7].[Id] = [Extent6].[Id]
+            WHERE (([Extent7].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Project3].[ReceiverId] = [Extent7].[Id]) AND (([Extent6].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) ) AS [Element2]
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014500] AS [Extent8] ON [Project3].[Id] = [Extent8].[MessageId]
+    )  AS [Project5]
+    ORDER BY [Project5].[Id3] ASC, [Project5].[Id6] ASC, [Project5].[Id] ASC, [Project5].[Id1] ASC, [Project5].[Id2] ASC, [Project5].[Id4] ASC, [Project5].[Id5] ASC, [Project5].[C1] ASC
+2017-09-27 10:29:21,157 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:29:21,157 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-09-27 10:29:21,157 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-09-27 10:29:21,157 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+2017-09-27 10:29:21,158 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:29:21 AM +08:00
+
+2017-09-27 10:29:21,351 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 193 ms with result: SqlDataReader
+
+2017-09-27 10:29:21,351 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:29:21,386 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:29:21 AM +08:00
+
+2017-09-27 10:29:21,437 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 9/27/2017 10:29:21 AM +08:00
+
+2017-09-27 10:29:21,554 [12] DEBUG Social.Domain.Core.SiteDataContext - UPDATE [dbo].[t_Social_Conversation100014500]
+SET [Source] = @0, [OriginalId] = @1, [IfRead] = @2, [LastMessageSentTime] = @3, [LastMessageSenderId] = @4, [LastRepliedAgentId] = NULL, [AgentId] = NULL, [DepartmentId] = NULL, [Status] = @5, [Subject] = @6, [Priority] = @7, [Note] = NULL, [IsDeleted] = @8, [IsHidden] = @9, [CreatedTime] = @10, [ModifiedTime] = @11
+WHERE ([Id] = @12)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @0: '4' (Type = Int16)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @1: '910038714230890497' (Type = String, Size = 200)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @2: 'True' (Type = Boolean)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @3: '9/19/2017 7:11:51 AM' (Type = DateTime2)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @4: '6' (Type = Int32)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @5: '4' (Type = Int16)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @6: '@richhashiqi @zhou_vico ????' (Type = String, Size = 200)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @7: '1' (Type = Int16)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @8: 'False' (Type = Boolean)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @9: 'False' (Type = Boolean)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @10: '9/19/2017 7:16:02 AM' (Type = DateTime2)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @11: '9/27/2017 2:29:21 AM' (Type = DateTime2)
+
+2017-09-27 10:29:21,555 [12] DEBUG Social.Domain.Core.SiteDataContext - -- @12: '15' (Type = Int32)
+
+2017-09-27 10:29:21,556 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 9/27/2017 10:29:21 AM +08:00
+
+2017-09-27 10:29:21,638 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 79 ms with result: 1
+
+2017-09-27 10:29:21,638 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-09-27 10:29:21,641 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 9/27/2017 10:29:21 AM +08:00
+

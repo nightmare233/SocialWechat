@@ -1,0 +1,637 @@
+2017-08-09 10:03:10,763 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-09 10:03:12,292 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-09 17:35:36,229 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-09 17:35:38,999 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-09 17:37:42,565 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-09 17:37:45,247 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-09 17:47:55,617 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-09 17:47:58,316 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-09 17:48:30,709 [14] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 5:48:30 PM +08:00
+
+2017-08-09 17:48:31,986 [14] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[Type] AS [Type], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[ScreenName] AS [ScreenName], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[Avatar] AS [Avatar], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_User] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[OriginalId] = @p__linq__0)
+2017-08-09 17:48:31,986 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:48:31,988 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 17:48:31,988 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 17:48:31,988 [14] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '156173874958313' (Type = String, Size = 4000)
+
+2017-08-09 17:48:31,988 [14] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 5:48:31 PM +08:00
+
+2017-08-09 17:48:32,029 [14] DEBUG Social.Domain.SiteDataContext - -- Completed in 40 ms with result: SqlDataReader
+
+2017-08-09 17:48:32,030 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:48:32,085 [14] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 5:48:32 PM +08:00
+
+2017-08-09 17:48:36,217 [14] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 5:48:36 PM +08:00
+
+2017-08-09 17:48:36,273 [14] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Token] AS [Token], 
+    [Extent1].[TokenSecret] AS [TokenSecret], 
+    [Extent1].[IfEnable] AS [IfEnable], 
+    [Extent1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Extent1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Extent1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Extent1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Extent1].[ConversationAgentId] AS [ConversationAgentId], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[ConversationPriority] AS [ConversationPriority], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Account] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[Id] = @EntityKeyValue1)
+2017-08-09 17:48:36,273 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:48:36,274 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 17:48:36,274 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 17:48:36,274 [14] DEBUG Social.Domain.SiteDataContext - -- EntityKeyValue1: '1006' (Type = Int32, IsNullable = false)
+
+2017-08-09 17:48:36,274 [14] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 5:48:36 PM +08:00
+
+2017-08-09 17:48:36,289 [14] DEBUG Social.Domain.SiteDataContext - -- Completed in 15 ms with result: SqlDataReader
+
+2017-08-09 17:48:36,289 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:48:36,290 [14] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 5:48:36 PM +08:00
+
+2017-08-09 17:48:58,153 [14] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 5:48:58 PM +08:00
+
+2017-08-09 17:48:58,173 [14] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Distinct1].[ConversationId] AS [ConversationId]
+    FROM ( SELECT DISTINCT 
+        [Extent1].[ConversationId] AS [ConversationId]
+        FROM [dbo].[t_Social_Message] AS [Extent1]
+        WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[SenderId] = @p__linq__0 OR [Extent1].[ReceiverId] = @p__linq__1)
+    )  AS [Distinct1]
+2017-08-09 17:48:58,173 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:48:58,173 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 17:48:58,173 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 17:48:58,173 [14] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '1006' (Type = Int32, IsNullable = false)
+
+2017-08-09 17:48:58,173 [14] DEBUG Social.Domain.SiteDataContext - -- p__linq__1: '1006' (Type = Int32, IsNullable = false)
+
+2017-08-09 17:48:58,173 [14] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 5:48:58 PM +08:00
+
+2017-08-09 17:48:58,192 [14] DEBUG Social.Domain.SiteDataContext - -- Completed in 19 ms with result: SqlDataReader
+
+2017-08-09 17:48:58,192 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:48:58,196 [14] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 5:48:58 PM +08:00
+
+2017-08-09 17:49:27,865 [14] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 5:49:27 PM +08:00
+
+2017-08-09 17:49:27,912 [14] DEBUG Social.Domain.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Conversation] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[Id] = @p0)
+2017-08-09 17:49:27,912 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:49:27,912 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 17:49:27,912 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 17:49:27,912 [14] DEBUG Social.Domain.SiteDataContext - -- p0: '2020' (Type = Int32)
+
+2017-08-09 17:49:27,912 [14] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 5:49:27 PM +08:00
+
+2017-08-09 17:49:27,924 [14] DEBUG Social.Domain.SiteDataContext - -- Completed in 11 ms with result: SqlDataReader
+
+2017-08-09 17:49:27,924 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:49:27,941 [14] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 5:49:27 PM +08:00
+
+2017-08-09 17:49:48,433 [14] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 5:49:48 PM +08:00
+
+2017-08-09 17:49:48,455 [14] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ConversationId] AS [ConversationId], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[ParentId] AS [ParentId], 
+    [Extent1].[SendTime] AS [SendTime], 
+    [Extent1].[SenderId] AS [SenderId], 
+    [Extent1].[ReceiverId] AS [ReceiverId], 
+    [Extent1].[SendAgentId] AS [SendAgentId], 
+    [Extent1].[Content] AS [Content], 
+    [Extent1].[Story] AS [Story], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Message] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[ConversationId] = @EntityKeyValue1)
+2017-08-09 17:49:48,455 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:49:48,455 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 17:49:48,455 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 17:49:48,455 [14] DEBUG Social.Domain.SiteDataContext - -- EntityKeyValue1: '2020' (Type = Int32, IsNullable = false)
+
+2017-08-09 17:49:48,455 [14] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 5:49:48 PM +08:00
+
+2017-08-09 17:49:48,484 [14] DEBUG Social.Domain.SiteDataContext - -- Completed in 28 ms with result: SqlDataReader
+
+2017-08-09 17:49:48,484 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:49:48,552 [14] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 5:49:48 PM +08:00
+
+2017-08-09 17:49:54,584 [14] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 5:49:54 PM +08:00
+
+2017-08-09 17:49:54,587 [14] DEBUG Social.Domain.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Token] AS [Token], 
+    [Extent1].[TokenSecret] AS [TokenSecret], 
+    [Extent1].[IfEnable] AS [IfEnable], 
+    [Extent1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Extent1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Extent1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Extent1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Extent1].[ConversationAgentId] AS [ConversationAgentId], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[ConversationPriority] AS [ConversationPriority], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Account] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[Id] = @p0)
+2017-08-09 17:49:54,587 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:49:54,587 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 17:49:54,587 [14] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 17:49:54,587 [14] DEBUG Social.Domain.SiteDataContext - -- p0: '6' (Type = Int32)
+
+2017-08-09 17:49:54,587 [14] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 5:49:54 PM +08:00
+
+2017-08-09 17:49:54,603 [14] DEBUG Social.Domain.SiteDataContext - -- Completed in 15 ms with result: SqlDataReader
+
+2017-08-09 17:49:54,603 [14] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:49:54,612 [14] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 5:49:54 PM +08:00
+
+2017-08-09 17:54:32,820 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-09 17:54:35,588 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-09 17:55:16,220 [12] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 5:55:16 PM +08:00
+
+2017-08-09 17:55:17,447 [12] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[Type] AS [Type], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[ScreenName] AS [ScreenName], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[Avatar] AS [Avatar], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_User] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[OriginalId] = @p__linq__0)
+2017-08-09 17:55:17,448 [12] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:55:17,449 [12] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 17:55:17,449 [12] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 17:55:17,449 [12] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '156173874958313' (Type = String, Size = 4000)
+
+2017-08-09 17:55:17,450 [12] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 5:55:17 PM +08:00
+
+2017-08-09 17:55:17,530 [12] DEBUG Social.Domain.SiteDataContext - -- Completed in 78 ms with result: SqlDataReader
+
+2017-08-09 17:55:17,530 [12] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:55:17,583 [12] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 5:55:17 PM +08:00
+
+2017-08-09 17:55:20,507 [12] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 5:55:20 PM +08:00
+
+2017-08-09 17:55:20,537 [12] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Distinct1].[ConversationId] AS [ConversationId]
+    FROM ( SELECT DISTINCT 
+        [Extent1].[ConversationId] AS [ConversationId]
+        FROM [dbo].[t_Social_Message] AS [Extent1]
+        WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[SenderId] = @p__linq__0 OR [Extent1].[ReceiverId] = @p__linq__1)
+    )  AS [Distinct1]
+2017-08-09 17:55:20,537 [12] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:55:20,537 [12] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 17:55:20,537 [12] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 17:55:20,537 [12] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '1006' (Type = Int32, IsNullable = false)
+
+2017-08-09 17:55:20,537 [12] DEBUG Social.Domain.SiteDataContext - -- p__linq__1: '1006' (Type = Int32, IsNullable = false)
+
+2017-08-09 17:55:20,537 [12] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 5:55:20 PM +08:00
+
+2017-08-09 17:55:20,548 [12] DEBUG Social.Domain.SiteDataContext - -- Completed in 10 ms with result: SqlDataReader
+
+2017-08-09 17:55:20,548 [12] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:55:20,551 [12] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 5:55:20 PM +08:00
+
+2017-08-09 17:55:20,600 [12] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 5:55:20 PM +08:00
+
+2017-08-09 17:55:20,669 [12] DEBUG Social.Domain.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Conversation] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[Id] = @p0)
+2017-08-09 17:55:20,669 [12] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:55:20,669 [12] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 17:55:20,669 [12] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 17:55:20,669 [12] DEBUG Social.Domain.SiteDataContext - -- p0: '2020' (Type = Int32)
+
+2017-08-09 17:55:20,669 [12] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 5:55:20 PM +08:00
+
+2017-08-09 17:55:20,672 [12] DEBUG Social.Domain.SiteDataContext - -- Completed in 2 ms with result: SqlDataReader
+
+2017-08-09 17:55:20,672 [12] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:55:20,691 [12] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 5:55:20 PM +08:00
+
+2017-08-09 17:55:28,923 [12] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 5:55:28 PM +08:00
+
+2017-08-09 17:55:28,948 [12] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ConversationId] AS [ConversationId], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[ParentId] AS [ParentId], 
+    [Extent1].[SendTime] AS [SendTime], 
+    [Extent1].[SenderId] AS [SenderId], 
+    [Extent1].[ReceiverId] AS [ReceiverId], 
+    [Extent1].[SendAgentId] AS [SendAgentId], 
+    [Extent1].[Content] AS [Content], 
+    [Extent1].[Story] AS [Story], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Message] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[ConversationId] = @EntityKeyValue1)
+2017-08-09 17:55:28,948 [12] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:55:28,948 [12] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 17:55:28,948 [12] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 17:55:28,948 [12] DEBUG Social.Domain.SiteDataContext - -- EntityKeyValue1: '2020' (Type = Int32, IsNullable = false)
+
+2017-08-09 17:55:28,948 [12] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 5:55:28 PM +08:00
+
+2017-08-09 17:55:28,951 [12] DEBUG Social.Domain.SiteDataContext - -- Completed in 2 ms with result: SqlDataReader
+
+2017-08-09 17:55:28,951 [12] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:55:28,981 [12] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 5:55:28 PM +08:00
+
+2017-08-09 17:55:32,753 [12] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 5:55:32 PM +08:00
+
+2017-08-09 17:55:32,776 [12] DEBUG Social.Domain.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Token] AS [Token], 
+    [Extent1].[TokenSecret] AS [TokenSecret], 
+    [Extent1].[IfEnable] AS [IfEnable], 
+    [Extent1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Extent1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Extent1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Extent1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Extent1].[ConversationAgentId] AS [ConversationAgentId], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[ConversationPriority] AS [ConversationPriority], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Account] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[Id] = @p0)
+2017-08-09 17:55:32,777 [12] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:55:32,777 [12] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 17:55:32,777 [12] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 17:55:32,777 [12] DEBUG Social.Domain.SiteDataContext - -- p0: '6' (Type = Int32)
+
+2017-08-09 17:55:32,777 [12] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 5:55:32 PM +08:00
+
+2017-08-09 17:55:32,790 [12] DEBUG Social.Domain.SiteDataContext - -- Completed in 12 ms with result: SqlDataReader
+
+2017-08-09 17:55:32,790 [12] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 17:55:32,797 [12] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 5:55:32 PM +08:00
+
+2017-08-09 18:00:53,955 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-09 18:00:54,885 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-09 18:01:32,682 [16] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 6:01:32 PM +08:00
+
+2017-08-09 18:01:33,848 [16] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[Type] AS [Type], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[ScreenName] AS [ScreenName], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[Avatar] AS [Avatar], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_User] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[OriginalId] = @p__linq__0)
+2017-08-09 18:01:33,848 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:33,850 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 18:01:33,850 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 18:01:33,850 [16] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '880620227460866048' (Type = String, Size = 4000)
+
+2017-08-09 18:01:33,850 [16] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 6:01:33 PM +08:00
+
+2017-08-09 18:01:33,900 [16] DEBUG Social.Domain.SiteDataContext - -- Completed in 49 ms with result: SqlDataReader
+
+2017-08-09 18:01:33,900 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:33,961 [16] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 6:01:33 PM +08:00
+
+2017-08-09 18:01:35,803 [16] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 6:01:35 PM +08:00
+
+2017-08-09 18:01:35,830 [16] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Distinct1].[ConversationId] AS [ConversationId]
+    FROM ( SELECT DISTINCT 
+        [Extent1].[ConversationId] AS [ConversationId]
+        FROM [dbo].[t_Social_Message] AS [Extent1]
+        WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[SenderId] = @p__linq__0 OR [Extent1].[ReceiverId] = @p__linq__1)
+    )  AS [Distinct1]
+2017-08-09 18:01:35,830 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:35,830 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 18:01:35,830 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 18:01:35,830 [16] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+2017-08-09 18:01:35,830 [16] DEBUG Social.Domain.SiteDataContext - -- p__linq__1: '15' (Type = Int32, IsNullable = false)
+
+2017-08-09 18:01:35,830 [16] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 6:01:35 PM +08:00
+
+2017-08-09 18:01:35,845 [16] DEBUG Social.Domain.SiteDataContext - -- Completed in 14 ms with result: SqlDataReader
+
+2017-08-09 18:01:35,845 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:35,849 [16] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 6:01:35 PM +08:00
+
+2017-08-09 18:01:35,897 [16] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 6:01:35 PM +08:00
+
+2017-08-09 18:01:35,959 [16] DEBUG Social.Domain.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Conversation] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[Id] = @p0)
+2017-08-09 18:01:35,959 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:35,959 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 18:01:35,959 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 18:01:35,959 [16] DEBUG Social.Domain.SiteDataContext - -- p0: '1019' (Type = Int32)
+
+2017-08-09 18:01:35,959 [16] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 6:01:35 PM +08:00
+
+2017-08-09 18:01:35,998 [16] DEBUG Social.Domain.SiteDataContext - -- Completed in 39 ms with result: SqlDataReader
+
+2017-08-09 18:01:35,998 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:36,020 [16] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 6:01:36 PM +08:00
+
+2017-08-09 18:01:36,028 [16] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 6:01:36 PM +08:00
+
+2017-08-09 18:01:36,029 [16] DEBUG Social.Domain.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Conversation] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[Id] = @p0)
+2017-08-09 18:01:36,029 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:36,029 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 18:01:36,029 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 18:01:36,029 [16] DEBUG Social.Domain.SiteDataContext - -- p0: '1020' (Type = Int32)
+
+2017-08-09 18:01:36,029 [16] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 6:01:36 PM +08:00
+
+2017-08-09 18:01:36,031 [16] DEBUG Social.Domain.SiteDataContext - -- Completed in 1 ms with result: SqlDataReader
+
+2017-08-09 18:01:36,031 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:36,049 [16] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 6:01:36 PM +08:00
+
+2017-08-09 18:01:45,671 [16] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 6:01:45 PM +08:00
+
+2017-08-09 18:01:45,698 [16] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ConversationId] AS [ConversationId], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[ParentId] AS [ParentId], 
+    [Extent1].[SendTime] AS [SendTime], 
+    [Extent1].[SenderId] AS [SenderId], 
+    [Extent1].[ReceiverId] AS [ReceiverId], 
+    [Extent1].[SendAgentId] AS [SendAgentId], 
+    [Extent1].[Content] AS [Content], 
+    [Extent1].[Story] AS [Story], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Message] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[ConversationId] = @EntityKeyValue1)
+2017-08-09 18:01:45,698 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:45,698 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 18:01:45,698 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 18:01:45,698 [16] DEBUG Social.Domain.SiteDataContext - -- EntityKeyValue1: '1019' (Type = Int32, IsNullable = false)
+
+2017-08-09 18:01:45,698 [16] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 6:01:45 PM +08:00
+
+2017-08-09 18:01:45,701 [16] DEBUG Social.Domain.SiteDataContext - -- Completed in 3 ms with result: SqlDataReader
+
+2017-08-09 18:01:45,701 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:45,716 [16] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 6:01:45 PM +08:00
+
+2017-08-09 18:01:52,381 [16] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 6:01:52 PM +08:00
+
+2017-08-09 18:01:52,403 [16] DEBUG Social.Domain.SiteDataContext - SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Token] AS [Token], 
+    [Extent1].[TokenSecret] AS [TokenSecret], 
+    [Extent1].[IfEnable] AS [IfEnable], 
+    [Extent1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Extent1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Extent1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Extent1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Extent1].[ConversationAgentId] AS [ConversationAgentId], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[ConversationPriority] AS [ConversationPriority], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_Account] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[Id] = @p0)
+2017-08-09 18:01:52,403 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:52,403 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 18:01:52,403 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 18:01:52,403 [16] DEBUG Social.Domain.SiteDataContext - -- p0: '13' (Type = Int32)
+
+2017-08-09 18:01:52,403 [16] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 6:01:52 PM +08:00
+
+2017-08-09 18:01:52,429 [16] DEBUG Social.Domain.SiteDataContext - -- Completed in 25 ms with result: SqlDataReader
+
+2017-08-09 18:01:52,429 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:52,435 [16] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 6:01:52 PM +08:00
+
+2017-08-09 18:01:57,758 [16] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/9/2017 6:01:57 PM +08:00
+
+2017-08-09 18:01:57,762 [16] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[Type] AS [Type], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[ScreenName] AS [ScreenName], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[Avatar] AS [Avatar], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[SiteId] AS [SiteId]
+    FROM [dbo].[t_Social_User] AS [Extent1]
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[Id] = @EntityKeyValue1)
+2017-08-09 18:01:57,762 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:57,762 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-09 18:01:57,762 [16] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-09 18:01:57,762 [16] DEBUG Social.Domain.SiteDataContext - -- EntityKeyValue1: '13' (Type = Int32, IsNullable = false)
+
+2017-08-09 18:01:57,762 [16] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/9/2017 6:01:57 PM +08:00
+
+2017-08-09 18:01:57,766 [16] DEBUG Social.Domain.SiteDataContext - -- Completed in 4 ms with result: SqlDataReader
+
+2017-08-09 18:01:57,766 [16] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-09 18:01:57,771 [16] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/9/2017 6:01:57 PM +08:00
+

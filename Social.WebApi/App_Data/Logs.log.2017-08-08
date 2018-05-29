@@ -1,0 +1,1723 @@
+2017-08-08 14:50:12,347 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 14:50:14,750 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 14:53:22,637 [13] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Social.Domain.DomainServices.TwitterAuthService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Domain\DomainServices\TwitterAuthService.cs:line 43
+   at Social.Application.AppServices.TwitterAccountAppService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Application\AppServices\TwitterAccountAppService.cs:line 51
+   at Social.WebApi.Controllers.TwitterAccountsController.IntegrationRequest(String redirectUri) in F:\social\social_20170728\Social\Social.WebApi\Controllers\TwitterAccountsController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 15:02:28,999 [15] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Social.Domain.DomainServices.TwitterAuthService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Domain\DomainServices\TwitterAuthService.cs:line 43
+   at Social.Application.AppServices.TwitterAccountAppService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Application\AppServices\TwitterAccountAppService.cs:line 51
+   at Social.WebApi.Controllers.TwitterAccountsController.IntegrationRequest(String redirectUri) in F:\social\social_20170728\Social\Social.WebApi\Controllers\TwitterAccountsController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 15:03:13,405 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 15:03:14,815 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 15:03:41,600 [30] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Social.Domain.DomainServices.TwitterAuthService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Domain\DomainServices\TwitterAuthService.cs:line 43
+   at Social.Application.AppServices.TwitterAccountAppService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Application\AppServices\TwitterAccountAppService.cs:line 51
+   at Social.WebApi.Controllers.TwitterAccountsController.IntegrationRequest(String redirectUri) in F:\social\social_20170728\Social\Social.WebApi\Controllers\TwitterAccountsController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 15:05:28,173 [21] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Social.Domain.DomainServices.TwitterAuthService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Domain\DomainServices\TwitterAuthService.cs:line 43
+   at Social.Application.AppServices.TwitterAccountAppService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Application\AppServices\TwitterAccountAppService.cs:line 51
+   at Social.WebApi.Controllers.TwitterAccountsController.IntegrationRequest(String redirectUri) in F:\social\social_20170728\Social\Social.WebApi\Controllers\TwitterAccountsController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 15:05:31,447 [22] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Social.Domain.DomainServices.TwitterAuthService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Domain\DomainServices\TwitterAuthService.cs:line 43
+   at Social.Application.AppServices.TwitterAccountAppService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Application\AppServices\TwitterAccountAppService.cs:line 51
+   at Social.WebApi.Controllers.TwitterAccountsController.IntegrationRequest(String redirectUri) in F:\social\social_20170728\Social\Social.WebApi\Controllers\TwitterAccountsController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 15:10:41,225 [9] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/8/2017 3:10:41 PM +08:00
+
+2017-08-08 15:10:42,224 [9] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[IfEnable] AS [IfEnable], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[ScreenName] AS [ScreenName], 
+    [Extent2].[Avatar] AS [Avatar]
+    FROM  [dbo].[t_Social_Account] AS [Extent1]
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON ([Extent1].[Id] = [Extent2].[Id]) AND (([Extent2].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL))
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND (0 = [Extent1].[IsDeleted]) AND (1 = [Extent2].[Source])
+2017-08-08 15:10:42,224 [9] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 15:10:42,226 [9] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-08 15:10:42,226 [9] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-08 15:10:42,226 [9] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/8/2017 3:10:42 PM +08:00
+
+2017-08-08 15:10:42,258 [9] DEBUG Social.Domain.SiteDataContext - -- Completed in 30 ms with result: SqlDataReader
+
+2017-08-08 15:10:42,258 [9] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 15:10:42,272 [9] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 3:10:42 PM +08:00
+
+2017-08-08 15:23:07,391 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 15:23:09,290 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 15:23:11,825 [24] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Social.Domain.DomainServices.TwitterAuthService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Domain\DomainServices\TwitterAuthService.cs:line 43
+   at Social.Application.AppServices.TwitterAccountAppService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Application\AppServices\TwitterAccountAppService.cs:line 51
+   at Social.WebApi.Controllers.TwitterAccountsController.IntegrationRequest(String redirectUri) in F:\social\social_20170728\Social\Social.WebApi\Controllers\TwitterAccountsController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 15:33:04,944 [60] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Social.Domain.DomainServices.TwitterAuthService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Domain\DomainServices\TwitterAuthService.cs:line 43
+   at Social.Application.AppServices.TwitterAccountAppService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Application\AppServices\TwitterAccountAppService.cs:line 51
+   at Social.WebApi.Controllers.TwitterAccountsController.IntegrationRequest(String redirectUri) in F:\social\social_20170728\Social\Social.WebApi\Controllers\TwitterAccountsController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 15:39:45,765 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 15:39:47,179 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 15:41:54,513 [13] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Social.Domain.DomainServices.TwitterAuthService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Domain\DomainServices\TwitterAuthService.cs:line 43
+   at Social.Application.AppServices.TwitterAccountAppService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Application\AppServices\TwitterAccountAppService.cs:line 51
+   at Social.WebApi.Controllers.TwitterAccountsController.IntegrationRequest(String redirectUri) in F:\social\social_20170728\Social\Social.WebApi\Controllers\TwitterAccountsController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 15:46:59,038 [39] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Social.Domain.DomainServices.TwitterAuthService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Domain\DomainServices\TwitterAuthService.cs:line 43
+   at Social.Application.AppServices.TwitterAccountAppService.InitAuthentication(String redirectUri) in F:\social\social_20170728\Social\Social.Application\AppServices\TwitterAccountAppService.cs:line 51
+   at Social.WebApi.Controllers.TwitterAccountsController.IntegrationRequest(String redirectUri) in F:\social\social_20170728\Social\Social.WebApi\Controllers\TwitterAccountsController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 16:22:54,124 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 16:22:55,946 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 16:23:07,758 [11] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/8/2017 4:23:07 PM +08:00
+
+2017-08-08 16:23:09,016 [11] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[IfEnable] AS [IfEnable], 
+    [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Avatar] AS [Avatar]
+    FROM  [dbo].[t_Social_Account] AS [Extent1]
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON ([Extent1].[Id] = [Extent2].[Id]) AND (([Extent2].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL))
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND (0 = [Extent1].[IsDeleted]) AND (0 = [Extent2].[Source])
+2017-08-08 16:23:09,016 [11] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 16:23:09,019 [11] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-08 16:23:09,019 [11] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-08 16:23:09,020 [11] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/8/2017 4:23:09 PM +08:00
+
+2017-08-08 16:23:09,071 [11] DEBUG Social.Domain.SiteDataContext - -- Completed in 50 ms with result: SqlDataReader
+
+2017-08-08 16:23:09,071 [11] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 16:23:09,088 [11] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 4:23:09 PM +08:00
+
+2017-08-08 16:24:38,924 [13] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 16:24:39,647 [13] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 16:32:56,931 [86] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 16:32:58,284 [86] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 16:36:49,436 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 16:36:50,879 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 16:37:47,727 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 16:37:48,535 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 16:39:19,698 [13] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 16:39:21,425 [13] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 16:40:17,216 [32] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.GetUserToken(String code, String redirectUri) in F:\social\social_20170728\Social\Social.Infrastructure\Facebook\FbClient.cs:line 39
+   at Social.Application.AppServices.FacebookAccountAppService.<GetPendingAddPagesAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\FacebookAccountAppService.cs:line 50
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.FacebookAccountsController.<GetPendingAddPages>d__4.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\FacebookAccountsController.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 16:40:24,145 [32] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/8/2017 4:40:24 PM +08:00
+
+2017-08-08 16:40:25,523 [32] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[IfEnable] AS [IfEnable], 
+    [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Avatar] AS [Avatar]
+    FROM  [dbo].[t_Social_Account] AS [Extent1]
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON ([Extent1].[Id] = [Extent2].[Id]) AND (([Extent2].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL))
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND (0 = [Extent1].[IsDeleted]) AND (0 = [Extent2].[Source])
+2017-08-08 16:40:25,523 [32] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 16:40:25,525 [32] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-08 16:40:25,525 [32] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-08 16:40:25,525 [32] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/8/2017 4:40:25 PM +08:00
+
+2017-08-08 16:40:25,537 [32] DEBUG Social.Domain.SiteDataContext - -- Completed in 10 ms with result: SqlDataReader
+
+2017-08-08 16:40:25,537 [32] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 16:40:25,546 [32] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 4:40:25 PM +08:00
+
+2017-08-08 16:44:37,991 [32] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.GetUserToken(String code, String redirectUri) in F:\social\social_20170728\Social\Social.Infrastructure\Facebook\FbClient.cs:line 39
+   at Social.Application.AppServices.FacebookAccountAppService.<GetPendingAddPagesAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\FacebookAccountAppService.cs:line 50
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.FacebookAccountsController.<GetPendingAddPages>d__4.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\FacebookAccountsController.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 16:45:28,217 [32] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.GetUserToken(String code, String redirectUri) in F:\social\social_20170728\Social\Social.Infrastructure\Facebook\FbClient.cs:line 39
+   at Social.Application.AppServices.FacebookAccountAppService.<GetPendingAddPagesAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\FacebookAccountAppService.cs:line 50
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.FacebookAccountsController.<GetPendingAddPages>d__4.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\FacebookAccountsController.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 16:45:59,137 [32] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.GetUserToken(String code, String redirectUri) in F:\social\social_20170728\Social\Social.Infrastructure\Facebook\FbClient.cs:line 39
+   at Social.Application.AppServices.FacebookAccountAppService.<GetPendingAddPagesAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\FacebookAccountAppService.cs:line 50
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.FacebookAccountsController.<GetPendingAddPages>d__4.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\FacebookAccountsController.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 16:54:37,231 [74] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.GetUserToken(String code, String redirectUri) in F:\social\social_20170728\Social\Social.Infrastructure\Facebook\FbClient.cs:line 39
+   at Social.Application.AppServices.FacebookAccountAppService.<GetPendingAddPagesAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\FacebookAccountAppService.cs:line 50
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.FacebookAccountsController.<GetPendingAddPages>d__4.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\FacebookAccountsController.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 17:09:52,941 [83] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 17:09:54,297 [83] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 17:09:55,589 [101] DEBUG Social.Domain.SiteDataContext - Opened connection at 8/8/2017 5:09:55 PM +08:00
+
+2017-08-08 17:09:56,735 [101] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[IfEnable] AS [IfEnable], 
+    [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[Avatar] AS [Avatar]
+    FROM  [dbo].[t_Social_Account] AS [Extent1]
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON ([Extent1].[Id] = [Extent2].[Id]) AND (([Extent2].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL))
+    WHERE (([Extent1].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND (0 = [Extent1].[IsDeleted]) AND (0 = [Extent2].[Source])
+2017-08-08 17:09:56,735 [101] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 17:09:56,736 [101] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-08-08 17:09:56,736 [101] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-08 17:09:56,736 [101] DEBUG Social.Domain.SiteDataContext - -- Executing at 8/8/2017 5:09:56 PM +08:00
+
+2017-08-08 17:09:56,746 [101] DEBUG Social.Domain.SiteDataContext - -- Completed in 8 ms with result: SqlDataReader
+
+2017-08-08 17:09:56,746 [101] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 17:09:56,754 [101] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 5:09:56 PM +08:00
+
+2017-08-08 19:08:56,235 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 19:08:57,122 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 19:13:19,208 [23] DEBUG Social.Domain.SiteDataContext - Opened connection asynchronously at 8/8/2017 7:13:19 PM +08:00
+
+2017-08-08 19:13:19,208 [15] DEBUG Social.Domain.SiteDataContext - Opened connection asynchronously at 8/8/2017 7:13:19 PM +08:00
+
+2017-08-08 19:13:20,426 [15] DEBUG Social.Domain.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[SiteId] AS [SiteId], 
+    [Extent1].[FacebookPageId] AS [FacebookPageId], 
+    [Extent1].[TwitterUserId] AS [TwitterUserId]
+    FROM [dbo].[t_Site_SocialAccount] AS [Extent1]
+    WHERE ([Extent1].[FacebookPageId] = @p__linq__0) OR (([Extent1].[FacebookPageId] IS NULL) AND (@p__linq__0 IS NULL))
+2017-08-08 19:13:20,427 [15] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:20,426 [23] DEBUG Social.Domain.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[SiteId] AS [SiteId], 
+    [Extent1].[FacebookPageId] AS [FacebookPageId], 
+    [Extent1].[TwitterUserId] AS [TwitterUserId]
+    FROM [dbo].[t_Site_SocialAccount] AS [Extent1]
+    WHERE ([Extent1].[FacebookPageId] = @p__linq__0) OR (([Extent1].[FacebookPageId] IS NULL) AND (@p__linq__0 IS NULL))
+2017-08-08 19:13:20,427 [23] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:20,429 [15] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '426763217705261' (Type = String, Size = 4000)
+
+2017-08-08 19:13:20,429 [23] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '426763217705261' (Type = String, Size = 4000)
+
+2017-08-08 19:13:20,429 [15] DEBUG Social.Domain.SiteDataContext - -- Executing asynchronously at 8/8/2017 7:13:20 PM +08:00
+
+2017-08-08 19:13:20,429 [23] DEBUG Social.Domain.SiteDataContext - -- Executing asynchronously at 8/8/2017 7:13:20 PM +08:00
+
+2017-08-08 19:13:20,506 [15] DEBUG Social.Domain.SiteDataContext - -- Completed in 76 ms with result: SqlDataReader
+
+2017-08-08 19:13:20,506 [15] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:20,506 [45] DEBUG Social.Domain.SiteDataContext - -- Completed in 76 ms with result: SqlDataReader
+
+2017-08-08 19:13:20,506 [45] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:20,574 [45] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 7:13:20 PM +08:00
+
+2017-08-08 19:13:20,575 [15] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 7:13:20 PM +08:00
+
+2017-08-08 19:13:29,373 [44] DEBUG Social.Domain.SiteDataContext - Opened connection asynchronously at 8/8/2017 7:13:29 PM +08:00
+
+2017-08-08 19:13:29,374 [44] DEBUG Social.Domain.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[SiteId] AS [SiteId], 
+    [Extent1].[FacebookPageId] AS [FacebookPageId], 
+    [Extent1].[TwitterUserId] AS [TwitterUserId]
+    FROM [dbo].[t_Site_SocialAccount] AS [Extent1]
+    WHERE ([Extent1].[FacebookPageId] = @p__linq__0) OR (([Extent1].[FacebookPageId] IS NULL) AND (@p__linq__0 IS NULL))
+2017-08-08 19:13:29,374 [44] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:29,374 [44] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '426763217705261' (Type = String, Size = 4000)
+
+2017-08-08 19:13:29,374 [44] DEBUG Social.Domain.SiteDataContext - -- Executing asynchronously at 8/8/2017 7:13:29 PM +08:00
+
+2017-08-08 19:13:29,379 [44] DEBUG Social.Domain.SiteDataContext - -- Completed in 4 ms with result: SqlDataReader
+
+2017-08-08 19:13:29,379 [44] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:29,380 [44] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 7:13:29 PM +08:00
+
+2017-08-08 19:13:31,418 [47] DEBUG Social.Domain.SiteDataContext - Opened connection asynchronously at 8/8/2017 7:13:31 PM +08:00
+
+2017-08-08 19:13:31,419 [50] DEBUG Social.Domain.SiteDataContext - Opened connection asynchronously at 8/8/2017 7:13:31 PM +08:00
+
+2017-08-08 19:13:31,443 [52] DEBUG Social.Domain.SiteDataContext - Opened connection asynchronously at 8/8/2017 7:13:31 PM +08:00
+
+2017-08-08 19:13:31,786 [47] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Limit1].[Id] AS [Id], 
+    [Limit1].[Token] AS [Token], 
+    [Limit1].[TokenSecret] AS [TokenSecret], 
+    [Limit1].[IfEnable] AS [IfEnable], 
+    [Limit1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Limit1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Limit1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Limit1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Limit1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Limit1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Limit1].[CreatedTime] AS [CreatedTime], 
+    [Limit1].[CreatedBy] AS [CreatedBy], 
+    [Limit1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Limit1].[ConversationAgentId] AS [ConversationAgentId], 
+    [Limit1].[IsDeleted] AS [IsDeleted], 
+    [Limit1].[ConversationPriority] AS [ConversationPriority], 
+    [Limit1].[SiteId] AS [SiteId], 
+    [Limit1].[Id1] AS [Id1], 
+    [Limit1].[OriginalId] AS [OriginalId], 
+    [Limit1].[OriginalLink] AS [OriginalLink], 
+    [Limit1].[Source] AS [Source], 
+    [Limit1].[Type] AS [Type], 
+    [Limit1].[Name] AS [Name], 
+    [Limit1].[ScreenName] AS [ScreenName], 
+    [Limit1].[Email] AS [Email], 
+    [Limit1].[Avatar] AS [Avatar], 
+    [Limit1].[IsDeleted1] AS [IsDeleted1], 
+    [Limit1].[SiteId1] AS [SiteId1]
+    FROM ( SELECT TOP (1) 
+        [Filter1].[Id1] AS [Id], 
+        [Filter1].[Token] AS [Token], 
+        [Filter1].[TokenSecret] AS [TokenSecret], 
+        [Filter1].[IfEnable] AS [IfEnable], 
+        [Filter1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+        [Filter1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+        [Filter1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+        [Filter1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+        [Filter1].[FacebookPageCategory] AS [FacebookPageCategory], 
+        [Filter1].[FacebookSignInAs] AS [FacebookSignInAs], 
+        [Filter1].[CreatedTime] AS [CreatedTime], 
+        [Filter1].[CreatedBy] AS [CreatedBy], 
+        [Filter1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+        [Filter1].[ConversationAgentId] AS [ConversationAgentId], 
+        [Filter1].[IsDeleted1] AS [IsDeleted], 
+        [Filter1].[ConversationPriority] AS [ConversationPriority], 
+        [Filter1].[SiteId1] AS [SiteId], 
+        [Extent3].[Id] AS [Id1], 
+        [Extent3].[OriginalId] AS [OriginalId], 
+        [Extent3].[OriginalLink] AS [OriginalLink], 
+        [Extent3].[Source] AS [Source], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent3].[IsDeleted] AS [IsDeleted1], 
+        [Extent3].[SiteId] AS [SiteId1]
+        FROM   (SELECT [Extent1].[Id] AS [Id1], [Extent1].[Token] AS [Token], [Extent1].[TokenSecret] AS [TokenSecret], [Extent1].[IfEnable] AS [IfEnable], [Extent1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], [Extent1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], [Extent1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], [Extent1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], [Extent1].[CreatedTime] AS [CreatedTime], [Extent1].[CreatedBy] AS [CreatedBy], [Extent1].[ConversationDepartmentId] AS [ConversationDepartmentId], [Extent1].[ConversationAgentId] AS [ConversationAgentId], [Extent1].[IsDeleted] AS [IsDeleted1], [Extent1].[ConversationPriority] AS [ConversationPriority], [Extent1].[SiteId] AS [SiteId1], [Extent2].[OriginalId] AS [OriginalId], [Extent2].[Source] AS [Source]
+            FROM  [dbo].[t_Social_Account] AS [Extent1]
+            LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON ([Extent1].[Id] = [Extent2].[Id]) AND (([Extent2].[SiteId] = @DynamicFilterParam_000001) )
+            WHERE ([Extent1].[IfEnable] = 1) AND (0 = [Extent1].[IsDeleted]) ) AS [Filter1]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON (([Extent3].[SiteId] = @DynamicFilterParam_000001) ) AND ([Filter1].[Id1] = [Extent3].[Id])
+        WHERE (([Filter1].[SiteId1] = @DynamicFilterParam_000001) ) AND (([Filter1].[OriginalId] = @p__linq__0) OR (([Filter1].[OriginalId] IS NULL) AND (@p__linq__0 IS NULL))) AND ([Filter1].[Source] = @p__linq__1)
+    )  AS [Limit1]
+2017-08-08 19:13:31,787 [47] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:31,787 [47] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: '10000' (Type = Int32)
+
+2017-08-08 19:13:31,787 [47] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-08 19:13:31,787 [47] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '426763217705261' (Type = String, Size = 4000)
+
+2017-08-08 19:13:31,787 [47] DEBUG Social.Domain.SiteDataContext - -- p__linq__1: 'Facebook' (Type = Int16)
+
+2017-08-08 19:13:31,787 [47] DEBUG Social.Domain.SiteDataContext - -- Executing asynchronously at 8/8/2017 7:13:31 PM +08:00
+
+2017-08-08 19:13:31,797 [50] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Limit1].[Id] AS [Id], 
+    [Limit1].[Token] AS [Token], 
+    [Limit1].[TokenSecret] AS [TokenSecret], 
+    [Limit1].[IfEnable] AS [IfEnable], 
+    [Limit1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Limit1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Limit1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Limit1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Limit1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Limit1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Limit1].[CreatedTime] AS [CreatedTime], 
+    [Limit1].[CreatedBy] AS [CreatedBy], 
+    [Limit1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Limit1].[ConversationAgentId] AS [ConversationAgentId], 
+    [Limit1].[IsDeleted] AS [IsDeleted], 
+    [Limit1].[ConversationPriority] AS [ConversationPriority], 
+    [Limit1].[SiteId] AS [SiteId], 
+    [Limit1].[Id1] AS [Id1], 
+    [Limit1].[OriginalId] AS [OriginalId], 
+    [Limit1].[OriginalLink] AS [OriginalLink], 
+    [Limit1].[Source] AS [Source], 
+    [Limit1].[Type] AS [Type], 
+    [Limit1].[Name] AS [Name], 
+    [Limit1].[ScreenName] AS [ScreenName], 
+    [Limit1].[Email] AS [Email], 
+    [Limit1].[Avatar] AS [Avatar], 
+    [Limit1].[IsDeleted1] AS [IsDeleted1], 
+    [Limit1].[SiteId1] AS [SiteId1]
+    FROM ( SELECT TOP (1) 
+        [Filter1].[Id1] AS [Id], 
+        [Filter1].[Token] AS [Token], 
+        [Filter1].[TokenSecret] AS [TokenSecret], 
+        [Filter1].[IfEnable] AS [IfEnable], 
+        [Filter1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+        [Filter1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+        [Filter1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+        [Filter1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+        [Filter1].[FacebookPageCategory] AS [FacebookPageCategory], 
+        [Filter1].[FacebookSignInAs] AS [FacebookSignInAs], 
+        [Filter1].[CreatedTime] AS [CreatedTime], 
+        [Filter1].[CreatedBy] AS [CreatedBy], 
+        [Filter1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+        [Filter1].[ConversationAgentId] AS [ConversationAgentId], 
+        [Filter1].[IsDeleted1] AS [IsDeleted], 
+        [Filter1].[ConversationPriority] AS [ConversationPriority], 
+        [Filter1].[SiteId1] AS [SiteId], 
+        [Extent3].[Id] AS [Id1], 
+        [Extent3].[OriginalId] AS [OriginalId], 
+        [Extent3].[OriginalLink] AS [OriginalLink], 
+        [Extent3].[Source] AS [Source], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent3].[IsDeleted] AS [IsDeleted1], 
+        [Extent3].[SiteId] AS [SiteId1]
+        FROM   (SELECT [Extent1].[Id] AS [Id1], [Extent1].[Token] AS [Token], [Extent1].[TokenSecret] AS [TokenSecret], [Extent1].[IfEnable] AS [IfEnable], [Extent1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], [Extent1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], [Extent1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], [Extent1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], [Extent1].[CreatedTime] AS [CreatedTime], [Extent1].[CreatedBy] AS [CreatedBy], [Extent1].[ConversationDepartmentId] AS [ConversationDepartmentId], [Extent1].[ConversationAgentId] AS [ConversationAgentId], [Extent1].[IsDeleted] AS [IsDeleted1], [Extent1].[ConversationPriority] AS [ConversationPriority], [Extent1].[SiteId] AS [SiteId1], [Extent2].[OriginalId] AS [OriginalId], [Extent2].[Source] AS [Source]
+            FROM  [dbo].[t_Social_Account] AS [Extent1]
+            LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON ([Extent1].[Id] = [Extent2].[Id]) AND (([Extent2].[SiteId] = @DynamicFilterParam_000001) )
+            WHERE ([Extent1].[IfEnable] = 1) AND (0 = [Extent1].[IsDeleted]) ) AS [Filter1]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON (([Extent3].[SiteId] = @DynamicFilterParam_000001) ) AND ([Filter1].[Id1] = [Extent3].[Id])
+        WHERE (([Filter1].[SiteId1] = @DynamicFilterParam_000001) ) AND (([Filter1].[OriginalId] = @p__linq__0) OR (([Filter1].[OriginalId] IS NULL) AND (@p__linq__0 IS NULL))) AND ([Filter1].[Source] = @p__linq__1)
+    )  AS [Limit1]
+2017-08-08 19:13:31,797 [50] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:31,797 [50] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: '10000' (Type = Int32)
+
+2017-08-08 19:13:31,797 [50] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-08 19:13:31,797 [50] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '426763217705261' (Type = String, Size = 4000)
+
+2017-08-08 19:13:31,797 [50] DEBUG Social.Domain.SiteDataContext - -- p__linq__1: 'Facebook' (Type = Int16)
+
+2017-08-08 19:13:31,797 [50] DEBUG Social.Domain.SiteDataContext - -- Executing asynchronously at 8/8/2017 7:13:31 PM +08:00
+
+2017-08-08 19:13:31,814 [52] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Limit1].[Id] AS [Id], 
+    [Limit1].[Token] AS [Token], 
+    [Limit1].[TokenSecret] AS [TokenSecret], 
+    [Limit1].[IfEnable] AS [IfEnable], 
+    [Limit1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Limit1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Limit1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Limit1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Limit1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Limit1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Limit1].[CreatedTime] AS [CreatedTime], 
+    [Limit1].[CreatedBy] AS [CreatedBy], 
+    [Limit1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Limit1].[ConversationAgentId] AS [ConversationAgentId], 
+    [Limit1].[IsDeleted] AS [IsDeleted], 
+    [Limit1].[ConversationPriority] AS [ConversationPriority], 
+    [Limit1].[SiteId] AS [SiteId], 
+    [Limit1].[Id1] AS [Id1], 
+    [Limit1].[OriginalId] AS [OriginalId], 
+    [Limit1].[OriginalLink] AS [OriginalLink], 
+    [Limit1].[Source] AS [Source], 
+    [Limit1].[Type] AS [Type], 
+    [Limit1].[Name] AS [Name], 
+    [Limit1].[ScreenName] AS [ScreenName], 
+    [Limit1].[Email] AS [Email], 
+    [Limit1].[Avatar] AS [Avatar], 
+    [Limit1].[IsDeleted1] AS [IsDeleted1], 
+    [Limit1].[SiteId1] AS [SiteId1]
+    FROM ( SELECT TOP (1) 
+        [Filter1].[Id1] AS [Id], 
+        [Filter1].[Token] AS [Token], 
+        [Filter1].[TokenSecret] AS [TokenSecret], 
+        [Filter1].[IfEnable] AS [IfEnable], 
+        [Filter1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+        [Filter1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+        [Filter1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+        [Filter1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+        [Filter1].[FacebookPageCategory] AS [FacebookPageCategory], 
+        [Filter1].[FacebookSignInAs] AS [FacebookSignInAs], 
+        [Filter1].[CreatedTime] AS [CreatedTime], 
+        [Filter1].[CreatedBy] AS [CreatedBy], 
+        [Filter1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+        [Filter1].[ConversationAgentId] AS [ConversationAgentId], 
+        [Filter1].[IsDeleted1] AS [IsDeleted], 
+        [Filter1].[ConversationPriority] AS [ConversationPriority], 
+        [Filter1].[SiteId1] AS [SiteId], 
+        [Extent3].[Id] AS [Id1], 
+        [Extent3].[OriginalId] AS [OriginalId], 
+        [Extent3].[OriginalLink] AS [OriginalLink], 
+        [Extent3].[Source] AS [Source], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent3].[IsDeleted] AS [IsDeleted1], 
+        [Extent3].[SiteId] AS [SiteId1]
+        FROM   (SELECT [Extent1].[Id] AS [Id1], [Extent1].[Token] AS [Token], [Extent1].[TokenSecret] AS [TokenSecret], [Extent1].[IfEnable] AS [IfEnable], [Extent1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], [Extent1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], [Extent1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], [Extent1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], [Extent1].[CreatedTime] AS [CreatedTime], [Extent1].[CreatedBy] AS [CreatedBy], [Extent1].[ConversationDepartmentId] AS [ConversationDepartmentId], [Extent1].[ConversationAgentId] AS [ConversationAgentId], [Extent1].[IsDeleted] AS [IsDeleted1], [Extent1].[ConversationPriority] AS [ConversationPriority], [Extent1].[SiteId] AS [SiteId1], [Extent2].[OriginalId] AS [OriginalId], [Extent2].[Source] AS [Source]
+            FROM  [dbo].[t_Social_Account] AS [Extent1]
+            LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON ([Extent1].[Id] = [Extent2].[Id]) AND (([Extent2].[SiteId] = @DynamicFilterParam_000001) )
+            WHERE ([Extent1].[IfEnable] = 1) AND (0 = [Extent1].[IsDeleted]) ) AS [Filter1]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON (([Extent3].[SiteId] = @DynamicFilterParam_000001) ) AND ([Filter1].[Id1] = [Extent3].[Id])
+        WHERE (([Filter1].[SiteId1] = @DynamicFilterParam_000001) ) AND (([Filter1].[OriginalId] = @p__linq__0) OR (([Filter1].[OriginalId] IS NULL) AND (@p__linq__0 IS NULL))) AND ([Filter1].[Source] = @p__linq__1)
+    )  AS [Limit1]
+2017-08-08 19:13:31,814 [52] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:31,814 [52] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: '10000' (Type = Int32)
+
+2017-08-08 19:13:31,814 [52] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-08 19:13:31,814 [52] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '426763217705261' (Type = String, Size = 4000)
+
+2017-08-08 19:13:31,814 [52] DEBUG Social.Domain.SiteDataContext - -- p__linq__1: 'Facebook' (Type = Int16)
+
+2017-08-08 19:13:31,814 [52] DEBUG Social.Domain.SiteDataContext - -- Executing asynchronously at 8/8/2017 7:13:31 PM +08:00
+
+2017-08-08 19:13:31,817 [50] DEBUG Social.Domain.SiteDataContext - -- Completed in 3 ms with result: SqlDataReader
+
+2017-08-08 19:13:31,817 [50] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:31,819 [47] DEBUG Social.Domain.SiteDataContext - -- Completed in 3 ms with result: SqlDataReader
+
+2017-08-08 19:13:31,820 [47] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:31,822 [23] DEBUG Social.Domain.SiteDataContext - -- Completed in 3 ms with result: SqlDataReader
+
+2017-08-08 19:13:31,822 [23] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:13:31,899 [50] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 7:13:31 PM +08:00
+
+2017-08-08 19:13:31,899 [23] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 7:13:31 PM +08:00
+
+2017-08-08 19:13:31,899 [47] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 7:13:31 PM +08:00
+
+2017-08-08 19:18:45,685 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 19:18:47,061 [1] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 19:18:48,583 [42] DEBUG Social.Domain.SiteDataContext - Opened connection asynchronously at 8/8/2017 7:18:48 PM +08:00
+
+2017-08-08 19:18:49,642 [42] DEBUG Social.Domain.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[SiteId] AS [SiteId], 
+    [Extent1].[FacebookPageId] AS [FacebookPageId], 
+    [Extent1].[TwitterUserId] AS [TwitterUserId]
+    FROM [dbo].[t_Site_SocialAccount] AS [Extent1]
+    WHERE ([Extent1].[FacebookPageId] = @p__linq__0) OR (([Extent1].[FacebookPageId] IS NULL) AND (@p__linq__0 IS NULL))
+2017-08-08 19:18:49,642 [42] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:18:49,643 [42] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '426763217705261' (Type = String, Size = 4000)
+
+2017-08-08 19:18:49,643 [42] DEBUG Social.Domain.SiteDataContext - -- Executing asynchronously at 8/8/2017 7:18:49 PM +08:00
+
+2017-08-08 19:18:49,651 [51] DEBUG Social.Domain.SiteDataContext - -- Completed in 6 ms with result: SqlDataReader
+
+2017-08-08 19:18:49,651 [51] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:18:49,702 [51] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 7:18:49 PM +08:00
+
+2017-08-08 19:18:49,901 [45] DEBUG Social.Domain.SiteDataContext - Opened connection asynchronously at 8/8/2017 7:18:49 PM +08:00
+
+2017-08-08 19:18:50,265 [45] DEBUG Social.Domain.SiteDataContext - SELECT 
+    [Limit1].[Id] AS [Id], 
+    [Limit1].[Token] AS [Token], 
+    [Limit1].[TokenSecret] AS [TokenSecret], 
+    [Limit1].[IfEnable] AS [IfEnable], 
+    [Limit1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Limit1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Limit1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Limit1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Limit1].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Limit1].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Limit1].[CreatedTime] AS [CreatedTime], 
+    [Limit1].[CreatedBy] AS [CreatedBy], 
+    [Limit1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Limit1].[ConversationAgentId] AS [ConversationAgentId], 
+    [Limit1].[IsDeleted] AS [IsDeleted], 
+    [Limit1].[ConversationPriority] AS [ConversationPriority], 
+    [Limit1].[SiteId] AS [SiteId], 
+    [Limit1].[Id1] AS [Id1], 
+    [Limit1].[OriginalId] AS [OriginalId], 
+    [Limit1].[OriginalLink] AS [OriginalLink], 
+    [Limit1].[Source] AS [Source], 
+    [Limit1].[Type] AS [Type], 
+    [Limit1].[Name] AS [Name], 
+    [Limit1].[ScreenName] AS [ScreenName], 
+    [Limit1].[Email] AS [Email], 
+    [Limit1].[Avatar] AS [Avatar], 
+    [Limit1].[IsDeleted1] AS [IsDeleted1], 
+    [Limit1].[SiteId1] AS [SiteId1]
+    FROM ( SELECT TOP (1) 
+        [Filter1].[Id1] AS [Id], 
+        [Filter1].[Token] AS [Token], 
+        [Filter1].[TokenSecret] AS [TokenSecret], 
+        [Filter1].[IfEnable] AS [IfEnable], 
+        [Filter1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+        [Filter1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+        [Filter1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+        [Filter1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+        [Filter1].[FacebookPageCategory] AS [FacebookPageCategory], 
+        [Filter1].[FacebookSignInAs] AS [FacebookSignInAs], 
+        [Filter1].[CreatedTime] AS [CreatedTime], 
+        [Filter1].[CreatedBy] AS [CreatedBy], 
+        [Filter1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+        [Filter1].[ConversationAgentId] AS [ConversationAgentId], 
+        [Filter1].[IsDeleted1] AS [IsDeleted], 
+        [Filter1].[ConversationPriority] AS [ConversationPriority], 
+        [Filter1].[SiteId1] AS [SiteId], 
+        [Extent3].[Id] AS [Id1], 
+        [Extent3].[OriginalId] AS [OriginalId], 
+        [Extent3].[OriginalLink] AS [OriginalLink], 
+        [Extent3].[Source] AS [Source], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent3].[IsDeleted] AS [IsDeleted1], 
+        [Extent3].[SiteId] AS [SiteId1]
+        FROM   (SELECT [Extent1].[Id] AS [Id1], [Extent1].[Token] AS [Token], [Extent1].[TokenSecret] AS [TokenSecret], [Extent1].[IfEnable] AS [IfEnable], [Extent1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], [Extent1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], [Extent1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], [Extent1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], [Extent1].[FacebookPageCategory] AS [FacebookPageCategory], [Extent1].[FacebookSignInAs] AS [FacebookSignInAs], [Extent1].[CreatedTime] AS [CreatedTime], [Extent1].[CreatedBy] AS [CreatedBy], [Extent1].[ConversationDepartmentId] AS [ConversationDepartmentId], [Extent1].[ConversationAgentId] AS [ConversationAgentId], [Extent1].[IsDeleted] AS [IsDeleted1], [Extent1].[ConversationPriority] AS [ConversationPriority], [Extent1].[SiteId] AS [SiteId1], [Extent2].[OriginalId] AS [OriginalId], [Extent2].[Source] AS [Source]
+            FROM  [dbo].[t_Social_Account] AS [Extent1]
+            LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON ([Extent1].[Id] = [Extent2].[Id]) AND (([Extent2].[SiteId] = @DynamicFilterParam_000001) )
+            WHERE ([Extent1].[IfEnable] = 1) AND (0 = [Extent1].[IsDeleted]) ) AS [Filter1]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON (([Extent3].[SiteId] = @DynamicFilterParam_000001) ) AND ([Filter1].[Id1] = [Extent3].[Id])
+        WHERE (([Filter1].[SiteId1] = @DynamicFilterParam_000001) ) AND (([Filter1].[OriginalId] = @p__linq__0) OR (([Filter1].[OriginalId] IS NULL) AND (@p__linq__0 IS NULL))) AND ([Filter1].[Source] = @p__linq__1)
+    )  AS [Limit1]
+2017-08-08 19:18:50,265 [45] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:18:50,265 [45] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000001: '10000' (Type = Int32)
+
+2017-08-08 19:18:50,265 [45] DEBUG Social.Domain.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-08-08 19:18:50,265 [45] DEBUG Social.Domain.SiteDataContext - -- p__linq__0: '426763217705261' (Type = String, Size = 4000)
+
+2017-08-08 19:18:50,265 [45] DEBUG Social.Domain.SiteDataContext - -- p__linq__1: 'Facebook' (Type = Int16)
+
+2017-08-08 19:18:50,265 [45] DEBUG Social.Domain.SiteDataContext - -- Executing asynchronously at 8/8/2017 7:18:50 PM +08:00
+
+2017-08-08 19:18:50,271 [51] DEBUG Social.Domain.SiteDataContext - -- Completed in 5 ms with result: SqlDataReader
+
+2017-08-08 19:18:50,271 [51] DEBUG Social.Domain.SiteDataContext - 
+
+2017-08-08 19:18:50,335 [51] DEBUG Social.Domain.SiteDataContext - Closed connection at 8/8/2017 7:18:50 PM +08:00
+
+2017-08-08 19:21:07,800 [41] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.GetUserToken(String code, String redirectUri)
+   at Social.Application.AppServices.FacebookAccountAppService.<GetPendingAddPagesAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.FacebookAccountsController.<GetPendingAddPages>d__4.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\FacebookAccountsController.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 19:22:39,729 [42] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.GetUserToken(String code, String redirectUri)
+   at Social.Application.AppServices.FacebookAccountAppService.<GetPendingAddPagesAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.FacebookAccountsController.<GetPendingAddPages>d__4.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\FacebookAccountsController.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 19:23:45,348 [42] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.GetUserToken(String code, String redirectUri)
+   at Social.Application.AppServices.FacebookAccountAppService.<GetPendingAddPagesAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.FacebookAccountsController.<GetPendingAddPages>d__4.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\FacebookAccountsController.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 19:26:53,706 [24] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 19:26:55,287 [24] INFO  System.Web.HttpApplication - Application started...
+2017-08-08 19:28:43,769 [45] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - Unable to connect to the remote server
+Facebook.WebExceptionWrapper: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:8888
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at Facebook.HttpHelper.OpenWrite()
+   at Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   at Facebook.FacebookClient.Post(String path, Object parameters)
+   at Social.Infrastructure.Facebook.FbClient.GetUserToken(String code, String redirectUri) in F:\social\social_20170728\Social\Social.Infrastructure\Facebook\FbClient.cs:line 39
+   at Social.Application.AppServices.FacebookAccountAppService.<GetPendingAddPagesAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Social.Application\AppServices\FacebookAccountAppService.cs:line 50
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Social.WebApi.Controllers.FacebookAccountsController.<GetPendingAddPages>d__4.MoveNext() in F:\social\social_20170728\Social\Social.WebApi\Controllers\FacebookAccountsController.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-08-08 19:35:00,676 [31] INFO  System.Web.HttpApplication - Application starting...
+2017-08-08 19:35:02,417 [31] INFO  System.Web.HttpApplication - Application started...

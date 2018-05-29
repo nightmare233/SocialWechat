@@ -1,0 +1,2690 @@
+2017-10-26 17:02:20,263 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-10-26 17:02:22,197 [1] INFO  System.Web.HttpApplication - Application started...
+2017-10-26 17:03:05,499 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:03:05 PM +08:00
+
+2017-10-26 17:03:05,658 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] = @p__linq__1)
+2017-10-26 17:03:05,658 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:05,659 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:03:05,659 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__1: 'TwitterTweet' (Type = Int16)
+
+2017-10-26 17:03:05,659 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:03:05 PM +08:00
+
+2017-10-26 17:03:05,754 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 94 ms with result: SqlDataReader
+
+2017-10-26 17:03:05,754 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:05,770 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:03:05 PM +08:00
+
+2017-10-26 17:03:05,798 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:03:05 PM +08:00
+
+2017-10-26 17:03:05,845 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project1].[Id1] AS [Id], 
+    [Project1].[Id2] AS [Id1], 
+    [Project1].[Id] AS [Id2], 
+    [Project1].[OriginalLink] AS [OriginalLink], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[ConversationId] AS [ConversationId], 
+    [Project1].[ParentId] AS [ParentId], 
+    [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project1].[Content] AS [Content], 
+    [Project1].[SendTime] AS [SendTime], 
+    [Project1].[SendAgentId] AS [SendAgentId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[SenderId] AS [SenderId], 
+    [Project1].[OriginalLink1] AS [OriginalLink1], 
+    [Project1].[Type] AS [Type], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[ScreenName] AS [ScreenName], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MessageId] AS [MessageId], 
+    [Project1].[Type1] AS [Type1], 
+    [Project1].[Url] AS [Url], 
+    [Project1].[PreviewUrl] AS [PreviewUrl], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[MimeType] AS [MimeType]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[ConversationId] AS [ConversationId], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalLink] AS [OriginalLink], 
+        [Extent1].[ParentId] AS [ParentId], 
+        [Extent1].[SendTime] AS [SendTime], 
+        [Extent1].[SenderId] AS [SenderId], 
+        [Extent1].[SendAgentId] AS [SendAgentId], 
+        [Extent1].[Content] AS [Content], 
+        [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name], 
+        [Extent3].[Id] AS [Id2], 
+        [Extent3].[OriginalLink] AS [OriginalLink1], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent4].[MessageId] AS [MessageId], 
+        [Extent4].[Type] AS [Type1], 
+        [Extent4].[Name] AS [Name2], 
+        [Extent4].[MimeType] AS [MimeType], 
+        [Extent4].[Url] AS [Url], 
+        [Extent4].[PreviewUrl] AS [PreviewUrl], 
+        CASE WHEN ([Extent4].[MessageId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    [dbo].[t_Social_Message100014501] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON ([Extent1].[SenderId] = [Extent3].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL))
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent4] ON [Extent1].[Id] = [Extent4].[MessageId]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[SendTime] ASC, [Project1].[Id1] ASC, [Project1].[Id2] ASC, [Project1].[Id] ASC, [Project1].[C1] ASC
+2017-10-26 17:03:05,845 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:05,845 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-10-26 17:03:05,845 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:03:05,845 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:03:05,845 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:03:05 PM +08:00
+
+2017-10-26 17:03:05,951 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 106 ms with result: SqlDataReader
+
+2017-10-26 17:03:05,951 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:05,955 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:03:05 PM +08:00
+
+2017-10-26 17:03:39,407 [14] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:03:39 PM +08:00
+
+2017-10-26 17:03:39,409 [14] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] = @p__linq__1)
+2017-10-26 17:03:39,409 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:39,409 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:03:39,409 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__1: 'TwitterTweet' (Type = Int16)
+
+2017-10-26 17:03:39,409 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:03:39 PM +08:00
+
+2017-10-26 17:03:39,504 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 94 ms with result: SqlDataReader
+
+2017-10-26 17:03:39,504 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:39,504 [14] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:03:39 PM +08:00
+
+2017-10-26 17:03:39,506 [14] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:03:39 PM +08:00
+
+2017-10-26 17:03:39,509 [14] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project1].[Id1] AS [Id], 
+    [Project1].[Id2] AS [Id1], 
+    [Project1].[Id] AS [Id2], 
+    [Project1].[OriginalLink] AS [OriginalLink], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[ConversationId] AS [ConversationId], 
+    [Project1].[ParentId] AS [ParentId], 
+    [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project1].[Content] AS [Content], 
+    [Project1].[SendTime] AS [SendTime], 
+    [Project1].[SendAgentId] AS [SendAgentId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[SenderId] AS [SenderId], 
+    [Project1].[OriginalLink1] AS [OriginalLink1], 
+    [Project1].[Type] AS [Type], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[ScreenName] AS [ScreenName], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MessageId] AS [MessageId], 
+    [Project1].[Type1] AS [Type1], 
+    [Project1].[Url] AS [Url], 
+    [Project1].[PreviewUrl] AS [PreviewUrl], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[MimeType] AS [MimeType]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[ConversationId] AS [ConversationId], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalLink] AS [OriginalLink], 
+        [Extent1].[ParentId] AS [ParentId], 
+        [Extent1].[SendTime] AS [SendTime], 
+        [Extent1].[SenderId] AS [SenderId], 
+        [Extent1].[SendAgentId] AS [SendAgentId], 
+        [Extent1].[Content] AS [Content], 
+        [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name], 
+        [Extent3].[Id] AS [Id2], 
+        [Extent3].[OriginalLink] AS [OriginalLink1], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent4].[MessageId] AS [MessageId], 
+        [Extent4].[Type] AS [Type1], 
+        [Extent4].[Name] AS [Name2], 
+        [Extent4].[MimeType] AS [MimeType], 
+        [Extent4].[Url] AS [Url], 
+        [Extent4].[PreviewUrl] AS [PreviewUrl], 
+        CASE WHEN ([Extent4].[MessageId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    [dbo].[t_Social_Message100014501] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON ([Extent1].[SenderId] = [Extent3].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) )
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent4] ON [Extent1].[Id] = [Extent4].[MessageId]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[SendTime] ASC, [Project1].[Id1] ASC, [Project1].[Id2] ASC, [Project1].[Id] ASC, [Project1].[C1] ASC
+2017-10-26 17:03:39,509 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:39,509 [14] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014501' (Type = Int32)
+
+2017-10-26 17:03:39,509 [14] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:03:39,509 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:03:39,509 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:03:39 PM +08:00
+
+2017-10-26 17:03:39,624 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 115 ms with result: SqlDataReader
+
+2017-10-26 17:03:39,624 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:39,624 [14] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:03:39 PM +08:00
+
+2017-10-26 17:03:41,992 [14] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:03:41 PM +08:00
+
+2017-10-26 17:03:41,995 [14] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] = @p__linq__1)
+2017-10-26 17:03:41,996 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:41,996 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:03:41,996 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__1: 'TwitterTweet' (Type = Int16)
+
+2017-10-26 17:03:41,996 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:03:41 PM +08:00
+
+2017-10-26 17:03:42,093 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 96 ms with result: SqlDataReader
+
+2017-10-26 17:03:42,093 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:42,093 [14] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:03:42 PM +08:00
+
+2017-10-26 17:03:42,094 [14] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:03:42 PM +08:00
+
+2017-10-26 17:03:42,100 [14] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project1].[Id1] AS [Id], 
+    [Project1].[Id2] AS [Id1], 
+    [Project1].[Id] AS [Id2], 
+    [Project1].[OriginalLink] AS [OriginalLink], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[ConversationId] AS [ConversationId], 
+    [Project1].[ParentId] AS [ParentId], 
+    [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project1].[Content] AS [Content], 
+    [Project1].[SendTime] AS [SendTime], 
+    [Project1].[SendAgentId] AS [SendAgentId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[SenderId] AS [SenderId], 
+    [Project1].[OriginalLink1] AS [OriginalLink1], 
+    [Project1].[Type] AS [Type], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[ScreenName] AS [ScreenName], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MessageId] AS [MessageId], 
+    [Project1].[Type1] AS [Type1], 
+    [Project1].[Url] AS [Url], 
+    [Project1].[PreviewUrl] AS [PreviewUrl], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[MimeType] AS [MimeType]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[ConversationId] AS [ConversationId], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalLink] AS [OriginalLink], 
+        [Extent1].[ParentId] AS [ParentId], 
+        [Extent1].[SendTime] AS [SendTime], 
+        [Extent1].[SenderId] AS [SenderId], 
+        [Extent1].[SendAgentId] AS [SendAgentId], 
+        [Extent1].[Content] AS [Content], 
+        [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name], 
+        [Extent3].[Id] AS [Id2], 
+        [Extent3].[OriginalLink] AS [OriginalLink1], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent4].[MessageId] AS [MessageId], 
+        [Extent4].[Type] AS [Type1], 
+        [Extent4].[Name] AS [Name2], 
+        [Extent4].[MimeType] AS [MimeType], 
+        [Extent4].[Url] AS [Url], 
+        [Extent4].[PreviewUrl] AS [PreviewUrl], 
+        CASE WHEN ([Extent4].[MessageId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    [dbo].[t_Social_Message100014501] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON ([Extent1].[SenderId] = [Extent3].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) )
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent4] ON [Extent1].[Id] = [Extent4].[MessageId]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[SendTime] ASC, [Project1].[Id1] ASC, [Project1].[Id2] ASC, [Project1].[Id] ASC, [Project1].[C1] ASC
+2017-10-26 17:03:42,101 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:42,101 [14] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014501' (Type = Int32)
+
+2017-10-26 17:03:42,101 [14] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:03:42,101 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:03:42,101 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:03:42 PM +08:00
+
+2017-10-26 17:03:42,220 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 119 ms with result: SqlDataReader
+
+2017-10-26 17:03:42,221 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:42,221 [14] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:03:42 PM +08:00
+
+2017-10-26 17:03:43,311 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:03:43 PM +08:00
+
+2017-10-26 17:03:43,315 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] = @p__linq__1)
+2017-10-26 17:03:43,315 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:43,315 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:03:43,315 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__1: 'TwitterTweet' (Type = Int16)
+
+2017-10-26 17:03:43,315 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:03:43 PM +08:00
+
+2017-10-26 17:03:43,413 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 97 ms with result: SqlDataReader
+
+2017-10-26 17:03:43,413 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:43,413 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:03:43 PM +08:00
+
+2017-10-26 17:03:43,414 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:03:43 PM +08:00
+
+2017-10-26 17:03:43,425 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project1].[Id1] AS [Id], 
+    [Project1].[Id2] AS [Id1], 
+    [Project1].[Id] AS [Id2], 
+    [Project1].[OriginalLink] AS [OriginalLink], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[ConversationId] AS [ConversationId], 
+    [Project1].[ParentId] AS [ParentId], 
+    [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project1].[Content] AS [Content], 
+    [Project1].[SendTime] AS [SendTime], 
+    [Project1].[SendAgentId] AS [SendAgentId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[SenderId] AS [SenderId], 
+    [Project1].[OriginalLink1] AS [OriginalLink1], 
+    [Project1].[Type] AS [Type], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[ScreenName] AS [ScreenName], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MessageId] AS [MessageId], 
+    [Project1].[Type1] AS [Type1], 
+    [Project1].[Url] AS [Url], 
+    [Project1].[PreviewUrl] AS [PreviewUrl], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[MimeType] AS [MimeType]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[ConversationId] AS [ConversationId], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalLink] AS [OriginalLink], 
+        [Extent1].[ParentId] AS [ParentId], 
+        [Extent1].[SendTime] AS [SendTime], 
+        [Extent1].[SenderId] AS [SenderId], 
+        [Extent1].[SendAgentId] AS [SendAgentId], 
+        [Extent1].[Content] AS [Content], 
+        [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name], 
+        [Extent3].[Id] AS [Id2], 
+        [Extent3].[OriginalLink] AS [OriginalLink1], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent4].[MessageId] AS [MessageId], 
+        [Extent4].[Type] AS [Type1], 
+        [Extent4].[Name] AS [Name2], 
+        [Extent4].[MimeType] AS [MimeType], 
+        [Extent4].[Url] AS [Url], 
+        [Extent4].[PreviewUrl] AS [PreviewUrl], 
+        CASE WHEN ([Extent4].[MessageId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    [dbo].[t_Social_Message100014501] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON ([Extent1].[SenderId] = [Extent3].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) )
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent4] ON [Extent1].[Id] = [Extent4].[MessageId]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[SendTime] ASC, [Project1].[Id1] ASC, [Project1].[Id2] ASC, [Project1].[Id] ASC, [Project1].[C1] ASC
+2017-10-26 17:03:43,425 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:43,425 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014501' (Type = Int32)
+
+2017-10-26 17:03:43,426 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:03:43,426 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:03:43,426 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:03:43 PM +08:00
+
+2017-10-26 17:03:43,544 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 118 ms with result: SqlDataReader
+
+2017-10-26 17:03:43,544 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:03:43,545 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:03:43 PM +08:00
+
+2017-10-26 17:04:15,525 [10] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:04:15 PM +08:00
+
+2017-10-26 17:04:15,526 [10] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] = @p__linq__1)
+2017-10-26 17:04:15,526 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:04:15,526 [10] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:04:15,526 [10] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__1: 'TwitterTweet' (Type = Int16)
+
+2017-10-26 17:04:15,526 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:04:15 PM +08:00
+
+2017-10-26 17:04:15,631 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 105 ms with result: SqlDataReader
+
+2017-10-26 17:04:15,631 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:04:15,632 [10] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:04:15 PM +08:00
+
+2017-10-26 17:04:18,434 [10] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:04:18 PM +08:00
+
+2017-10-26 17:04:18,438 [10] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project1].[Id1] AS [Id], 
+    [Project1].[Id2] AS [Id1], 
+    [Project1].[Id] AS [Id2], 
+    [Project1].[OriginalLink] AS [OriginalLink], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[ConversationId] AS [ConversationId], 
+    [Project1].[ParentId] AS [ParentId], 
+    [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project1].[Content] AS [Content], 
+    [Project1].[SendTime] AS [SendTime], 
+    [Project1].[SendAgentId] AS [SendAgentId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[SenderId] AS [SenderId], 
+    [Project1].[OriginalLink1] AS [OriginalLink1], 
+    [Project1].[Type] AS [Type], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[ScreenName] AS [ScreenName], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MessageId] AS [MessageId], 
+    [Project1].[Type1] AS [Type1], 
+    [Project1].[Url] AS [Url], 
+    [Project1].[PreviewUrl] AS [PreviewUrl], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[MimeType] AS [MimeType]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[ConversationId] AS [ConversationId], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalLink] AS [OriginalLink], 
+        [Extent1].[ParentId] AS [ParentId], 
+        [Extent1].[SendTime] AS [SendTime], 
+        [Extent1].[SenderId] AS [SenderId], 
+        [Extent1].[SendAgentId] AS [SendAgentId], 
+        [Extent1].[Content] AS [Content], 
+        [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name], 
+        [Extent3].[Id] AS [Id2], 
+        [Extent3].[OriginalLink] AS [OriginalLink1], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent4].[MessageId] AS [MessageId], 
+        [Extent4].[Type] AS [Type1], 
+        [Extent4].[Name] AS [Name2], 
+        [Extent4].[MimeType] AS [MimeType], 
+        [Extent4].[Url] AS [Url], 
+        [Extent4].[PreviewUrl] AS [PreviewUrl], 
+        CASE WHEN ([Extent4].[MessageId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    [dbo].[t_Social_Message100014501] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON ([Extent1].[SenderId] = [Extent3].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) )
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent4] ON [Extent1].[Id] = [Extent4].[MessageId]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[SendTime] ASC, [Project1].[Id1] ASC, [Project1].[Id2] ASC, [Project1].[Id] ASC, [Project1].[C1] ASC
+2017-10-26 17:04:18,438 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:04:18,438 [10] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014501' (Type = Int32)
+
+2017-10-26 17:04:18,438 [10] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:04:18,438 [10] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:04:18,438 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:04:18 PM +08:00
+
+2017-10-26 17:04:18,557 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 118 ms with result: SqlDataReader
+
+2017-10-26 17:04:18,557 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:04:18,557 [10] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:04:18 PM +08:00
+
+2017-10-26 17:05:18,299 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-10-26 17:05:19,707 [1] INFO  System.Web.HttpApplication - Application started...
+2017-10-26 17:06:07,760 [10] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:06:07 PM +08:00
+
+2017-10-26 17:06:07,924 [10] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] = @p__linq__1)
+2017-10-26 17:06:07,924 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:06:07,924 [10] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:06:07,924 [10] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__1: 'TwitterTweet' (Type = Int16)
+
+2017-10-26 17:06:07,924 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:06:07 PM +08:00
+
+2017-10-26 17:06:08,012 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 87 ms with result: SqlDataReader
+
+2017-10-26 17:06:08,012 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:06:08,039 [10] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:06:08 PM +08:00
+
+2017-10-26 17:06:08,080 [10] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:06:08 PM +08:00
+
+2017-10-26 17:06:08,133 [10] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project1].[Id1] AS [Id], 
+    [Project1].[Id2] AS [Id1], 
+    [Project1].[Id] AS [Id2], 
+    [Project1].[OriginalLink] AS [OriginalLink], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[ConversationId] AS [ConversationId], 
+    [Project1].[ParentId] AS [ParentId], 
+    [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project1].[Content] AS [Content], 
+    [Project1].[SendTime] AS [SendTime], 
+    [Project1].[SendAgentId] AS [SendAgentId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[SenderId] AS [SenderId], 
+    [Project1].[OriginalLink1] AS [OriginalLink1], 
+    [Project1].[Type] AS [Type], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[ScreenName] AS [ScreenName], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MessageId] AS [MessageId], 
+    [Project1].[Type1] AS [Type1], 
+    [Project1].[Url] AS [Url], 
+    [Project1].[PreviewUrl] AS [PreviewUrl], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[MimeType] AS [MimeType]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[ConversationId] AS [ConversationId], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalLink] AS [OriginalLink], 
+        [Extent1].[ParentId] AS [ParentId], 
+        [Extent1].[SendTime] AS [SendTime], 
+        [Extent1].[SenderId] AS [SenderId], 
+        [Extent1].[SendAgentId] AS [SendAgentId], 
+        [Extent1].[Content] AS [Content], 
+        [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name], 
+        [Extent3].[Id] AS [Id2], 
+        [Extent3].[OriginalLink] AS [OriginalLink1], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent4].[MessageId] AS [MessageId], 
+        [Extent4].[Type] AS [Type1], 
+        [Extent4].[Name] AS [Name2], 
+        [Extent4].[MimeType] AS [MimeType], 
+        [Extent4].[Url] AS [Url], 
+        [Extent4].[PreviewUrl] AS [PreviewUrl], 
+        CASE WHEN ([Extent4].[MessageId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    [dbo].[t_Social_Message100014501] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON ([Extent1].[SenderId] = [Extent3].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL))
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent4] ON [Extent1].[Id] = [Extent4].[MessageId]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[SendTime] ASC, [Project1].[Id1] ASC, [Project1].[Id2] ASC, [Project1].[Id] ASC, [Project1].[C1] ASC
+2017-10-26 17:06:08,133 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:06:08,133 [10] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-10-26 17:06:08,133 [10] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:06:08,133 [10] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:06:08,133 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:06:08 PM +08:00
+
+2017-10-26 17:06:08,244 [10] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 110 ms with result: SqlDataReader
+
+2017-10-26 17:06:08,244 [10] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:06:08,252 [10] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:06:08 PM +08:00
+
+2017-10-26 17:06:21,451 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:06:21 PM +08:00
+
+2017-10-26 17:06:21,456 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] = @p__linq__1)
+2017-10-26 17:06:21,456 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:06:21,456 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:06:21,456 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__1: 'TwitterTweet' (Type = Int16)
+
+2017-10-26 17:06:21,456 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:06:21 PM +08:00
+
+2017-10-26 17:06:21,540 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 83 ms with result: SqlDataReader
+
+2017-10-26 17:06:21,540 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:06:21,541 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:06:21 PM +08:00
+
+2017-10-26 17:06:22,247 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:06:22 PM +08:00
+
+2017-10-26 17:06:22,250 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project1].[Id1] AS [Id], 
+    [Project1].[Id2] AS [Id1], 
+    [Project1].[Id] AS [Id2], 
+    [Project1].[OriginalLink] AS [OriginalLink], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[ConversationId] AS [ConversationId], 
+    [Project1].[ParentId] AS [ParentId], 
+    [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project1].[Content] AS [Content], 
+    [Project1].[SendTime] AS [SendTime], 
+    [Project1].[SendAgentId] AS [SendAgentId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[SenderId] AS [SenderId], 
+    [Project1].[OriginalLink1] AS [OriginalLink1], 
+    [Project1].[Type] AS [Type], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[ScreenName] AS [ScreenName], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MessageId] AS [MessageId], 
+    [Project1].[Type1] AS [Type1], 
+    [Project1].[Url] AS [Url], 
+    [Project1].[PreviewUrl] AS [PreviewUrl], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[MimeType] AS [MimeType]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[ConversationId] AS [ConversationId], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalLink] AS [OriginalLink], 
+        [Extent1].[ParentId] AS [ParentId], 
+        [Extent1].[SendTime] AS [SendTime], 
+        [Extent1].[SenderId] AS [SenderId], 
+        [Extent1].[SendAgentId] AS [SendAgentId], 
+        [Extent1].[Content] AS [Content], 
+        [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name], 
+        [Extent3].[Id] AS [Id2], 
+        [Extent3].[OriginalLink] AS [OriginalLink1], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent4].[MessageId] AS [MessageId], 
+        [Extent4].[Type] AS [Type1], 
+        [Extent4].[Name] AS [Name2], 
+        [Extent4].[MimeType] AS [MimeType], 
+        [Extent4].[Url] AS [Url], 
+        [Extent4].[PreviewUrl] AS [PreviewUrl], 
+        CASE WHEN ([Extent4].[MessageId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    [dbo].[t_Social_Message100014501] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON ([Extent1].[SenderId] = [Extent3].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) )
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent4] ON [Extent1].[Id] = [Extent4].[MessageId]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[SendTime] ASC, [Project1].[Id1] ASC, [Project1].[Id2] ASC, [Project1].[Id] ASC, [Project1].[C1] ASC
+2017-10-26 17:06:22,250 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:06:22,250 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014501' (Type = Int32)
+
+2017-10-26 17:06:22,250 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:06:22,250 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:06:22,250 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:06:22 PM +08:00
+
+2017-10-26 17:06:22,352 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 102 ms with result: SqlDataReader
+
+2017-10-26 17:06:22,352 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:06:22,352 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:06:22 PM +08:00
+
+2017-10-26 17:08:21,512 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-10-26 17:08:23,129 [1] INFO  System.Web.HttpApplication - Application started...
+2017-10-26 17:09:07,629 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:09:07 PM +08:00
+
+2017-10-26 17:09:07,766 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] = @p__linq__1)
+2017-10-26 17:09:07,766 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:09:07,767 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:09:07,767 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__1: 'TwitterTweet' (Type = Int16)
+
+2017-10-26 17:09:07,767 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:09:07 PM +08:00
+
+2017-10-26 17:09:07,865 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 98 ms with result: SqlDataReader
+
+2017-10-26 17:09:07,865 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:09:07,918 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:09:07 PM +08:00
+
+2017-10-26 17:09:07,987 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:09:07 PM +08:00
+
+2017-10-26 17:09:08,060 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project1].[Id1] AS [Id], 
+    [Project1].[Id2] AS [Id1], 
+    [Project1].[Id] AS [Id2], 
+    [Project1].[OriginalLink] AS [OriginalLink], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[ConversationId] AS [ConversationId], 
+    [Project1].[ParentId] AS [ParentId], 
+    [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project1].[Content] AS [Content], 
+    [Project1].[SendTime] AS [SendTime], 
+    [Project1].[SendAgentId] AS [SendAgentId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[SenderId] AS [SenderId], 
+    [Project1].[OriginalLink1] AS [OriginalLink1], 
+    [Project1].[Type] AS [Type], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[ScreenName] AS [ScreenName], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MessageId] AS [MessageId], 
+    [Project1].[Type1] AS [Type1], 
+    [Project1].[Url] AS [Url], 
+    [Project1].[PreviewUrl] AS [PreviewUrl], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[MimeType] AS [MimeType]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[ConversationId] AS [ConversationId], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalLink] AS [OriginalLink], 
+        [Extent1].[ParentId] AS [ParentId], 
+        [Extent1].[SendTime] AS [SendTime], 
+        [Extent1].[SenderId] AS [SenderId], 
+        [Extent1].[SendAgentId] AS [SendAgentId], 
+        [Extent1].[Content] AS [Content], 
+        [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name], 
+        [Extent3].[Id] AS [Id2], 
+        [Extent3].[OriginalLink] AS [OriginalLink1], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent4].[MessageId] AS [MessageId], 
+        [Extent4].[Type] AS [Type1], 
+        [Extent4].[Name] AS [Name2], 
+        [Extent4].[MimeType] AS [MimeType], 
+        [Extent4].[Url] AS [Url], 
+        [Extent4].[PreviewUrl] AS [PreviewUrl], 
+        CASE WHEN ([Extent4].[MessageId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    [dbo].[t_Social_Message100014501] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON ([Extent1].[SenderId] = [Extent3].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL))
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent4] ON [Extent1].[Id] = [Extent4].[MessageId]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[SendTime] ASC, [Project1].[Id1] ASC, [Project1].[Id2] ASC, [Project1].[Id] ASC, [Project1].[C1] ASC
+2017-10-26 17:09:08,060 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:09:08,060 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-10-26 17:09:08,060 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:09:08,060 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:09:08,060 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:09:08 PM +08:00
+
+2017-10-26 17:09:08,624 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 564 ms with result: SqlDataReader
+
+2017-10-26 17:09:08,624 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:09:08,635 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:09:08 PM +08:00
+
+2017-10-26 17:24:50,132 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-10-26 17:24:51,580 [1] INFO  System.Web.HttpApplication - Application started...
+2017-10-26 17:26:01,084 [14] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:26:01 PM +08:00
+
+2017-10-26 17:26:01,258 [14] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] = @p__linq__1)
+2017-10-26 17:26:01,258 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:01,259 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:26:01,259 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__1: 'TwitterTweet' (Type = Int16)
+
+2017-10-26 17:26:01,259 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:26:01 PM +08:00
+
+2017-10-26 17:26:01,358 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 99 ms with result: SqlDataReader
+
+2017-10-26 17:26:01,358 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:01,373 [14] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:26:01 PM +08:00
+
+2017-10-26 17:26:01,402 [14] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:26:01 PM +08:00
+
+2017-10-26 17:26:01,449 [14] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project1].[Id1] AS [Id], 
+    [Project1].[Id2] AS [Id1], 
+    [Project1].[Id] AS [Id2], 
+    [Project1].[OriginalLink] AS [OriginalLink], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[ConversationId] AS [ConversationId], 
+    [Project1].[ParentId] AS [ParentId], 
+    [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project1].[Content] AS [Content], 
+    [Project1].[SendTime] AS [SendTime], 
+    [Project1].[SendAgentId] AS [SendAgentId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[SenderId] AS [SenderId], 
+    [Project1].[OriginalLink1] AS [OriginalLink1], 
+    [Project1].[Type] AS [Type], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[ScreenName] AS [ScreenName], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MessageId] AS [MessageId], 
+    [Project1].[Type1] AS [Type1], 
+    [Project1].[Url] AS [Url], 
+    [Project1].[PreviewUrl] AS [PreviewUrl], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[MimeType] AS [MimeType]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[ConversationId] AS [ConversationId], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalLink] AS [OriginalLink], 
+        [Extent1].[ParentId] AS [ParentId], 
+        [Extent1].[SendTime] AS [SendTime], 
+        [Extent1].[SenderId] AS [SenderId], 
+        [Extent1].[SendAgentId] AS [SendAgentId], 
+        [Extent1].[Content] AS [Content], 
+        [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name], 
+        [Extent3].[Id] AS [Id2], 
+        [Extent3].[OriginalLink] AS [OriginalLink1], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent4].[MessageId] AS [MessageId], 
+        [Extent4].[Type] AS [Type1], 
+        [Extent4].[Name] AS [Name2], 
+        [Extent4].[MimeType] AS [MimeType], 
+        [Extent4].[Url] AS [Url], 
+        [Extent4].[PreviewUrl] AS [PreviewUrl], 
+        CASE WHEN ([Extent4].[MessageId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    [dbo].[t_Social_Message100014501] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON ([Extent1].[SenderId] = [Extent3].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL))
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent4] ON [Extent1].[Id] = [Extent4].[MessageId]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[SendTime] ASC, [Project1].[Id1] ASC, [Project1].[Id2] ASC, [Project1].[Id] ASC, [Project1].[C1] ASC
+2017-10-26 17:26:01,450 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:01,450 [14] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-10-26 17:26:01,450 [14] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:26:01,450 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '10' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:26:01,450 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:26:01 PM +08:00
+
+2017-10-26 17:26:01,574 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 123 ms with result: SqlDataReader
+
+2017-10-26 17:26:01,574 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:01,585 [14] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:26:01 PM +08:00
+
+2017-10-26 17:26:18,844 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:26:18 PM +08:00
+
+2017-10-26 17:26:18,847 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] = @p__linq__1)
+2017-10-26 17:26:18,847 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:18,847 [9] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:26:18,847 [9] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__1: 'TwitterTweet' (Type = Int16)
+
+2017-10-26 17:26:18,848 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:26:18 PM +08:00
+
+2017-10-26 17:26:18,944 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 96 ms with result: SqlDataReader
+
+2017-10-26 17:26:18,944 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:18,945 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:26:18 PM +08:00
+
+2017-10-26 17:26:18,948 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:26:18 PM +08:00
+
+2017-10-26 17:26:18,959 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project1].[Id1] AS [Id], 
+    [Project1].[Id2] AS [Id1], 
+    [Project1].[Id] AS [Id2], 
+    [Project1].[OriginalLink] AS [OriginalLink], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[ConversationId] AS [ConversationId], 
+    [Project1].[ParentId] AS [ParentId], 
+    [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project1].[Content] AS [Content], 
+    [Project1].[SendTime] AS [SendTime], 
+    [Project1].[SendAgentId] AS [SendAgentId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[SenderId] AS [SenderId], 
+    [Project1].[OriginalLink1] AS [OriginalLink1], 
+    [Project1].[Type] AS [Type], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[ScreenName] AS [ScreenName], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MessageId] AS [MessageId], 
+    [Project1].[Type1] AS [Type1], 
+    [Project1].[Url] AS [Url], 
+    [Project1].[PreviewUrl] AS [PreviewUrl], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[MimeType] AS [MimeType]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[ConversationId] AS [ConversationId], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalLink] AS [OriginalLink], 
+        [Extent1].[ParentId] AS [ParentId], 
+        [Extent1].[SendTime] AS [SendTime], 
+        [Extent1].[SenderId] AS [SenderId], 
+        [Extent1].[SendAgentId] AS [SendAgentId], 
+        [Extent1].[Content] AS [Content], 
+        [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name], 
+        [Extent3].[Id] AS [Id2], 
+        [Extent3].[OriginalLink] AS [OriginalLink1], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent4].[MessageId] AS [MessageId], 
+        [Extent4].[Type] AS [Type1], 
+        [Extent4].[Name] AS [Name2], 
+        [Extent4].[MimeType] AS [MimeType], 
+        [Extent4].[Url] AS [Url], 
+        [Extent4].[PreviewUrl] AS [PreviewUrl], 
+        CASE WHEN ([Extent4].[MessageId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    [dbo].[t_Social_Message100014501] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON ([Extent1].[SenderId] = [Extent3].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) )
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent4] ON [Extent1].[Id] = [Extent4].[MessageId]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[SendTime] ASC, [Project1].[Id1] ASC, [Project1].[Id2] ASC, [Project1].[Id] ASC, [Project1].[C1] ASC
+2017-10-26 17:26:18,959 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:18,959 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014501' (Type = Int32)
+
+2017-10-26 17:26:18,959 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:26:18,959 [9] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:26:18,959 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:26:18 PM +08:00
+
+2017-10-26 17:26:19,078 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 118 ms with result: SqlDataReader
+
+2017-10-26 17:26:19,078 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:19,078 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:26:19 PM +08:00
+
+2017-10-26 17:26:55,874 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:26:55 PM +08:00
+
+2017-10-26 17:26:55,879 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] = @p__linq__1)
+2017-10-26 17:26:55,879 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:55,879 [9] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '53' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:26:55,879 [9] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__1: 'TwitterTweet' (Type = Int16)
+
+2017-10-26 17:26:55,879 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:26:55 PM +08:00
+
+2017-10-26 17:26:55,977 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 96 ms with result: SqlDataReader
+
+2017-10-26 17:26:55,977 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:55,978 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:26:55 PM +08:00
+
+2017-10-26 17:26:55,979 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:26:55 PM +08:00
+
+2017-10-26 17:26:55,989 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project1].[Id1] AS [Id], 
+    [Project1].[Id2] AS [Id1], 
+    [Project1].[Id] AS [Id2], 
+    [Project1].[OriginalLink] AS [OriginalLink], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[ConversationId] AS [ConversationId], 
+    [Project1].[ParentId] AS [ParentId], 
+    [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project1].[Content] AS [Content], 
+    [Project1].[SendTime] AS [SendTime], 
+    [Project1].[SendAgentId] AS [SendAgentId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[SenderId] AS [SenderId], 
+    [Project1].[OriginalLink1] AS [OriginalLink1], 
+    [Project1].[Type] AS [Type], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[ScreenName] AS [ScreenName], 
+    [Project1].[Email] AS [Email], 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MessageId] AS [MessageId], 
+    [Project1].[Type1] AS [Type1], 
+    [Project1].[Url] AS [Url], 
+    [Project1].[PreviewUrl] AS [PreviewUrl], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[MimeType] AS [MimeType]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[ConversationId] AS [ConversationId], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalLink] AS [OriginalLink], 
+        [Extent1].[ParentId] AS [ParentId], 
+        [Extent1].[SendTime] AS [SendTime], 
+        [Extent1].[SenderId] AS [SenderId], 
+        [Extent1].[SendAgentId] AS [SendAgentId], 
+        [Extent1].[Content] AS [Content], 
+        [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+        [Extent2].[Id] AS [Id1], 
+        [Extent2].[Name] AS [Name], 
+        [Extent3].[Id] AS [Id2], 
+        [Extent3].[OriginalLink] AS [OriginalLink1], 
+        [Extent3].[Type] AS [Type], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent3].[ScreenName] AS [ScreenName], 
+        [Extent3].[Email] AS [Email], 
+        [Extent3].[Avatar] AS [Avatar], 
+        [Extent4].[MessageId] AS [MessageId], 
+        [Extent4].[Type] AS [Type1], 
+        [Extent4].[Name] AS [Name2], 
+        [Extent4].[MimeType] AS [MimeType], 
+        [Extent4].[Url] AS [Url], 
+        [Extent4].[PreviewUrl] AS [PreviewUrl], 
+        CASE WHEN ([Extent4].[MessageId] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    [dbo].[t_Social_Message100014501] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON ([Extent1].[SenderId] = [Extent3].[Id]) AND (([Extent3].[SiteId] = @DynamicFilterParam_000001) )
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent4] ON [Extent1].[Id] = [Extent4].[MessageId]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[SendTime] ASC, [Project1].[Id1] ASC, [Project1].[Id2] ASC, [Project1].[Id] ASC, [Project1].[C1] ASC
+2017-10-26 17:26:55,990 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:55,990 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014501' (Type = Int32)
+
+2017-10-26 17:26:55,990 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:26:55,990 [9] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '53' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:26:55,990 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:26:55 PM +08:00
+
+2017-10-26 17:26:56,113 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 122 ms with result: SqlDataReader
+
+2017-10-26 17:26:56,113 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:26:56,113 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:26:56 PM +08:00
+
+2017-10-26 17:28:03,965 [14] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:28:03 PM +08:00
+
+2017-10-26 17:28:03,978 [14] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] IN (cast(2 as smallint), cast(3 as smallint)))
+2017-10-26 17:28:03,978 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:28:03,978 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '57' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:28:03,979 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:28:03 PM +08:00
+
+2017-10-26 17:28:04,075 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 97 ms with result: SqlDataReader
+
+2017-10-26 17:28:04,075 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:28:04,076 [14] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:28:04 PM +08:00
+
+2017-10-26 17:28:04,076 [14] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:28:04 PM +08:00
+
+2017-10-26 17:28:04,218 [14] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project5].[Id4] AS [Id], 
+    [Project5].[Id7] AS [Id1], 
+    [Project5].[Id] AS [Id2], 
+    [Project5].[ConversationId] AS [ConversationId], 
+    [Project5].[Source] AS [Source], 
+    [Project5].[OriginalId] AS [OriginalId], 
+    [Project5].[OriginalLink] AS [OriginalLink], 
+    [Project5].[ParentId] AS [ParentId], 
+    [Project5].[SendTime] AS [SendTime], 
+    [Project5].[SenderId] AS [SenderId], 
+    [Project5].[ReceiverId] AS [ReceiverId], 
+    [Project5].[SendAgentId] AS [SendAgentId], 
+    [Project5].[Content] AS [Content], 
+    [Project5].[Story] AS [Story], 
+    [Project5].[IsDeleted] AS [IsDeleted], 
+    [Project5].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project5].[Id1] AS [Id3], 
+    [Project5].[Name] AS [Name], 
+    [Project5].[UserType] AS [UserType], 
+    [Project5].[IfActive] AS [IfActive], 
+    [Project5].[IfDeleted] AS [IfDeleted], 
+    [Project5].[IfAdmin] AS [IfAdmin], 
+    [Project5].[Id2] AS [Id4], 
+    [Project5].[OriginalId1] AS [OriginalId1], 
+    [Project5].[OriginalLink1] AS [OriginalLink1], 
+    [Project5].[Source1] AS [Source1], 
+    [Project5].[Type] AS [Type], 
+    [Project5].[Name1] AS [Name1], 
+    [Project5].[ScreenName] AS [ScreenName], 
+    [Project5].[Email] AS [Email], 
+    [Project5].[Avatar] AS [Avatar], 
+    [Project5].[IsDeleted1] AS [IsDeleted1], 
+    [Project5].[SiteId] AS [SiteId], 
+    [Project5].[Id3] AS [Id5], 
+    [Project5].[Token] AS [Token], 
+    [Project5].[TokenSecret] AS [TokenSecret], 
+    [Project5].[IfEnable] AS [IfEnable], 
+    [Project5].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Project5].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Project5].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Project5].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Project5].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Project5].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Project5].[CreatedTime] AS [CreatedTime], 
+    [Project5].[CreatedBy] AS [CreatedBy], 
+    [Project5].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Project5].[ConversationAgentId] AS [ConversationAgentId], 
+    [Project5].[IsDeleted2] AS [IsDeleted2], 
+    [Project5].[ConversationPriority] AS [ConversationPriority], 
+    [Project5].[SiteId1] AS [SiteId1], 
+    [Project5].[Id5] AS [Id6], 
+    [Project5].[OriginalId2] AS [OriginalId2], 
+    [Project5].[OriginalLink2] AS [OriginalLink2], 
+    [Project5].[Source2] AS [Source2], 
+    [Project5].[Type1] AS [Type1], 
+    [Project5].[Name2] AS [Name2], 
+    [Project5].[ScreenName1] AS [ScreenName1], 
+    [Project5].[Email1] AS [Email1], 
+    [Project5].[Avatar1] AS [Avatar1], 
+    [Project5].[IsDeleted3] AS [IsDeleted3], 
+    [Project5].[SiteId2] AS [SiteId2], 
+    [Project5].[Id6] AS [Id7], 
+    [Project5].[Token1] AS [Token1], 
+    [Project5].[TokenSecret1] AS [TokenSecret1], 
+    [Project5].[IfEnable1] AS [IfEnable1], 
+    [Project5].[IfConvertMessageToConversation1] AS [IfConvertMessageToConversation1], 
+    [Project5].[IfConvertVisitorPostToConversation1] AS [IfConvertVisitorPostToConversation1], 
+    [Project5].[IfConvertWallPostToConversation1] AS [IfConvertWallPostToConversation1], 
+    [Project5].[IfConvertTweetToConversation1] AS [IfConvertTweetToConversation1], 
+    [Project5].[FacebookPageCategory1] AS [FacebookPageCategory1], 
+    [Project5].[FacebookSignInAs1] AS [FacebookSignInAs1], 
+    [Project5].[CreatedTime1] AS [CreatedTime1], 
+    [Project5].[CreatedBy1] AS [CreatedBy1], 
+    [Project5].[ConversationDepartmentId1] AS [ConversationDepartmentId1], 
+    [Project5].[ConversationAgentId1] AS [ConversationAgentId1], 
+    [Project5].[IsDeleted4] AS [IsDeleted4], 
+    [Project5].[ConversationPriority1] AS [ConversationPriority1], 
+    [Project5].[SiteId3] AS [SiteId3], 
+    [Project5].[C1] AS [C1], 
+    [Project5].[Id8] AS [Id8], 
+    [Project5].[MessageId] AS [MessageId], 
+    [Project5].[OriginalId3] AS [OriginalId3], 
+    [Project5].[OriginalLink3] AS [OriginalLink3], 
+    [Project5].[Type2] AS [Type2], 
+    [Project5].[Name3] AS [Name3], 
+    [Project5].[MimeType] AS [MimeType], 
+    [Project5].[Size] AS [Size], 
+    [Project5].[Url] AS [Url], 
+    [Project5].[PreviewUrl] AS [PreviewUrl], 
+    [Project5].[RawData] AS [RawData]
+    FROM ( SELECT 
+        [Project3].[Id] AS [Id], 
+        [Project3].[ConversationId] AS [ConversationId], 
+        [Project3].[Source] AS [Source], 
+        [Project3].[OriginalId] AS [OriginalId], 
+        [Project3].[OriginalLink] AS [OriginalLink], 
+        [Project3].[ParentId] AS [ParentId], 
+        [Project3].[SendTime] AS [SendTime], 
+        [Project3].[SenderId] AS [SenderId], 
+        [Project3].[ReceiverId] AS [ReceiverId], 
+        [Project3].[SendAgentId] AS [SendAgentId], 
+        [Project3].[Content] AS [Content], 
+        [Project3].[Story] AS [Story], 
+        [Project3].[IsDeleted] AS [IsDeleted], 
+        [Project3].[QuoteTweetId] AS [QuoteTweetId], 
+        [Project3].[Id1] AS [Id1], 
+        [Project3].[Name] AS [Name], 
+        [Project3].[UserType] AS [UserType], 
+        [Project3].[IfActive] AS [IfActive], 
+        [Project3].[IfDeleted] AS [IfDeleted], 
+        [Project3].[IfAdmin] AS [IfAdmin], 
+        [Project3].[Id2] AS [Id2], 
+        [Project3].[OriginalId1] AS [OriginalId1], 
+        [Project3].[OriginalLink1] AS [OriginalLink1], 
+        [Project3].[Source1] AS [Source1], 
+        [Project3].[Type] AS [Type], 
+        [Project3].[Name1] AS [Name1], 
+        [Project3].[ScreenName] AS [ScreenName], 
+        [Project3].[Email] AS [Email], 
+        [Project3].[Avatar] AS [Avatar], 
+        [Project3].[IsDeleted1] AS [IsDeleted1], 
+        [Project3].[SiteId] AS [SiteId], 
+        [Project3].[Id3] AS [Id3], 
+        [Project3].[Token] AS [Token], 
+        [Project3].[TokenSecret] AS [TokenSecret], 
+        [Project3].[IfEnable] AS [IfEnable], 
+        [Project3].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+        [Project3].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+        [Project3].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+        [Project3].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+        [Project3].[FacebookPageCategory] AS [FacebookPageCategory], 
+        [Project3].[FacebookSignInAs] AS [FacebookSignInAs], 
+        [Project3].[CreatedTime] AS [CreatedTime], 
+        [Project3].[CreatedBy] AS [CreatedBy], 
+        [Project3].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+        [Project3].[ConversationAgentId] AS [ConversationAgentId], 
+        [Project3].[IsDeleted2] AS [IsDeleted2], 
+        [Project3].[ConversationPriority] AS [ConversationPriority], 
+        [Project3].[SiteId1] AS [SiteId1], 
+        [Project3].[Id4] AS [Id4], 
+        [Project3].[Id5] AS [Id5], 
+        [Project3].[OriginalId2] AS [OriginalId2], 
+        [Project3].[OriginalLink2] AS [OriginalLink2], 
+        [Project3].[Source2] AS [Source2], 
+        [Project3].[Type1] AS [Type1], 
+        [Project3].[Name2] AS [Name2], 
+        [Project3].[ScreenName1] AS [ScreenName1], 
+        [Project3].[Email1] AS [Email1], 
+        [Project3].[Avatar1] AS [Avatar1], 
+        [Project3].[IsDeleted3] AS [IsDeleted3], 
+        [Project3].[SiteId2] AS [SiteId2], 
+        [Element2].[Id] AS [Id6], 
+        [Element2].[Token] AS [Token1], 
+        [Element2].[TokenSecret] AS [TokenSecret1], 
+        [Element2].[IfEnable] AS [IfEnable1], 
+        [Element2].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation1], 
+        [Element2].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation1], 
+        [Element2].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation1], 
+        [Element2].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation1], 
+        [Element2].[FacebookPageCategory] AS [FacebookPageCategory1], 
+        [Element2].[FacebookSignInAs] AS [FacebookSignInAs1], 
+        [Element2].[CreatedTime] AS [CreatedTime1], 
+        [Element2].[CreatedBy] AS [CreatedBy1], 
+        [Element2].[ConversationDepartmentId] AS [ConversationDepartmentId1], 
+        [Element2].[ConversationAgentId] AS [ConversationAgentId1], 
+        [Element2].[IsDeleted] AS [IsDeleted4], 
+        [Element2].[ConversationPriority] AS [ConversationPriority1], 
+        [Element2].[SiteId] AS [SiteId3], 
+        [Element2].[Id1] AS [Id7], 
+        [Extent9].[Id] AS [Id8], 
+        [Extent9].[MessageId] AS [MessageId], 
+        [Extent9].[OriginalId] AS [OriginalId3], 
+        [Extent9].[OriginalLink] AS [OriginalLink3], 
+        [Extent9].[Type] AS [Type2], 
+        [Extent9].[Name] AS [Name3], 
+        [Extent9].[MimeType] AS [MimeType], 
+        [Extent9].[Size] AS [Size], 
+        [Extent9].[Url] AS [Url], 
+        [Extent9].[PreviewUrl] AS [PreviewUrl], 
+        [Extent9].[RawData] AS [RawData], 
+        CASE WHEN ([Extent9].[Id] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    (SELECT 
+            [Project1].[Id] AS [Id], 
+            [Project1].[ConversationId] AS [ConversationId], 
+            [Project1].[Source] AS [Source], 
+            [Project1].[OriginalId] AS [OriginalId], 
+            [Project1].[OriginalLink] AS [OriginalLink], 
+            [Project1].[ParentId] AS [ParentId], 
+            [Project1].[SendTime] AS [SendTime], 
+            [Project1].[SenderId] AS [SenderId], 
+            [Project1].[ReceiverId] AS [ReceiverId], 
+            [Project1].[SendAgentId] AS [SendAgentId], 
+            [Project1].[Content] AS [Content], 
+            [Project1].[Story] AS [Story], 
+            [Project1].[IsDeleted] AS [IsDeleted], 
+            [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+            [Project1].[Id1] AS [Id1], 
+            [Project1].[Name] AS [Name], 
+            [Project1].[UserType] AS [UserType], 
+            [Project1].[IfActive] AS [IfActive], 
+            [Project1].[IfDeleted] AS [IfDeleted], 
+            [Project1].[IfAdmin] AS [IfAdmin], 
+            [Project1].[Id2] AS [Id2], 
+            [Project1].[OriginalId1] AS [OriginalId1], 
+            [Project1].[OriginalLink1] AS [OriginalLink1], 
+            [Project1].[Source1] AS [Source1], 
+            [Project1].[Type] AS [Type], 
+            [Project1].[Name1] AS [Name1], 
+            [Project1].[ScreenName] AS [ScreenName], 
+            [Project1].[Email] AS [Email], 
+            [Project1].[Avatar] AS [Avatar], 
+            [Project1].[IsDeleted1] AS [IsDeleted1], 
+            [Project1].[SiteId] AS [SiteId], 
+            [Element1].[Id] AS [Id3], 
+            [Element1].[Token] AS [Token], 
+            [Element1].[TokenSecret] AS [TokenSecret], 
+            [Element1].[IfEnable] AS [IfEnable], 
+            [Element1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Element1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Element1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Element1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Element1].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Element1].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Element1].[CreatedTime] AS [CreatedTime], 
+            [Element1].[CreatedBy] AS [CreatedBy], 
+            [Element1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Element1].[ConversationAgentId] AS [ConversationAgentId], 
+            [Element1].[IsDeleted] AS [IsDeleted2], 
+            [Element1].[ConversationPriority] AS [ConversationPriority], 
+            [Element1].[SiteId] AS [SiteId1], 
+            [Element1].[Id1] AS [Id4], 
+            [Extent6].[Id] AS [Id5], 
+            [Extent6].[OriginalId] AS [OriginalId2], 
+            [Extent6].[OriginalLink] AS [OriginalLink2], 
+            [Extent6].[Source] AS [Source2], 
+            [Extent6].[Type] AS [Type1], 
+            [Extent6].[Name] AS [Name2], 
+            [Extent6].[ScreenName] AS [ScreenName1], 
+            [Extent6].[Email] AS [Email1], 
+            [Extent6].[Avatar] AS [Avatar1], 
+            [Extent6].[IsDeleted] AS [IsDeleted3], 
+            [Extent6].[SiteId] AS [SiteId2]
+            FROM    (SELECT 
+                [Extent1].[Id] AS [Id], 
+                [Extent1].[ConversationId] AS [ConversationId], 
+                [Extent1].[Source] AS [Source], 
+                [Extent1].[OriginalId] AS [OriginalId], 
+                [Extent1].[OriginalLink] AS [OriginalLink], 
+                [Extent1].[ParentId] AS [ParentId], 
+                [Extent1].[SendTime] AS [SendTime], 
+                [Extent1].[SenderId] AS [SenderId], 
+                [Extent1].[ReceiverId] AS [ReceiverId], 
+                [Extent1].[SendAgentId] AS [SendAgentId], 
+                [Extent1].[Content] AS [Content], 
+                [Extent1].[Story] AS [Story], 
+                [Extent1].[IsDeleted] AS [IsDeleted], 
+                [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+                [Extent2].[Id] AS [Id1], 
+                [Extent2].[Name] AS [Name], 
+                [Extent2].[UserType] AS [UserType], 
+                [Extent2].[IfActive] AS [IfActive], 
+                [Extent2].[IfDeleted] AS [IfDeleted], 
+                [Extent2].[IfAdmin] AS [IfAdmin], 
+                [Extent3].[Id] AS [Id2], 
+                [Extent3].[OriginalId] AS [OriginalId1], 
+                [Extent3].[OriginalLink] AS [OriginalLink1], 
+                [Extent3].[Source] AS [Source1], 
+                [Extent3].[Type] AS [Type], 
+                [Extent3].[Name] AS [Name1], 
+                [Extent3].[ScreenName] AS [ScreenName], 
+                [Extent3].[Email] AS [Email], 
+                [Extent3].[Avatar] AS [Avatar], 
+                [Extent3].[IsDeleted] AS [IsDeleted1], 
+                [Extent3].[SiteId] AS [SiteId]
+                FROM   [dbo].[t_Social_Message100014501] AS [Extent1]
+                LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+                LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON (([Extent3].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[SenderId] = [Extent3].[Id])
+                WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0) ) AS [Project1]
+            OUTER APPLY  (SELECT TOP (1) 
+                [Extent4].[Id] AS [Id], 
+                [Extent4].[Token] AS [Token], 
+                [Extent4].[TokenSecret] AS [TokenSecret], 
+                [Extent4].[IfEnable] AS [IfEnable], 
+                [Extent4].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+                [Extent4].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+                [Extent4].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+                [Extent4].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+                [Extent4].[FacebookPageCategory] AS [FacebookPageCategory], 
+                [Extent4].[FacebookSignInAs] AS [FacebookSignInAs], 
+                [Extent4].[CreatedTime] AS [CreatedTime], 
+                [Extent4].[CreatedBy] AS [CreatedBy], 
+                [Extent4].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+                [Extent4].[ConversationAgentId] AS [ConversationAgentId], 
+                [Extent4].[IsDeleted] AS [IsDeleted], 
+                [Extent4].[ConversationPriority] AS [ConversationPriority], 
+                [Extent4].[SiteId] AS [SiteId], 
+                [Extent5].[Id] AS [Id1]
+                FROM  [dbo].[t_Social_Account] AS [Extent4]
+                INNER JOIN [dbo].[t_Social_User] AS [Extent5] ON [Extent5].[Id] = [Extent4].[Id]
+                WHERE (([Extent5].[SiteId] = @DynamicFilterParam_000001) ) AND ([Project1].[SenderId] = [Extent5].[Id]) AND (([Extent4].[SiteId] = @DynamicFilterParam_000001) ) ) AS [Element1]
+            LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent6] ON (([Extent6].[SiteId] = @DynamicFilterParam_000001) ) AND ([Project1].[ReceiverId] = [Extent6].[Id]) ) AS [Project3]
+        OUTER APPLY  (SELECT TOP (1) 
+            [Extent7].[Id] AS [Id], 
+            [Extent7].[Token] AS [Token], 
+            [Extent7].[TokenSecret] AS [TokenSecret], 
+            [Extent7].[IfEnable] AS [IfEnable], 
+            [Extent7].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Extent7].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Extent7].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Extent7].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Extent7].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Extent7].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Extent7].[CreatedTime] AS [CreatedTime], 
+            [Extent7].[CreatedBy] AS [CreatedBy], 
+            [Extent7].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Extent7].[ConversationAgentId] AS [ConversationAgentId], 
+            [Extent7].[IsDeleted] AS [IsDeleted], 
+            [Extent7].[ConversationPriority] AS [ConversationPriority], 
+            [Extent7].[SiteId] AS [SiteId], 
+            [Extent8].[Id] AS [Id1]
+            FROM  [dbo].[t_Social_Account] AS [Extent7]
+            INNER JOIN [dbo].[t_Social_User] AS [Extent8] ON [Extent8].[Id] = [Extent7].[Id]
+            WHERE (([Extent8].[SiteId] = @DynamicFilterParam_000001) ) AND ([Project3].[ReceiverId] = [Extent8].[Id]) AND (([Extent7].[SiteId] = @DynamicFilterParam_000001) ) ) AS [Element2]
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent9] ON [Project3].[Id] = [Extent9].[MessageId]
+    )  AS [Project5]
+    ORDER BY [Project5].[Id4] ASC, [Project5].[Id7] ASC, [Project5].[Id] ASC, [Project5].[Id1] ASC, [Project5].[Id2] ASC, [Project5].[Id3] ASC, [Project5].[Id5] ASC, [Project5].[Id6] ASC, [Project5].[C1] ASC
+2017-10-26 17:28:04,218 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:28:04,218 [14] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014501' (Type = Int32)
+
+2017-10-26 17:28:04,218 [14] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:28:04,218 [14] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '57' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:28:04,218 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:28:04 PM +08:00
+
+2017-10-26 17:28:04,416 [14] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 197 ms with result: SqlDataReader
+
+2017-10-26 17:28:04,416 [14] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:28:04,475 [14] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:28:04 PM +08:00
+
+2017-10-26 17:29:18,620 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-10-26 17:29:20,299 [1] INFO  System.Web.HttpApplication - Application started...
+2017-10-26 17:29:42,911 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-10-26 17:29:44,202 [1] INFO  System.Web.HttpApplication - Application started...
+2017-10-26 17:30:02,942 [11] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:30:02 PM +08:00
+
+2017-10-26 17:30:03,105 [11] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] IN (cast(2 as smallint), cast(3 as smallint)))
+2017-10-26 17:30:03,105 [11] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:30:03,105 [11] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '57' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:30:03,106 [11] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:30:03 PM +08:00
+
+2017-10-26 17:30:03,194 [11] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 87 ms with result: SqlDataReader
+
+2017-10-26 17:30:03,194 [11] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:30:03,235 [11] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:30:03 PM +08:00
+
+2017-10-26 17:30:03,239 [11] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:30:03 PM +08:00
+
+2017-10-26 17:30:03,404 [11] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project5].[Id4] AS [Id], 
+    [Project5].[Id7] AS [Id1], 
+    [Project5].[Id] AS [Id2], 
+    [Project5].[ConversationId] AS [ConversationId], 
+    [Project5].[Source] AS [Source], 
+    [Project5].[OriginalId] AS [OriginalId], 
+    [Project5].[OriginalLink] AS [OriginalLink], 
+    [Project5].[ParentId] AS [ParentId], 
+    [Project5].[SendTime] AS [SendTime], 
+    [Project5].[SenderId] AS [SenderId], 
+    [Project5].[ReceiverId] AS [ReceiverId], 
+    [Project5].[SendAgentId] AS [SendAgentId], 
+    [Project5].[Content] AS [Content], 
+    [Project5].[Story] AS [Story], 
+    [Project5].[IsDeleted] AS [IsDeleted], 
+    [Project5].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project5].[Id1] AS [Id3], 
+    [Project5].[Name] AS [Name], 
+    [Project5].[UserType] AS [UserType], 
+    [Project5].[IfActive] AS [IfActive], 
+    [Project5].[IfDeleted] AS [IfDeleted], 
+    [Project5].[IfAdmin] AS [IfAdmin], 
+    [Project5].[Id2] AS [Id4], 
+    [Project5].[OriginalId1] AS [OriginalId1], 
+    [Project5].[OriginalLink1] AS [OriginalLink1], 
+    [Project5].[Source1] AS [Source1], 
+    [Project5].[Type] AS [Type], 
+    [Project5].[Name1] AS [Name1], 
+    [Project5].[ScreenName] AS [ScreenName], 
+    [Project5].[Email] AS [Email], 
+    [Project5].[Avatar] AS [Avatar], 
+    [Project5].[IsDeleted1] AS [IsDeleted1], 
+    [Project5].[SiteId] AS [SiteId], 
+    [Project5].[Id3] AS [Id5], 
+    [Project5].[Token] AS [Token], 
+    [Project5].[TokenSecret] AS [TokenSecret], 
+    [Project5].[IfEnable] AS [IfEnable], 
+    [Project5].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Project5].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Project5].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Project5].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Project5].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Project5].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Project5].[CreatedTime] AS [CreatedTime], 
+    [Project5].[CreatedBy] AS [CreatedBy], 
+    [Project5].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Project5].[ConversationAgentId] AS [ConversationAgentId], 
+    [Project5].[IsDeleted2] AS [IsDeleted2], 
+    [Project5].[ConversationPriority] AS [ConversationPriority], 
+    [Project5].[SiteId1] AS [SiteId1], 
+    [Project5].[Id5] AS [Id6], 
+    [Project5].[OriginalId2] AS [OriginalId2], 
+    [Project5].[OriginalLink2] AS [OriginalLink2], 
+    [Project5].[Source2] AS [Source2], 
+    [Project5].[Type1] AS [Type1], 
+    [Project5].[Name2] AS [Name2], 
+    [Project5].[ScreenName1] AS [ScreenName1], 
+    [Project5].[Email1] AS [Email1], 
+    [Project5].[Avatar1] AS [Avatar1], 
+    [Project5].[IsDeleted3] AS [IsDeleted3], 
+    [Project5].[SiteId2] AS [SiteId2], 
+    [Project5].[Id6] AS [Id7], 
+    [Project5].[Token1] AS [Token1], 
+    [Project5].[TokenSecret1] AS [TokenSecret1], 
+    [Project5].[IfEnable1] AS [IfEnable1], 
+    [Project5].[IfConvertMessageToConversation1] AS [IfConvertMessageToConversation1], 
+    [Project5].[IfConvertVisitorPostToConversation1] AS [IfConvertVisitorPostToConversation1], 
+    [Project5].[IfConvertWallPostToConversation1] AS [IfConvertWallPostToConversation1], 
+    [Project5].[IfConvertTweetToConversation1] AS [IfConvertTweetToConversation1], 
+    [Project5].[FacebookPageCategory1] AS [FacebookPageCategory1], 
+    [Project5].[FacebookSignInAs1] AS [FacebookSignInAs1], 
+    [Project5].[CreatedTime1] AS [CreatedTime1], 
+    [Project5].[CreatedBy1] AS [CreatedBy1], 
+    [Project5].[ConversationDepartmentId1] AS [ConversationDepartmentId1], 
+    [Project5].[ConversationAgentId1] AS [ConversationAgentId1], 
+    [Project5].[IsDeleted4] AS [IsDeleted4], 
+    [Project5].[ConversationPriority1] AS [ConversationPriority1], 
+    [Project5].[SiteId3] AS [SiteId3], 
+    [Project5].[C1] AS [C1], 
+    [Project5].[Id8] AS [Id8], 
+    [Project5].[MessageId] AS [MessageId], 
+    [Project5].[OriginalId3] AS [OriginalId3], 
+    [Project5].[OriginalLink3] AS [OriginalLink3], 
+    [Project5].[Type2] AS [Type2], 
+    [Project5].[Name3] AS [Name3], 
+    [Project5].[MimeType] AS [MimeType], 
+    [Project5].[Size] AS [Size], 
+    [Project5].[Url] AS [Url], 
+    [Project5].[PreviewUrl] AS [PreviewUrl], 
+    [Project5].[RawData] AS [RawData]
+    FROM ( SELECT 
+        [Project3].[Id] AS [Id], 
+        [Project3].[ConversationId] AS [ConversationId], 
+        [Project3].[Source] AS [Source], 
+        [Project3].[OriginalId] AS [OriginalId], 
+        [Project3].[OriginalLink] AS [OriginalLink], 
+        [Project3].[ParentId] AS [ParentId], 
+        [Project3].[SendTime] AS [SendTime], 
+        [Project3].[SenderId] AS [SenderId], 
+        [Project3].[ReceiverId] AS [ReceiverId], 
+        [Project3].[SendAgentId] AS [SendAgentId], 
+        [Project3].[Content] AS [Content], 
+        [Project3].[Story] AS [Story], 
+        [Project3].[IsDeleted] AS [IsDeleted], 
+        [Project3].[QuoteTweetId] AS [QuoteTweetId], 
+        [Project3].[Id1] AS [Id1], 
+        [Project3].[Name] AS [Name], 
+        [Project3].[UserType] AS [UserType], 
+        [Project3].[IfActive] AS [IfActive], 
+        [Project3].[IfDeleted] AS [IfDeleted], 
+        [Project3].[IfAdmin] AS [IfAdmin], 
+        [Project3].[Id2] AS [Id2], 
+        [Project3].[OriginalId1] AS [OriginalId1], 
+        [Project3].[OriginalLink1] AS [OriginalLink1], 
+        [Project3].[Source1] AS [Source1], 
+        [Project3].[Type] AS [Type], 
+        [Project3].[Name1] AS [Name1], 
+        [Project3].[ScreenName] AS [ScreenName], 
+        [Project3].[Email] AS [Email], 
+        [Project3].[Avatar] AS [Avatar], 
+        [Project3].[IsDeleted1] AS [IsDeleted1], 
+        [Project3].[SiteId] AS [SiteId], 
+        [Project3].[Id3] AS [Id3], 
+        [Project3].[Token] AS [Token], 
+        [Project3].[TokenSecret] AS [TokenSecret], 
+        [Project3].[IfEnable] AS [IfEnable], 
+        [Project3].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+        [Project3].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+        [Project3].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+        [Project3].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+        [Project3].[FacebookPageCategory] AS [FacebookPageCategory], 
+        [Project3].[FacebookSignInAs] AS [FacebookSignInAs], 
+        [Project3].[CreatedTime] AS [CreatedTime], 
+        [Project3].[CreatedBy] AS [CreatedBy], 
+        [Project3].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+        [Project3].[ConversationAgentId] AS [ConversationAgentId], 
+        [Project3].[IsDeleted2] AS [IsDeleted2], 
+        [Project3].[ConversationPriority] AS [ConversationPriority], 
+        [Project3].[SiteId1] AS [SiteId1], 
+        [Project3].[Id4] AS [Id4], 
+        [Project3].[Id5] AS [Id5], 
+        [Project3].[OriginalId2] AS [OriginalId2], 
+        [Project3].[OriginalLink2] AS [OriginalLink2], 
+        [Project3].[Source2] AS [Source2], 
+        [Project3].[Type1] AS [Type1], 
+        [Project3].[Name2] AS [Name2], 
+        [Project3].[ScreenName1] AS [ScreenName1], 
+        [Project3].[Email1] AS [Email1], 
+        [Project3].[Avatar1] AS [Avatar1], 
+        [Project3].[IsDeleted3] AS [IsDeleted3], 
+        [Project3].[SiteId2] AS [SiteId2], 
+        [Element2].[Id] AS [Id6], 
+        [Element2].[Token] AS [Token1], 
+        [Element2].[TokenSecret] AS [TokenSecret1], 
+        [Element2].[IfEnable] AS [IfEnable1], 
+        [Element2].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation1], 
+        [Element2].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation1], 
+        [Element2].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation1], 
+        [Element2].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation1], 
+        [Element2].[FacebookPageCategory] AS [FacebookPageCategory1], 
+        [Element2].[FacebookSignInAs] AS [FacebookSignInAs1], 
+        [Element2].[CreatedTime] AS [CreatedTime1], 
+        [Element2].[CreatedBy] AS [CreatedBy1], 
+        [Element2].[ConversationDepartmentId] AS [ConversationDepartmentId1], 
+        [Element2].[ConversationAgentId] AS [ConversationAgentId1], 
+        [Element2].[IsDeleted] AS [IsDeleted4], 
+        [Element2].[ConversationPriority] AS [ConversationPriority1], 
+        [Element2].[SiteId] AS [SiteId3], 
+        [Element2].[Id1] AS [Id7], 
+        [Extent9].[Id] AS [Id8], 
+        [Extent9].[MessageId] AS [MessageId], 
+        [Extent9].[OriginalId] AS [OriginalId3], 
+        [Extent9].[OriginalLink] AS [OriginalLink3], 
+        [Extent9].[Type] AS [Type2], 
+        [Extent9].[Name] AS [Name3], 
+        [Extent9].[MimeType] AS [MimeType], 
+        [Extent9].[Size] AS [Size], 
+        [Extent9].[Url] AS [Url], 
+        [Extent9].[PreviewUrl] AS [PreviewUrl], 
+        [Extent9].[RawData] AS [RawData], 
+        CASE WHEN ([Extent9].[Id] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    (SELECT 
+            [Project1].[Id] AS [Id], 
+            [Project1].[ConversationId] AS [ConversationId], 
+            [Project1].[Source] AS [Source], 
+            [Project1].[OriginalId] AS [OriginalId], 
+            [Project1].[OriginalLink] AS [OriginalLink], 
+            [Project1].[ParentId] AS [ParentId], 
+            [Project1].[SendTime] AS [SendTime], 
+            [Project1].[SenderId] AS [SenderId], 
+            [Project1].[ReceiverId] AS [ReceiverId], 
+            [Project1].[SendAgentId] AS [SendAgentId], 
+            [Project1].[Content] AS [Content], 
+            [Project1].[Story] AS [Story], 
+            [Project1].[IsDeleted] AS [IsDeleted], 
+            [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+            [Project1].[Id1] AS [Id1], 
+            [Project1].[Name] AS [Name], 
+            [Project1].[UserType] AS [UserType], 
+            [Project1].[IfActive] AS [IfActive], 
+            [Project1].[IfDeleted] AS [IfDeleted], 
+            [Project1].[IfAdmin] AS [IfAdmin], 
+            [Project1].[Id2] AS [Id2], 
+            [Project1].[OriginalId1] AS [OriginalId1], 
+            [Project1].[OriginalLink1] AS [OriginalLink1], 
+            [Project1].[Source1] AS [Source1], 
+            [Project1].[Type] AS [Type], 
+            [Project1].[Name1] AS [Name1], 
+            [Project1].[ScreenName] AS [ScreenName], 
+            [Project1].[Email] AS [Email], 
+            [Project1].[Avatar] AS [Avatar], 
+            [Project1].[IsDeleted1] AS [IsDeleted1], 
+            [Project1].[SiteId] AS [SiteId], 
+            [Element1].[Id] AS [Id3], 
+            [Element1].[Token] AS [Token], 
+            [Element1].[TokenSecret] AS [TokenSecret], 
+            [Element1].[IfEnable] AS [IfEnable], 
+            [Element1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Element1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Element1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Element1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Element1].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Element1].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Element1].[CreatedTime] AS [CreatedTime], 
+            [Element1].[CreatedBy] AS [CreatedBy], 
+            [Element1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Element1].[ConversationAgentId] AS [ConversationAgentId], 
+            [Element1].[IsDeleted] AS [IsDeleted2], 
+            [Element1].[ConversationPriority] AS [ConversationPriority], 
+            [Element1].[SiteId] AS [SiteId1], 
+            [Element1].[Id1] AS [Id4], 
+            [Extent6].[Id] AS [Id5], 
+            [Extent6].[OriginalId] AS [OriginalId2], 
+            [Extent6].[OriginalLink] AS [OriginalLink2], 
+            [Extent6].[Source] AS [Source2], 
+            [Extent6].[Type] AS [Type1], 
+            [Extent6].[Name] AS [Name2], 
+            [Extent6].[ScreenName] AS [ScreenName1], 
+            [Extent6].[Email] AS [Email1], 
+            [Extent6].[Avatar] AS [Avatar1], 
+            [Extent6].[IsDeleted] AS [IsDeleted3], 
+            [Extent6].[SiteId] AS [SiteId2]
+            FROM    (SELECT 
+                [Extent1].[Id] AS [Id], 
+                [Extent1].[ConversationId] AS [ConversationId], 
+                [Extent1].[Source] AS [Source], 
+                [Extent1].[OriginalId] AS [OriginalId], 
+                [Extent1].[OriginalLink] AS [OriginalLink], 
+                [Extent1].[ParentId] AS [ParentId], 
+                [Extent1].[SendTime] AS [SendTime], 
+                [Extent1].[SenderId] AS [SenderId], 
+                [Extent1].[ReceiverId] AS [ReceiverId], 
+                [Extent1].[SendAgentId] AS [SendAgentId], 
+                [Extent1].[Content] AS [Content], 
+                [Extent1].[Story] AS [Story], 
+                [Extent1].[IsDeleted] AS [IsDeleted], 
+                [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+                [Extent2].[Id] AS [Id1], 
+                [Extent2].[Name] AS [Name], 
+                [Extent2].[UserType] AS [UserType], 
+                [Extent2].[IfActive] AS [IfActive], 
+                [Extent2].[IfDeleted] AS [IfDeleted], 
+                [Extent2].[IfAdmin] AS [IfAdmin], 
+                [Extent3].[Id] AS [Id2], 
+                [Extent3].[OriginalId] AS [OriginalId1], 
+                [Extent3].[OriginalLink] AS [OriginalLink1], 
+                [Extent3].[Source] AS [Source1], 
+                [Extent3].[Type] AS [Type], 
+                [Extent3].[Name] AS [Name1], 
+                [Extent3].[ScreenName] AS [ScreenName], 
+                [Extent3].[Email] AS [Email], 
+                [Extent3].[Avatar] AS [Avatar], 
+                [Extent3].[IsDeleted] AS [IsDeleted1], 
+                [Extent3].[SiteId] AS [SiteId]
+                FROM   [dbo].[t_Social_Message100014501] AS [Extent1]
+                LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+                LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON (([Extent3].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[SenderId] = [Extent3].[Id])
+                WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0) ) AS [Project1]
+            OUTER APPLY  (SELECT TOP (1) 
+                [Extent4].[Id] AS [Id], 
+                [Extent4].[Token] AS [Token], 
+                [Extent4].[TokenSecret] AS [TokenSecret], 
+                [Extent4].[IfEnable] AS [IfEnable], 
+                [Extent4].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+                [Extent4].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+                [Extent4].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+                [Extent4].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+                [Extent4].[FacebookPageCategory] AS [FacebookPageCategory], 
+                [Extent4].[FacebookSignInAs] AS [FacebookSignInAs], 
+                [Extent4].[CreatedTime] AS [CreatedTime], 
+                [Extent4].[CreatedBy] AS [CreatedBy], 
+                [Extent4].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+                [Extent4].[ConversationAgentId] AS [ConversationAgentId], 
+                [Extent4].[IsDeleted] AS [IsDeleted], 
+                [Extent4].[ConversationPriority] AS [ConversationPriority], 
+                [Extent4].[SiteId] AS [SiteId], 
+                [Extent5].[Id] AS [Id1]
+                FROM  [dbo].[t_Social_Account] AS [Extent4]
+                INNER JOIN [dbo].[t_Social_User] AS [Extent5] ON [Extent5].[Id] = [Extent4].[Id]
+                WHERE (([Extent5].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Project1].[SenderId] = [Extent5].[Id]) AND (([Extent4].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) ) AS [Element1]
+            LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent6] ON (([Extent6].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Project1].[ReceiverId] = [Extent6].[Id]) ) AS [Project3]
+        OUTER APPLY  (SELECT TOP (1) 
+            [Extent7].[Id] AS [Id], 
+            [Extent7].[Token] AS [Token], 
+            [Extent7].[TokenSecret] AS [TokenSecret], 
+            [Extent7].[IfEnable] AS [IfEnable], 
+            [Extent7].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Extent7].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Extent7].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Extent7].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Extent7].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Extent7].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Extent7].[CreatedTime] AS [CreatedTime], 
+            [Extent7].[CreatedBy] AS [CreatedBy], 
+            [Extent7].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Extent7].[ConversationAgentId] AS [ConversationAgentId], 
+            [Extent7].[IsDeleted] AS [IsDeleted], 
+            [Extent7].[ConversationPriority] AS [ConversationPriority], 
+            [Extent7].[SiteId] AS [SiteId], 
+            [Extent8].[Id] AS [Id1]
+            FROM  [dbo].[t_Social_Account] AS [Extent7]
+            INNER JOIN [dbo].[t_Social_User] AS [Extent8] ON [Extent8].[Id] = [Extent7].[Id]
+            WHERE (([Extent8].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Project3].[ReceiverId] = [Extent8].[Id]) AND (([Extent7].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) ) AS [Element2]
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent9] ON [Project3].[Id] = [Extent9].[MessageId]
+    )  AS [Project5]
+    ORDER BY [Project5].[Id4] ASC, [Project5].[Id7] ASC, [Project5].[Id] ASC, [Project5].[Id1] ASC, [Project5].[Id2] ASC, [Project5].[Id3] ASC, [Project5].[Id5] ASC, [Project5].[Id6] ASC, [Project5].[C1] ASC
+2017-10-26 17:30:03,404 [11] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:30:03,404 [11] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-10-26 17:30:03,404 [11] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:30:03,404 [11] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '57' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:30:03,404 [11] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:30:03 PM +08:00
+
+2017-10-26 17:30:03,647 [11] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 242 ms with result: SqlDataReader
+
+2017-10-26 17:30:03,647 [11] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:30:03,770 [11] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:30:03 PM +08:00
+
+2017-10-26 17:30:40,132 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-10-26 17:30:41,685 [1] INFO  System.Web.HttpApplication - Application started...
+2017-10-26 17:31:08,960 [11] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:31:08 PM +08:00
+
+2017-10-26 17:31:09,084 [11] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation10014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] IN (cast(2 as smallint), cast(3 as smallint)))
+2017-10-26 17:31:09,084 [11] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:31:09,085 [11] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '57' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:31:09,085 [11] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:31:09 PM +08:00
+
+2017-10-26 17:31:09,189 [11] DEBUG Social.Domain.Core.SiteDataContext - -- Failed in 103 ms with error: Invalid object name 'dbo.t_Social_Conversation10014501'.
+
+2017-10-26 17:31:09,189 [11] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:31:09,201 [11] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:31:09 PM +08:00
+
+2017-10-26 17:31:14,971 [11] ERROR Framework.WebApi.Filters.ApiExceptionFilterAttribute - An error occurred while executing the command definition. See the inner exception for details.
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.t_Social_Conversation10014501'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at LinqKit.ExpandableQueryProvider`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at Social.Domain.DomainServices.ConversationService.Find(Int32 id, ConversationSource[] sources) in F:\social\social_20170728\Social\Social.Domain\DomainServices\ConversationService.cs:line 80
+   at Social.Application.AppServices.ConversationMessageAppService.GetFacebookPostMessages(Int32 conversationId) in F:\social\social_20170728\Social\Social.Application\AppServices\ConversationMessageAppService.cs:line 63
+   at Social.WebApi.Controllers.ConversationsController.GetFacebookPostMessages(Int32 conversationId) in F:\social\social_20170728\Social\Social.WebApi\Controllers\ConversationsController.cs:line 214
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<>c__DisplayClass4_0.<<ExecuteActionFilterAsync>b__0>d.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 31
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.Core.UnitOfWork.UnitOfWorkManager.<Run>d__8.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.Core\UnitOfWork\UnitOfWorkManager.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Framework.WebApi.Filters.UnitOfWorkFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in F:\social\social_20170728\Social\Framework\Framework.WebApi\Filters\UnitOfWorkFilter.cs:line 29
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-10-26 17:31:20,805 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:31:20 PM +08:00
+
+2017-10-26 17:31:20,809 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[IfRead] AS [IfRead], 
+    [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Extent1].[AgentId] AS [AgentId], 
+    [Extent1].[DepartmentId] AS [DepartmentId], 
+    [Extent1].[Status] AS [Status], 
+    [Extent1].[Subject] AS [Subject], 
+    [Extent1].[Priority] AS [Priority], 
+    [Extent1].[Note] AS [Note], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[IsHidden] AS [IsHidden], 
+    [Extent1].[CreatedTime] AS [CreatedTime], 
+    [Extent1].[ModifiedTime] AS [ModifiedTime]
+    FROM [dbo].[t_Social_Conversation100014501] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Id] = @p__linq__0) AND ([Extent1].[IsHidden] <> 1) AND ([Extent1].[Source] IN (cast(2 as smallint), cast(3 as smallint)))
+2017-10-26 17:31:20,809 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:31:20,809 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '57' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:31:20,809 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:31:20 PM +08:00
+
+2017-10-26 17:31:20,892 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 83 ms with result: SqlDataReader
+
+2017-10-26 17:31:20,892 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:31:20,932 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:31:20 PM +08:00
+
+2017-10-26 17:31:20,936 [12] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:31:20 PM +08:00
+
+2017-10-26 17:31:21,132 [12] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Project5].[Id4] AS [Id], 
+    [Project5].[Id7] AS [Id1], 
+    [Project5].[Id] AS [Id2], 
+    [Project5].[ConversationId] AS [ConversationId], 
+    [Project5].[Source] AS [Source], 
+    [Project5].[OriginalId] AS [OriginalId], 
+    [Project5].[OriginalLink] AS [OriginalLink], 
+    [Project5].[ParentId] AS [ParentId], 
+    [Project5].[SendTime] AS [SendTime], 
+    [Project5].[SenderId] AS [SenderId], 
+    [Project5].[ReceiverId] AS [ReceiverId], 
+    [Project5].[SendAgentId] AS [SendAgentId], 
+    [Project5].[Content] AS [Content], 
+    [Project5].[Story] AS [Story], 
+    [Project5].[IsDeleted] AS [IsDeleted], 
+    [Project5].[QuoteTweetId] AS [QuoteTweetId], 
+    [Project5].[Id1] AS [Id3], 
+    [Project5].[Name] AS [Name], 
+    [Project5].[UserType] AS [UserType], 
+    [Project5].[IfActive] AS [IfActive], 
+    [Project5].[IfDeleted] AS [IfDeleted], 
+    [Project5].[IfAdmin] AS [IfAdmin], 
+    [Project5].[Id2] AS [Id4], 
+    [Project5].[OriginalId1] AS [OriginalId1], 
+    [Project5].[OriginalLink1] AS [OriginalLink1], 
+    [Project5].[Source1] AS [Source1], 
+    [Project5].[Type] AS [Type], 
+    [Project5].[Name1] AS [Name1], 
+    [Project5].[ScreenName] AS [ScreenName], 
+    [Project5].[Email] AS [Email], 
+    [Project5].[Avatar] AS [Avatar], 
+    [Project5].[IsDeleted1] AS [IsDeleted1], 
+    [Project5].[SiteId] AS [SiteId], 
+    [Project5].[Id3] AS [Id5], 
+    [Project5].[Token] AS [Token], 
+    [Project5].[TokenSecret] AS [TokenSecret], 
+    [Project5].[IfEnable] AS [IfEnable], 
+    [Project5].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+    [Project5].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+    [Project5].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+    [Project5].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+    [Project5].[FacebookPageCategory] AS [FacebookPageCategory], 
+    [Project5].[FacebookSignInAs] AS [FacebookSignInAs], 
+    [Project5].[CreatedTime] AS [CreatedTime], 
+    [Project5].[CreatedBy] AS [CreatedBy], 
+    [Project5].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+    [Project5].[ConversationAgentId] AS [ConversationAgentId], 
+    [Project5].[IsDeleted2] AS [IsDeleted2], 
+    [Project5].[ConversationPriority] AS [ConversationPriority], 
+    [Project5].[SiteId1] AS [SiteId1], 
+    [Project5].[Id5] AS [Id6], 
+    [Project5].[OriginalId2] AS [OriginalId2], 
+    [Project5].[OriginalLink2] AS [OriginalLink2], 
+    [Project5].[Source2] AS [Source2], 
+    [Project5].[Type1] AS [Type1], 
+    [Project5].[Name2] AS [Name2], 
+    [Project5].[ScreenName1] AS [ScreenName1], 
+    [Project5].[Email1] AS [Email1], 
+    [Project5].[Avatar1] AS [Avatar1], 
+    [Project5].[IsDeleted3] AS [IsDeleted3], 
+    [Project5].[SiteId2] AS [SiteId2], 
+    [Project5].[Id6] AS [Id7], 
+    [Project5].[Token1] AS [Token1], 
+    [Project5].[TokenSecret1] AS [TokenSecret1], 
+    [Project5].[IfEnable1] AS [IfEnable1], 
+    [Project5].[IfConvertMessageToConversation1] AS [IfConvertMessageToConversation1], 
+    [Project5].[IfConvertVisitorPostToConversation1] AS [IfConvertVisitorPostToConversation1], 
+    [Project5].[IfConvertWallPostToConversation1] AS [IfConvertWallPostToConversation1], 
+    [Project5].[IfConvertTweetToConversation1] AS [IfConvertTweetToConversation1], 
+    [Project5].[FacebookPageCategory1] AS [FacebookPageCategory1], 
+    [Project5].[FacebookSignInAs1] AS [FacebookSignInAs1], 
+    [Project5].[CreatedTime1] AS [CreatedTime1], 
+    [Project5].[CreatedBy1] AS [CreatedBy1], 
+    [Project5].[ConversationDepartmentId1] AS [ConversationDepartmentId1], 
+    [Project5].[ConversationAgentId1] AS [ConversationAgentId1], 
+    [Project5].[IsDeleted4] AS [IsDeleted4], 
+    [Project5].[ConversationPriority1] AS [ConversationPriority1], 
+    [Project5].[SiteId3] AS [SiteId3], 
+    [Project5].[C1] AS [C1], 
+    [Project5].[Id8] AS [Id8], 
+    [Project5].[MessageId] AS [MessageId], 
+    [Project5].[OriginalId3] AS [OriginalId3], 
+    [Project5].[OriginalLink3] AS [OriginalLink3], 
+    [Project5].[Type2] AS [Type2], 
+    [Project5].[Name3] AS [Name3], 
+    [Project5].[MimeType] AS [MimeType], 
+    [Project5].[Size] AS [Size], 
+    [Project5].[Url] AS [Url], 
+    [Project5].[PreviewUrl] AS [PreviewUrl], 
+    [Project5].[RawData] AS [RawData]
+    FROM ( SELECT 
+        [Project3].[Id] AS [Id], 
+        [Project3].[ConversationId] AS [ConversationId], 
+        [Project3].[Source] AS [Source], 
+        [Project3].[OriginalId] AS [OriginalId], 
+        [Project3].[OriginalLink] AS [OriginalLink], 
+        [Project3].[ParentId] AS [ParentId], 
+        [Project3].[SendTime] AS [SendTime], 
+        [Project3].[SenderId] AS [SenderId], 
+        [Project3].[ReceiverId] AS [ReceiverId], 
+        [Project3].[SendAgentId] AS [SendAgentId], 
+        [Project3].[Content] AS [Content], 
+        [Project3].[Story] AS [Story], 
+        [Project3].[IsDeleted] AS [IsDeleted], 
+        [Project3].[QuoteTweetId] AS [QuoteTweetId], 
+        [Project3].[Id1] AS [Id1], 
+        [Project3].[Name] AS [Name], 
+        [Project3].[UserType] AS [UserType], 
+        [Project3].[IfActive] AS [IfActive], 
+        [Project3].[IfDeleted] AS [IfDeleted], 
+        [Project3].[IfAdmin] AS [IfAdmin], 
+        [Project3].[Id2] AS [Id2], 
+        [Project3].[OriginalId1] AS [OriginalId1], 
+        [Project3].[OriginalLink1] AS [OriginalLink1], 
+        [Project3].[Source1] AS [Source1], 
+        [Project3].[Type] AS [Type], 
+        [Project3].[Name1] AS [Name1], 
+        [Project3].[ScreenName] AS [ScreenName], 
+        [Project3].[Email] AS [Email], 
+        [Project3].[Avatar] AS [Avatar], 
+        [Project3].[IsDeleted1] AS [IsDeleted1], 
+        [Project3].[SiteId] AS [SiteId], 
+        [Project3].[Id3] AS [Id3], 
+        [Project3].[Token] AS [Token], 
+        [Project3].[TokenSecret] AS [TokenSecret], 
+        [Project3].[IfEnable] AS [IfEnable], 
+        [Project3].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+        [Project3].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+        [Project3].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+        [Project3].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+        [Project3].[FacebookPageCategory] AS [FacebookPageCategory], 
+        [Project3].[FacebookSignInAs] AS [FacebookSignInAs], 
+        [Project3].[CreatedTime] AS [CreatedTime], 
+        [Project3].[CreatedBy] AS [CreatedBy], 
+        [Project3].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+        [Project3].[ConversationAgentId] AS [ConversationAgentId], 
+        [Project3].[IsDeleted2] AS [IsDeleted2], 
+        [Project3].[ConversationPriority] AS [ConversationPriority], 
+        [Project3].[SiteId1] AS [SiteId1], 
+        [Project3].[Id4] AS [Id4], 
+        [Project3].[Id5] AS [Id5], 
+        [Project3].[OriginalId2] AS [OriginalId2], 
+        [Project3].[OriginalLink2] AS [OriginalLink2], 
+        [Project3].[Source2] AS [Source2], 
+        [Project3].[Type1] AS [Type1], 
+        [Project3].[Name2] AS [Name2], 
+        [Project3].[ScreenName1] AS [ScreenName1], 
+        [Project3].[Email1] AS [Email1], 
+        [Project3].[Avatar1] AS [Avatar1], 
+        [Project3].[IsDeleted3] AS [IsDeleted3], 
+        [Project3].[SiteId2] AS [SiteId2], 
+        [Element2].[Id] AS [Id6], 
+        [Element2].[Token] AS [Token1], 
+        [Element2].[TokenSecret] AS [TokenSecret1], 
+        [Element2].[IfEnable] AS [IfEnable1], 
+        [Element2].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation1], 
+        [Element2].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation1], 
+        [Element2].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation1], 
+        [Element2].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation1], 
+        [Element2].[FacebookPageCategory] AS [FacebookPageCategory1], 
+        [Element2].[FacebookSignInAs] AS [FacebookSignInAs1], 
+        [Element2].[CreatedTime] AS [CreatedTime1], 
+        [Element2].[CreatedBy] AS [CreatedBy1], 
+        [Element2].[ConversationDepartmentId] AS [ConversationDepartmentId1], 
+        [Element2].[ConversationAgentId] AS [ConversationAgentId1], 
+        [Element2].[IsDeleted] AS [IsDeleted4], 
+        [Element2].[ConversationPriority] AS [ConversationPriority1], 
+        [Element2].[SiteId] AS [SiteId3], 
+        [Element2].[Id1] AS [Id7], 
+        [Extent9].[Id] AS [Id8], 
+        [Extent9].[MessageId] AS [MessageId], 
+        [Extent9].[OriginalId] AS [OriginalId3], 
+        [Extent9].[OriginalLink] AS [OriginalLink3], 
+        [Extent9].[Type] AS [Type2], 
+        [Extent9].[Name] AS [Name3], 
+        [Extent9].[MimeType] AS [MimeType], 
+        [Extent9].[Size] AS [Size], 
+        [Extent9].[Url] AS [Url], 
+        [Extent9].[PreviewUrl] AS [PreviewUrl], 
+        [Extent9].[RawData] AS [RawData], 
+        CASE WHEN ([Extent9].[Id] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1]
+        FROM    (SELECT 
+            [Project1].[Id] AS [Id], 
+            [Project1].[ConversationId] AS [ConversationId], 
+            [Project1].[Source] AS [Source], 
+            [Project1].[OriginalId] AS [OriginalId], 
+            [Project1].[OriginalLink] AS [OriginalLink], 
+            [Project1].[ParentId] AS [ParentId], 
+            [Project1].[SendTime] AS [SendTime], 
+            [Project1].[SenderId] AS [SenderId], 
+            [Project1].[ReceiverId] AS [ReceiverId], 
+            [Project1].[SendAgentId] AS [SendAgentId], 
+            [Project1].[Content] AS [Content], 
+            [Project1].[Story] AS [Story], 
+            [Project1].[IsDeleted] AS [IsDeleted], 
+            [Project1].[QuoteTweetId] AS [QuoteTweetId], 
+            [Project1].[Id1] AS [Id1], 
+            [Project1].[Name] AS [Name], 
+            [Project1].[UserType] AS [UserType], 
+            [Project1].[IfActive] AS [IfActive], 
+            [Project1].[IfDeleted] AS [IfDeleted], 
+            [Project1].[IfAdmin] AS [IfAdmin], 
+            [Project1].[Id2] AS [Id2], 
+            [Project1].[OriginalId1] AS [OriginalId1], 
+            [Project1].[OriginalLink1] AS [OriginalLink1], 
+            [Project1].[Source1] AS [Source1], 
+            [Project1].[Type] AS [Type], 
+            [Project1].[Name1] AS [Name1], 
+            [Project1].[ScreenName] AS [ScreenName], 
+            [Project1].[Email] AS [Email], 
+            [Project1].[Avatar] AS [Avatar], 
+            [Project1].[IsDeleted1] AS [IsDeleted1], 
+            [Project1].[SiteId] AS [SiteId], 
+            [Element1].[Id] AS [Id3], 
+            [Element1].[Token] AS [Token], 
+            [Element1].[TokenSecret] AS [TokenSecret], 
+            [Element1].[IfEnable] AS [IfEnable], 
+            [Element1].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Element1].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Element1].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Element1].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Element1].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Element1].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Element1].[CreatedTime] AS [CreatedTime], 
+            [Element1].[CreatedBy] AS [CreatedBy], 
+            [Element1].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Element1].[ConversationAgentId] AS [ConversationAgentId], 
+            [Element1].[IsDeleted] AS [IsDeleted2], 
+            [Element1].[ConversationPriority] AS [ConversationPriority], 
+            [Element1].[SiteId] AS [SiteId1], 
+            [Element1].[Id1] AS [Id4], 
+            [Extent6].[Id] AS [Id5], 
+            [Extent6].[OriginalId] AS [OriginalId2], 
+            [Extent6].[OriginalLink] AS [OriginalLink2], 
+            [Extent6].[Source] AS [Source2], 
+            [Extent6].[Type] AS [Type1], 
+            [Extent6].[Name] AS [Name2], 
+            [Extent6].[ScreenName] AS [ScreenName1], 
+            [Extent6].[Email] AS [Email1], 
+            [Extent6].[Avatar] AS [Avatar1], 
+            [Extent6].[IsDeleted] AS [IsDeleted3], 
+            [Extent6].[SiteId] AS [SiteId2]
+            FROM    (SELECT 
+                [Extent1].[Id] AS [Id], 
+                [Extent1].[ConversationId] AS [ConversationId], 
+                [Extent1].[Source] AS [Source], 
+                [Extent1].[OriginalId] AS [OriginalId], 
+                [Extent1].[OriginalLink] AS [OriginalLink], 
+                [Extent1].[ParentId] AS [ParentId], 
+                [Extent1].[SendTime] AS [SendTime], 
+                [Extent1].[SenderId] AS [SenderId], 
+                [Extent1].[ReceiverId] AS [ReceiverId], 
+                [Extent1].[SendAgentId] AS [SendAgentId], 
+                [Extent1].[Content] AS [Content], 
+                [Extent1].[Story] AS [Story], 
+                [Extent1].[IsDeleted] AS [IsDeleted], 
+                [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+                [Extent2].[Id] AS [Id1], 
+                [Extent2].[Name] AS [Name], 
+                [Extent2].[UserType] AS [UserType], 
+                [Extent2].[IfActive] AS [IfActive], 
+                [Extent2].[IfDeleted] AS [IfDeleted], 
+                [Extent2].[IfAdmin] AS [IfAdmin], 
+                [Extent3].[Id] AS [Id2], 
+                [Extent3].[OriginalId] AS [OriginalId1], 
+                [Extent3].[OriginalLink] AS [OriginalLink1], 
+                [Extent3].[Source] AS [Source1], 
+                [Extent3].[Type] AS [Type], 
+                [Extent3].[Name] AS [Name1], 
+                [Extent3].[ScreenName] AS [ScreenName], 
+                [Extent3].[Email] AS [Email], 
+                [Extent3].[Avatar] AS [Avatar], 
+                [Extent3].[IsDeleted] AS [IsDeleted1], 
+                [Extent3].[SiteId] AS [SiteId]
+                FROM   [dbo].[t_Social_Message100014501] AS [Extent1]
+                LEFT OUTER JOIN [dbo].[t_User100014501] AS [Extent2] ON [Extent1].[SendAgentId] = [Extent2].[Id]
+                LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON (([Extent3].[SiteId] = @DynamicFilterParam_000001) ) AND ([Extent1].[SenderId] = [Extent3].[Id])
+                WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] = @p__linq__0) ) AS [Project1]
+            OUTER APPLY  (SELECT TOP (1) 
+                [Extent4].[Id] AS [Id], 
+                [Extent4].[Token] AS [Token], 
+                [Extent4].[TokenSecret] AS [TokenSecret], 
+                [Extent4].[IfEnable] AS [IfEnable], 
+                [Extent4].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+                [Extent4].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+                [Extent4].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+                [Extent4].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+                [Extent4].[FacebookPageCategory] AS [FacebookPageCategory], 
+                [Extent4].[FacebookSignInAs] AS [FacebookSignInAs], 
+                [Extent4].[CreatedTime] AS [CreatedTime], 
+                [Extent4].[CreatedBy] AS [CreatedBy], 
+                [Extent4].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+                [Extent4].[ConversationAgentId] AS [ConversationAgentId], 
+                [Extent4].[IsDeleted] AS [IsDeleted], 
+                [Extent4].[ConversationPriority] AS [ConversationPriority], 
+                [Extent4].[SiteId] AS [SiteId], 
+                [Extent5].[Id] AS [Id1]
+                FROM  [dbo].[t_Social_Account] AS [Extent4]
+                INNER JOIN [dbo].[t_Social_User] AS [Extent5] ON [Extent5].[Id] = [Extent4].[Id]
+                WHERE (([Extent5].[SiteId] = @DynamicFilterParam_000001) ) AND ([Project1].[SenderId] = [Extent5].[Id]) AND (([Extent4].[SiteId] = @DynamicFilterParam_000001) ) ) AS [Element1]
+            LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent6] ON (([Extent6].[SiteId] = @DynamicFilterParam_000001) ) AND ([Project1].[ReceiverId] = [Extent6].[Id]) ) AS [Project3]
+        OUTER APPLY  (SELECT TOP (1) 
+            [Extent7].[Id] AS [Id], 
+            [Extent7].[Token] AS [Token], 
+            [Extent7].[TokenSecret] AS [TokenSecret], 
+            [Extent7].[IfEnable] AS [IfEnable], 
+            [Extent7].[IfConvertMessageToConversation] AS [IfConvertMessageToConversation], 
+            [Extent7].[IfConvertVisitorPostToConversation] AS [IfConvertVisitorPostToConversation], 
+            [Extent7].[IfConvertWallPostToConversation] AS [IfConvertWallPostToConversation], 
+            [Extent7].[IfConvertTweetToConversation] AS [IfConvertTweetToConversation], 
+            [Extent7].[FacebookPageCategory] AS [FacebookPageCategory], 
+            [Extent7].[FacebookSignInAs] AS [FacebookSignInAs], 
+            [Extent7].[CreatedTime] AS [CreatedTime], 
+            [Extent7].[CreatedBy] AS [CreatedBy], 
+            [Extent7].[ConversationDepartmentId] AS [ConversationDepartmentId], 
+            [Extent7].[ConversationAgentId] AS [ConversationAgentId], 
+            [Extent7].[IsDeleted] AS [IsDeleted], 
+            [Extent7].[ConversationPriority] AS [ConversationPriority], 
+            [Extent7].[SiteId] AS [SiteId], 
+            [Extent8].[Id] AS [Id1]
+            FROM  [dbo].[t_Social_Account] AS [Extent7]
+            INNER JOIN [dbo].[t_Social_User] AS [Extent8] ON [Extent8].[Id] = [Extent7].[Id]
+            WHERE (([Extent8].[SiteId] = @DynamicFilterParam_000001) ) AND ([Project3].[ReceiverId] = [Extent8].[Id]) AND (([Extent7].[SiteId] = @DynamicFilterParam_000001) ) ) AS [Element2]
+        LEFT OUTER JOIN [dbo].[t_Social_MessageAttachment100014501] AS [Extent9] ON [Project3].[Id] = [Extent9].[MessageId]
+    )  AS [Project5]
+    ORDER BY [Project5].[Id4] ASC, [Project5].[Id7] ASC, [Project5].[Id] ASC, [Project5].[Id1] ASC, [Project5].[Id2] ASC, [Project5].[Id3] ASC, [Project5].[Id5] ASC, [Project5].[Id6] ASC, [Project5].[C1] ASC
+2017-10-26 17:31:21,132 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:31:21,132 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: '100014501' (Type = Int32)
+
+2017-10-26 17:31:21,132 [12] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:31:21,132 [12] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '57' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:31:21,132 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:31:21 PM +08:00
+
+2017-10-26 17:31:21,312 [12] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 179 ms with result: SqlDataReader
+
+2017-10-26 17:31:21,312 [12] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:31:21,456 [12] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:31:21 PM +08:00
+
+2017-10-26 17:52:48,420 [1] INFO  System.Web.HttpApplication - Application starting...
+2017-10-26 17:52:50,085 [1] INFO  System.Web.HttpApplication - Application started...
+2017-10-26 17:54:41,844 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:54:41 PM +08:00
+
+2017-10-26 17:54:42,062 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (100) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Source] AS [Source], 
+    [Project1].[OriginalId] AS [OriginalId], 
+    [Project1].[IfRead] AS [IfRead], 
+    [Project1].[LastMessageSentTime] AS [LastMessageSentTime], 
+    [Project1].[LastMessageSenderId] AS [LastMessageSenderId], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Avatar] AS [Avatar], 
+    [Project1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+    [Project1].[AgentId] AS [AgentId], 
+    [Project1].[Name1] AS [Name1], 
+    [Project1].[DepartmentId] AS [DepartmentId], 
+    [Project1].[Name2] AS [Name2], 
+    [Project1].[Status] AS [Status], 
+    [Project1].[Subject] AS [Subject], 
+    [Project1].[Priority] AS [Priority], 
+    [Project1].[Note] AS [Note], 
+    [Project1].[OriginalLink] AS [OriginalLink]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Source] AS [Source], 
+        [Extent1].[OriginalId] AS [OriginalId], 
+        [Extent1].[IfRead] AS [IfRead], 
+        [Extent1].[LastMessageSentTime] AS [LastMessageSentTime], 
+        [Extent1].[LastMessageSenderId] AS [LastMessageSenderId], 
+        [Extent1].[LastRepliedAgentId] AS [LastRepliedAgentId], 
+        [Extent1].[AgentId] AS [AgentId], 
+        [Extent1].[DepartmentId] AS [DepartmentId], 
+        [Extent1].[Status] AS [Status], 
+        [Extent1].[Subject] AS [Subject], 
+        [Extent1].[Priority] AS [Priority], 
+        [Extent1].[Note] AS [Note], 
+        [Extent2].[OriginalLink] AS [OriginalLink], 
+        [Extent2].[Name] AS [Name], 
+        [Extent2].[Avatar] AS [Avatar], 
+        [Extent3].[Name] AS [Name1], 
+        [Extent4].[Name] AS [Name2]
+        FROM    [dbo].[t_Social_Conversation100014502] AS [Extent1]
+        LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON ([Extent1].[LastMessageSenderId] = [Extent2].[Id]) AND (([Extent2].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL))
+        LEFT OUTER JOIN [dbo].[t_User100014502] AS [Extent3] ON [Extent1].[AgentId] = [Extent3].[Id]
+        LEFT OUTER JOIN [dbo].[t_LiveChat_Department] AS [Extent4] ON ([Extent1].[DepartmentId] = [Extent4].[Id]) AND (([Extent4].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL))
+        WHERE (0 = [Extent1].[IsDeleted]) AND (0 = [Extent1].[IsHidden])
+    )  AS [Project1]
+    ORDER BY [Project1].[LastMessageSentTime] DESC
+2017-10-26 17:54:42,062 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:54:42,062 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-10-26 17:54:42,062 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:54:42,063 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:54:42 PM +08:00
+
+2017-10-26 17:54:42,254 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 192 ms with result: SqlDataReader
+
+2017-10-26 17:54:42,254 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:54:42,407 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:54:42 PM +08:00
+
+2017-10-26 17:54:42,412 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:54:42 PM +08:00
+
+2017-10-26 17:54:42,499 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ConversationId] AS [ConversationId], 
+    [Extent1].[Source] AS [Source], 
+    [Extent1].[OriginalId] AS [OriginalId], 
+    [Extent1].[OriginalLink] AS [OriginalLink], 
+    [Extent1].[ParentId] AS [ParentId], 
+    [Extent1].[SendTime] AS [SendTime], 
+    [Extent1].[SenderId] AS [SenderId], 
+    [Extent1].[ReceiverId] AS [ReceiverId], 
+    [Extent1].[SendAgentId] AS [SendAgentId], 
+    [Extent1].[Content] AS [Content], 
+    [Extent1].[Story] AS [Story], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[QuoteTweetId] AS [QuoteTweetId], 
+    [Extent2].[Id] AS [Id1], 
+    [Extent2].[OriginalId] AS [OriginalId1], 
+    [Extent2].[OriginalLink] AS [OriginalLink1], 
+    [Extent2].[Source] AS [Source1], 
+    [Extent2].[Type] AS [Type], 
+    [Extent2].[Name] AS [Name], 
+    [Extent2].[ScreenName] AS [ScreenName], 
+    [Extent2].[Email] AS [Email], 
+    [Extent2].[Avatar] AS [Avatar], 
+    [Extent2].[IsDeleted] AS [IsDeleted1], 
+    [Extent2].[SiteId] AS [SiteId], 
+    [Extent3].[Id] AS [Id2], 
+    [Extent3].[OriginalId] AS [OriginalId2], 
+    [Extent3].[OriginalLink] AS [OriginalLink2], 
+    [Extent3].[Source] AS [Source2], 
+    [Extent3].[Type] AS [Type1], 
+    [Extent3].[Name] AS [Name1], 
+    [Extent3].[ScreenName] AS [ScreenName1], 
+    [Extent3].[Email] AS [Email1], 
+    [Extent3].[Avatar] AS [Avatar1], 
+    [Extent3].[IsDeleted] AS [IsDeleted2], 
+    [Extent3].[SiteId] AS [SiteId1]
+    FROM   [dbo].[t_Social_Message100014502] AS [Extent1]
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent2] ON (([Extent2].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[SenderId] = [Extent2].[Id])
+    LEFT OUTER JOIN [dbo].[t_Social_User] AS [Extent3] ON (([Extent3].[SiteId] = @DynamicFilterParam_000001) OR (@DynamicFilterParam_000002 IS NOT NULL)) AND ([Extent1].[ReceiverId] = [Extent3].[Id])
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ConversationId] IN (102, 164, 176, 169, 177, 178, 99, 179, 181, 180, 163, 147, 175, 167, 171, 122, 168, 174, 173, 172, 144, 100, 162, 145, 161, 160, 159, 158, 157, 142, 155, 138, 148, 149, 151, 152, 153, 154, 150, 146, 143, 139, 119, 137, 141, 134, 140, 136, 135, 81, 133, 124, 131, 132, 123, 126, 130, 85, 118, 125, 128, 96, 129, 95, 127, 97, 121, 120, 117, 113, 116, 115, 114, 112, 106, 82, 90, 111, 108, 110, 109, 107, 105, 104, 103, 98, 101, 94, 75, 91, 88, 93, 86, 87, 89, 83, 84, 68, 77, 78))
+2017-10-26 17:54:42,499 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:54:42,499 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000001: 'null' (Type = Int32)
+
+2017-10-26 17:54:42,499 [9] DEBUG Social.Domain.Core.SiteDataContext - -- DynamicFilterParam_000002: 'null' (Type = Boolean)
+
+2017-10-26 17:54:42,499 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:54:42 PM +08:00
+
+2017-10-26 17:54:42,609 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 110 ms with result: SqlDataReader
+
+2017-10-26 17:54:42,609 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:54:45,226 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:54:45 PM +08:00
+
+2017-10-26 17:54:45,731 [9] DEBUG Social.Domain.Core.SiteDataContext - Opened connection at 10/26/2017 5:54:45 PM +08:00
+
+2017-10-26 17:54:45,754 [9] DEBUG Social.Domain.Core.SiteDataContext - SELECT TOP (1) 
+    [Extent1].[SiteId] AS [SiteId], 
+    [Extent1].[IfCustomAwayEnable] AS [IfCustomAwayEnable], 
+    [Extent1].[IfDepartmentEnable] AS [IfDepartmentEnable]
+    FROM [dbo].[t_LiveChat_Config] AS [Extent1]
+    WHERE [Extent1].[SiteId] = @p__linq__0
+2017-10-26 17:54:45,754 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:54:45,754 [9] DEBUG Social.Domain.Core.SiteDataContext - -- p__linq__0: '100014502' (Type = Int32, IsNullable = false)
+
+2017-10-26 17:54:45,754 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Executing at 10/26/2017 5:54:45 PM +08:00
+
+2017-10-26 17:54:45,837 [9] DEBUG Social.Domain.Core.SiteDataContext - -- Completed in 83 ms with result: SqlDataReader
+
+2017-10-26 17:54:45,837 [9] DEBUG Social.Domain.Core.SiteDataContext - 
+
+2017-10-26 17:54:45,843 [9] DEBUG Social.Domain.Core.SiteDataContext - Closed connection at 10/26/2017 5:54:45 PM +08:00
+
